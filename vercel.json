@@ -1,5 +1,8 @@
 {
   "functions": {
     "api/ask.js": { "maxDuration": 20 }
-  }
+  },
+  "redirects": [
+    { "source": "/((?!api/).*)", "destination": "https://cynthia-mo-ya.github.io/$1", "permanent": false }
+  ]
 }

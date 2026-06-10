@@ -126,7 +126,7 @@
     spAnswer.textContent = window.I18N ? window.I18N.t('spider.thinking') : '…';
 
     var ctrl = new AbortController();
-    var timeout = setTimeout(function () { ctrl.abort(); }, 12000);
+    var timeout = setTimeout(function () { ctrl.abort(); }, 20000);
 
     fetch(PROXY_URL, {
       method: 'POST',
