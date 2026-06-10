@@ -15,12 +15,14 @@
 
 <!-- ════════ LOADER ════════ -->
 <div class="loader" id="loader">
-  <div class="loader-burst">
-    <span class="loader-earth">EARTH-65</span>
-    <span class="loader-name">CYNTHIA</span>
-    <span class="loader-sub">个人作品集 · 装载中</span>
-  </div>
   <div class="loader-bar"><i></i></div>
+  <div class="loader-stars" aria-hidden="true"></div>
+  <div class="loader-title">
+    <span class="lt-script lt-a">A</span>
+    <span class="lt-word" id="ltWord"></span>
+    <span class="lt-script lt-of">of <em>Cynthia</em></span>
+    <span class="loader-sub" data-i18n="loader.sub">莫心雅 · 游戏策划个人作品集 · EARTH-65</span>
+  </div>
 </div>
 
 <!-- ════════ CURSOR ════════ -->
@@ -32,15 +34,20 @@
   <a class="nav-logo" href="#top">
     <span class="nav-logo-en">CYNTHIA</span><span class="nav-logo-zh">莫心雅</span>
   </a>
-  <button class="nav-burger" id="navBurger" aria-label="菜单"><i></i><i></i><i></i></button>
+  <div class="nav-right">
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language"><span class="lt-zh">中</span><i>/</i><span class="lt-en">EN</span></button>
+    <button class="nav-burger" id="navBurger" aria-label="菜单"><i></i><i></i><i></i></button>
+  </div>
   <div class="nav-links" id="navLinks">
-    <a href="#about" data-num="00">起源</a>
-    <a href="#jinling" data-num="01">金陵残梦</a>
-    <a href="#pawnshop" data-num="02">记忆当铺</a>
-    <a href="#system" data-num="03">你就是系统</a>
-    <a href="#gameart" data-num="EX">游戏美术</a>
-    <a href="#skills" data-num="SK">装备库</a>
-    <a href="#contact" class="nav-cta" data-num="!!">联系我</a>
+    <a href="#decode" data-num="ID" data-i18n="nav.decode">代号</a>
+    <a href="#about" data-num="00" data-i18n="nav.about">起源</a>
+    <a href="#cards" data-num="PV" data-i18n="nav.cards">卡牌</a>
+    <a href="#jinling" data-num="01" data-i18n="nav.jinling">金陵残梦</a>
+    <a href="#pawnshop" data-num="02" data-i18n="nav.pawnshop">记忆当铺</a>
+    <a href="#system" data-num="03" data-i18n="nav.system">你就是系统</a>
+    <a href="#gameart" data-num="EX" data-i18n="nav.gameart">游戏美术</a>
+    <a href="#skills" data-num="SK" data-i18n="nav.skills">装备库</a>
+    <a href="#contact" class="nav-cta" data-num="!!" data-i18n="nav.contact">联系我</a>
   </div>
 </nav>
 
@@ -53,26 +60,26 @@
 
   <div class="hero-inner">
     <div class="hero-tag comic-tag">
-      <span class="blink">●</span> MULTIVERSE FILE · EARTH-65 · 中国 · 武汉
+      <span class="blink">●</span> <span data-i18n="hero.tag">MULTIVERSE FILE · EARTH-65 · 中国 · 武汉</span>
     </div>
     <h1 class="hero-title">
       <span class="glitch hero-en" data-text="CYNTHIA">CYNTHIA</span>
       <span class="hero-zh">莫心雅</span>
     </h1>
     <p class="hero-role">
-      <span class="role-chip chip-pink">游戏策划</span>
+      <span class="role-chip chip-pink" data-i18n="hero.role1">游戏策划</span>
       <span class="role-chip chip-ink">GAME DESIGNER</span>
-      <span class="role-chip chip-cyan">叙事 · 系统 · 关卡</span>
+      <span class="role-chip chip-cyan" data-i18n="hero.role2">叙事 · 系统 · 关卡</span>
     </p>
-    <p class="hero-line">把文学变成<em>可以玩的梦</em>。</p>
+    <p class="hero-line" data-i18n="hero.line">把文学变成<em>可以玩的梦</em>。</p>
 
     <div class="hero-stickers">
-      <div class="sticker sticker-1"><b>1<span>/120</span></b>专业第一<small>湖北大学 · 数字媒体艺术</small></div>
-      <div class="sticker sticker-2"><b>5<span>件</span></b>独立交付<small>《金陵残梦》完整概念</small></div>
-      <div class="sticker sticker-3"><b>80<span>%</span></b>主策工作量<small>两个落地体验项目</small></div>
+      <div class="sticker sticker-1"><b>1<span>/120</span></b><span data-i18n="hero.st1">专业第一</span><small data-i18n="hero.st1s">湖北大学 · 数字媒体艺术</small></div>
+      <div class="sticker sticker-2"><b>5<span data-i18n="hero.st2u">件</span></b><span data-i18n="hero.st2">独立交付</span><small data-i18n="hero.st2s">《金陵残梦》完整概念</small></div>
+      <div class="sticker sticker-3"><b>80<span>%</span></b><span data-i18n="hero.st3">主策工作量</span><small data-i18n="hero.st3s">两个落地体验项目</small></div>
     </div>
 
-    <a class="hero-scroll" href="#about">往下滑 <span class="thwip">THWIP!</span> ↓</a>
+    <a class="hero-scroll" href="#decode"><span data-i18n="hero.scroll">往下滑</span> <span class="thwip">THWIP!</span> ↓</a>
   </div>
 
   <div class="hero-marquee" aria-hidden="true">
@@ -85,46 +92,213 @@
 
 <main>
 
+<!-- ════════ DECODE：字母墙 + 蜘蛛问答 ════════ -->
+<section class="issue issue-black" id="decode">
+  <div class="issue-head">
+    <span class="issue-num num-pink">CODENAME</span>
+    <h2 class="issue-title"><span class="glitch" data-text="解码 CYNTHIA" data-i18n="decode.title">解码 CYNTHIA</span><small>DECODE THE NAME</small></h2>
+    <p class="issue-meta" data-i18n="decode.meta">七个字母 · 七种能力 · 把鼠标放上去试试</p>
+  </div>
+
+  <div class="decode-wrap">
+    <div class="decode-ghost" aria-hidden="true"><i>C</i><i>Y</i><i>N</i><i>T</i><i>H</i><i>I</i><i>A</i></div>
+    <ul class="decode-letters" id="decodeLetters">
+      <li class="dletter" style="--lc: var(--pink)">
+        <span class="dl-char">C</span>
+        <span class="dl-info"><b>CO-OP</b><small data-i18n="decode.c">双人协作 · 非对称机制研究者</small></span>
+      </li>
+      <li class="dletter" style="--lc: var(--cyan)">
+        <span class="dl-char">Y</span>
+        <span class="dl-info"><b>YARN</b><small data-i18n="decode.y">纺出故事线 · 也是一根蛛丝</small></span>
+      </li>
+      <li class="dletter" style="--lc: var(--yellow)">
+        <span class="dl-char">N</span>
+        <span class="dl-info"><b>NARRATIVE</b><small data-i18n="decode.n">叙事设计 · 文学 IP 的交互转生</small></span>
+      </li>
+      <li class="dletter" style="--lc: var(--purple-lt)">
+        <span class="dl-char">T</span>
+        <span class="dl-info"><b>TRANSLATE</b><small data-i18n="decode.t">玩法转译 · 人物困境 → 关卡机制</small></span>
+      </li>
+      <li class="dletter" style="--lc: var(--pink)">
+        <span class="dl-char">H</span>
+        <span class="dl-info"><b>HEART</b><small data-i18n="decode.h">情感驱动 · 按情感重量结算的设计</small></span>
+      </li>
+      <li class="dletter" style="--lc: var(--cyan)">
+        <span class="dl-char">I</span>
+        <span class="dl-info"><b>IMMERSION</b><small data-i18n="decode.i">沉浸体验 · 全程无 UI / 五感入梦</small></span>
+      </li>
+      <li class="dletter" style="--lc: var(--yellow)">
+        <span class="dl-char">A</span>
+        <span class="dl-info"><b>ART</b><small data-i18n="decode.a">美术功底 · 广美附中科班出身</small></span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 蜘蛛问答 + 档案夹 -->
+  <div class="spider-zone" id="spiderZone">
+    <div class="spider-stage" id="spiderStage">
+      <div class="spider-burst" aria-hidden="true"></div>
+      <div class="spider-bubble" data-i18n="spider.bubble">CLICK ME<br>OR THE FILE</div>
+      <!-- Gwen 徽标风格蜘蛛：棱角长腿 -->
+      <svg class="spider-svg" id="spiderSvg" viewBox="0 0 220 200" aria-label="spider">
+        <g fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M96 84 L52 56 L20 64 M94 94 L42 90 L12 110 M96 104 L52 122 L40 156 M102 112 L84 144 L92 182"/>
+          <path d="M124 84 L168 56 L200 64 M126 94 L178 90 L208 110 M124 104 L168 122 L180 156 M118 112 L136 144 L128 182"/>
+        </g>
+        <path d="M110 56 L120 66 L118 80 L110 86 L102 80 L100 66 Z" fill="currentColor"/>
+        <path d="M110 86 L126 96 L122 126 L110 142 L98 126 L94 96 Z" fill="currentColor"/>
+        <circle cx="104" cy="70" r="2.4" fill="#0B0814"/>
+        <circle cx="116" cy="70" r="2.4" fill="#0B0814"/>
+      </svg>
+
+      <!-- 白色便签问答（点蜘蛛弹出） -->
+      <div class="sp-note-qa" id="spNoteQa" hidden>
+        <i class="sp-tape" aria-hidden="true"></i>
+        <p class="sp-note-title" data-i18n="spider.noteq">你有什么想问我的？</p>
+        <div class="sp-answer" id="spAnswer" data-i18n="spider.welcome">嗨！我是心雅的蜘蛛 🕷️ 项目、设计理念、AI 工作流、为什么是《红楼梦》……问点真的。</div>
+        <form class="sp-form" id="spForm">
+          <input type="text" id="spInput" maxlength="120" data-i18n-ph="spider.ph" placeholder="问项目、能力、合作方式…" autocomplete="off">
+          <button type="submit" id="spAsk">Ask</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 牛皮纸档案夹 -->
+    <div class="dossier" id="dossier">
+      <button class="dossier-cover" id="dossierCover">
+        <i class="dossier-clip" aria-hidden="true"></i>
+        <span class="dossier-tab">CYNTHIA</span>
+        <span class="dossier-plate">
+          <small>PERSONAL DOSSIER</small>
+          <b>CYNTHIA</b>
+          <em>Mo Xinya / Case File</em>
+        </span>
+        <span class="dossier-stamp" data-i18n="file.stamp">CONFIDENTIAL</span>
+        <span class="dossier-hint" data-i18n="file.open">⤷ 单击展开档案</span>
+        <i class="dossier-marks" aria-hidden="true"><u></u><u></u><u></u></i>
+      </button>
+
+      <div class="dossier-spread" id="dossierSpread" hidden>
+        <button class="dossier-close" id="dossierClose" data-i18n="file.close">⤶ 单击合上文档</button>
+        <div class="dossier-left">
+          <figure class="dos-polaroid">
+            <img src="assets/img/portrait.png" alt="莫心雅">
+            <figcaption>FILE 01 · born to design</figcaption>
+            <i class="sp-tape" aria-hidden="true"></i>
+          </figure>
+          <div class="dos-namecard">
+            <b>CYNTHIA</b>
+            <span data-i18n="file.name">莫心雅 · 游戏策划</span>
+          </div>
+          <div class="dos-sticky dos-sticky-y">
+            <b data-i18n="file.s1t">审美 / 策划 / AI 工作流</b>
+            <span data-i18n="file.s1">把文学变成可以玩的梦</span>
+          </div>
+          <div class="dos-sticky dos-sticky-r">
+            <b>PROOF</b>
+            <span data-i18n="file.s2">· 系统 / 叙事 / 关卡设计<br>· 5 件独立交付<br>· 80% 主策工作量 ×2</span>
+          </div>
+          <div class="dos-sticky dos-sticky-w">
+            <b data-i18n="file.s3t">教育</b>
+            <span data-i18n="file.s3">湖北大学 · 数媒艺术 2025–2029<br>学业排名 1/120 · 广美附中</span>
+          </div>
+        </div>
+        <div class="dossier-right">
+          <a class="dos-resume" href="assets/pdf/莫心雅_游戏策划简历.pdf" target="_blank">
+            <img src="assets/img/resume-preview.webp" alt="莫心雅简历预览" loading="lazy">
+            <span class="dos-resume-cta" data-i18n="file.read">点击阅读完整简历 ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ════════ ISSUE #00 ABOUT ════════ -->
 <section class="issue issue-light" id="about">
   <div class="issue-head">
     <span class="issue-num">ISSUE #00</span>
-    <h2 class="issue-title"><span class="glitch" data-text="起源故事">起源故事</span><small>ORIGIN STORY</small></h2>
+    <h2 class="issue-title"><span class="glitch" data-text="起源故事" data-i18n="about.title">起源故事</span><small>ORIGIN STORY</small></h2>
   </div>
 
   <div class="about-grid">
     <figure class="panel panel-portrait reveal">
       <div class="portrait-duo"><img src="assets/img/portrait.png" alt="莫心雅" width="241" height="337"></div>
-      <figcaption>莫心雅 · MO XINYA<br><b>“被美术耽误的策划，被策划点燃的美术。”</b></figcaption>
+      <figcaption>莫心雅 · MO XINYA<br><b data-i18n="about.quote">“被美术耽误的策划，被策划点燃的美术。”</b></figcaption>
       <span class="burst burst-pink">HI!</span>
     </figure>
 
     <div class="panel panel-edu reveal">
-      <h3>教育线 <small>TIMELINE</small></h3>
+      <h3><span data-i18n="about.edu">教育线</span> <small>TIMELINE</small></h3>
       <ul class="timeline">
-        <li><b>2021–2025</b><span>广州美术学院附属中等美术学校 · 美术方向</span></li>
-        <li><b>约 1 年</b><span>张默然画室 · 动画专项（2D 角色 / 场景构图 / 漫画分镜 / 速写）</span></li>
-        <li class="tl-hot"><b>2025–2029</b><span>湖北大学 · 数字媒体艺术（本科）<em>学业排名 1/120 · 专业第一</em></span></li>
+        <li><b>2021–2025</b><span data-i18n="about.edu1">广州美术学院附属中等美术学校 · 美术方向</span></li>
+        <li><b data-i18n="about.edu2t">约 1 年</b><span data-i18n="about.edu2">张默然画室 · 动画专项（2D 角色 / 场景构图 / 漫画分镜 / 速写）</span></li>
+        <li class="tl-hot"><b>2025–2029</b><span data-i18n="about.edu3">湖北大学 · 数字媒体艺术（本科）<em>学业排名 1/120 · 专业第一</em></span></li>
       </ul>
     </div>
 
     <div class="panel panel-core reveal">
-      <h3>核心能力 <small>POWERS</small></h3>
+      <h3><span data-i18n="about.power">核心能力</span> <small>POWERS</small></h3>
       <div class="power-cards">
         <article class="power power-pink">
-          <b>系统设计</b>
-          <p>独立构建含核心玩法循环、双维度关系系统、四结局结构与非对称协作机制的完整策划案，落到可执行纵向切片。</p>
+          <b data-i18n="about.p1">系统设计</b>
+          <p data-i18n="about.p1d">独立构建含核心玩法循环、双维度关系系统、四结局结构与非对称协作机制的完整策划案，落到可执行纵向切片。</p>
         </article>
         <article class="power power-cyan">
-          <b>叙事设计</b>
-          <p>擅长把文学 IP 转化为交互叙事——分支叙事、情感驱动关卡、「玩法即叙事 / 视角即叙事」融合方案。</p>
+          <b data-i18n="about.p2">叙事设计</b>
+          <p data-i18n="about.p2d">擅长把文学 IP 转化为交互叙事——分支叙事、情感驱动关卡、「玩法即叙事 / 视角即叙事」融合方案。</p>
         </article>
         <article class="power power-purple">
-          <b>关卡设计</b>
-          <p>从关卡概念到垂直切片全流程，含分屏交互脚本、镜头语言与多阶段 Boss 设计。</p>
+          <b data-i18n="about.p3">关卡设计</b>
+          <p data-i18n="about.p3d">从关卡概念到垂直切片全流程，含分屏交互脚本、镜头语言与多阶段 Boss 设计。</p>
         </article>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ════════ 卡牌总览 ════════ -->
+<section class="issue issue-black" id="cards">
+  <span class="bigword" aria-hidden="true">DECK</span>
+  <div class="issue-head">
+    <span class="issue-num num-cyan">TRADING CARDS</span>
+    <h2 class="issue-title"><span class="glitch" data-text="作品卡牌" data-i18n="cards.title">作品卡牌</span><small>PICK A CARD</small></h2>
+    <p class="issue-meta" data-i18n="cards.meta">悬停上色 · 点击翻面看详情</p>
+  </div>
+
+  <div class="cards-rail" id="cardsRail">
+    <button class="pcard pcard-1" data-card="jinling">
+      <span class="pc-num">01</span>
+      <span class="pc-burst" aria-hidden="true"><i class="pc-wham">WHAM!</i></span>
+      <span class="pc-icon" aria-hidden="true">🏮</span>
+      <b class="pc-title" data-i18n="cards.c1t">金陵残梦</b>
+      <small class="pc-tags" data-i18n="cards.c1tag">双人叙事冒险 / 个人独立 / PC·Steam</small>
+      <span class="pc-blurb" data-i18n="cards.c1b">以《红楼梦》为蓝本，两名玩家在同一世界看见不同真相。</span>
+    </button>
+    <button class="pcard pcard-2" data-card="derive">
+      <span class="pc-num">01.5</span>
+      <span class="pc-burst" aria-hidden="true"><i class="pc-wham">BZZT!</i></span>
+      <span class="pc-icon" aria-hidden="true">🎛️</span>
+      <b class="pc-title" data-i18n="cards.c2t">衍生宇宙</b>
+      <small class="pc-tags" data-i18n="cards.c2tag">Arduino 声景装置 / 衍生 APP</small>
+      <span class="pc-blurb" data-i18n="cards.c2b">把游戏的四幕情绪做成可以「拧」的实体音景，再延展成移动端梦境应用。</span>
+    </button>
+    <button class="pcard pcard-3" data-card="pawnshop">
+      <span class="pc-num">02</span>
+      <span class="pc-burst" aria-hidden="true"><i class="pc-wham">CRASH!</i></span>
+      <span class="pc-icon" aria-hidden="true">🏷️</span>
+      <b class="pc-title" data-i18n="cards.c3t">记忆当铺</b>
+      <small class="pc-tags" data-i18n="cards.c3tag">五感沉浸体验 / 主策划 / 全校路演</small>
+      <span class="pc-blurb" data-i18n="cards.c3b">用五感典当记忆，按情感重量结算「典金」。</span>
+    </button>
+    <button class="pcard pcard-4" data-card="system">
+      <span class="pc-num">03</span>
+      <span class="pc-burst" aria-hidden="true"><i class="pc-wham">POW!</i></span>
+      <span class="pc-icon" aria-hidden="true">🎨</span>
+      <b class="pc-title" data-i18n="cards.c4t">你就是系统</b>
+      <small class="pc-tags" data-i18n="cards.c4tag">人体互动画布 / 主策划 / 零硬件</small>
+      <span class="pc-blurb" data-i18n="cards.c4b">数字艺术 = 你的动作 + 系统的回应，人肉实时渲染管线。</span>
+    </button>
   </div>
 </section>
 
@@ -132,21 +306,21 @@
 <section class="issue issue-dark" id="jinling">
   <span class="bigword" aria-hidden="true">JINLING</span>
   <div class="issue-head">
-    <span class="issue-num num-pink">ISSUE #01 · 主线</span>
-    <h2 class="issue-title"><span class="glitch" data-text="金陵残梦">金陵残梦</span><small>REMNANT DREAM OF JINLING</small></h2>
-    <p class="issue-meta">个人独立完成 · 策划 / 叙事 / 关卡 / 美术 / AI 工作流 · 2026.03 – 至今</p>
+    <span class="issue-num num-pink"><span data-i18n="jl.num">ISSUE #01 · 主线</span></span>
+    <h2 class="issue-title"><span class="glitch" data-text="金陵残梦" data-i18n="jl.title">金陵残梦</span><small>REMNANT DREAM OF JINLING</small></h2>
+    <p class="issue-meta" data-i18n="jl.meta">个人独立完成 · 策划 / 叙事 / 关卡 / 美术 / AI 工作流 · 2026.03 – 至今</p>
   </div>
 
   <div class="jl-intro">
     <div class="speech speech-light reveal">
-      <p class="speech-big">“共入金陵旧梦，<br>各得一双眼睛。”</p>
-      <p>以《红楼梦》为蓝本的<b>双人协作叙事冒险游戏</b>概念（PC / Steam）。两名玩家分屏操控代表理性的<b class="t-cyan">石青</b>与代表感性的<b class="t-pink">温遇</b>——在同一个世界看见不同真相，协作解放被困灵魂，以对话选择决定关系走向。</p>
+      <p class="speech-big" data-i18n="jl.quote">“共入金陵旧梦，<br>各得一双眼睛。”</p>
+      <p data-i18n="jl.desc">以《红楼梦》为蓝本的<b>双人协作叙事冒险游戏</b>概念（PC / Steam）。两名玩家分屏操控代表理性的<b class="t-cyan">石青</b>与代表感性的<b class="t-pink">温遇</b>——在同一个世界看见不同真相，协作解放被困灵魂，以对话选择决定关系走向。</p>
     </div>
     <ul class="jl-highlights reveal">
-      <li><b>双人分屏即叙事</b>石青·结构层 / 温遇·情感层两套真相，单视角无法通关</li>
-      <li><b>双层真相</b>缺一不可——「对话节点」按理解度 × 靠近度导向四种关系结局</li>
-      <li><b>全程无 UI</b>沉浸呈现，六章「人物困境 → 玩法转译」关卡 + 多阶段心魔 Boss</li>
-      <li><b>垂直切片</b>已产出《花冢未眠》垂直切片脚本</li>
+      <li><b data-i18n="jl.h1">双人分屏即叙事</b><span data-i18n="jl.h1d">石青·结构层 / 温遇·情感层两套真相，单视角无法通关</span></li>
+      <li><b data-i18n="jl.h2">双层真相</b><span data-i18n="jl.h2d">缺一不可——「对话节点」按理解度 × 靠近度导向四种关系结局</span></li>
+      <li><b data-i18n="jl.h3">全程无 UI</b><span data-i18n="jl.h3d">沉浸呈现，六章「人物困境 → 玩法转译」关卡 + 多阶段心魔 Boss</span></li>
+      <li><b data-i18n="jl.h4">垂直切片</b><span data-i18n="jl.h4d">已产出《花冢未眠》垂直切片脚本</span></li>
     </ul>
   </div>
 
@@ -156,32 +330,32 @@
         <source src="assets/video/jinling-pv.mp4" type="video/mp4">
       </video>
     </div>
-    <span class="video-label">▶ 概念 PV · 112s · AI 动态分镜</span>
+    <span class="video-label" data-i18n="jl.pv">▶ 概念 PV · 112s · AI 动态分镜</span>
     <span class="burst burst-cyan">PLAY!</span>
   </div>
 
-  <h3 class="strip-title reveal">美术概念集 <small>ART CONCEPT COLLECTION · 35P · 点击放大</small></h3>
+  <h3 class="strip-title reveal"><span data-i18n="jl.s1">美术概念集</span> <small data-i18n="jl.s1s">ART CONCEPT COLLECTION · 35P · 点击放大</small></h3>
   <div class="strip" data-gallery="jinling-art" data-count="35" data-h="220"></div>
 
-  <h3 class="strip-title reveal">概念 PPT 节选 <small>CONCEPT DECK · 22P</small></h3>
+  <h3 class="strip-title reveal"><span data-i18n="jl.s2">概念 PPT 节选</span> <small>CONCEPT DECK · 22P</small></h3>
   <div class="strip" data-gallery="jinling-ppt" data-count="22" data-h="170"></div>
 
   <div class="btn-row reveal">
-    <a class="btn btn-pink" href="https://jinling-canmeng.vercel.app" target="_blank" rel="noopener">⚡ 进入交互式导航网站</a>
-    <a class="btn" href="assets/pdf/金陵残梦_游戏概念设计.pdf" target="_blank">📄 完整概念设计文档</a>
-    <a class="btn" href="assets/pdf/金陵残梦_概念PPT.pdf" target="_blank">📑 概念 PPT</a>
+    <a class="btn btn-pink" href="https://jinling-canmeng.vercel.app" target="_blank" rel="noopener" data-i18n="jl.b1">⚡ 进入交互式导航网站</a>
+    <a class="btn" href="assets/pdf/金陵残梦_游戏概念设计.pdf" target="_blank" data-i18n="jl.b2">📄 完整概念设计文档</a>
+    <a class="btn" href="assets/pdf/金陵残梦_概念PPT.pdf" target="_blank" data-i18n="jl.b3">📑 概念 PPT</a>
   </div>
 
   <!-- 衍生产品 -->
   <div class="derive">
     <div class="derive-head reveal">
-      <span class="issue-num num-cyan">ISSUE #01.5 · 衍生宇宙</span>
-      <h3>从屏幕里长出来的《金陵残梦》</h3>
+      <span class="issue-num num-cyan"><span data-i18n="jl.dnum">ISSUE #01.5 · 衍生宇宙</span></span>
+      <h3 data-i18n="jl.dtitle">从屏幕里长出来的《金陵残梦》</h3>
     </div>
     <div class="derive-grid">
       <article class="panel panel-dark reveal">
-        <h4>互动声景装置 <small>ARDUINO DEVICE</small></h4>
-        <p>旋钮划过四段时空——<b class="t-cyan">筑梦·古琴</b> → <b>同感·箫琵琶</b> → <b class="t-pink">悟命·二胡</b> → <b>幻灭·扬琴</b>。Arduino + DFPlayer 实体装置，把游戏的四幕情绪做成可以「拧」的音景。</p>
+        <h4><span data-i18n="jl.d1">互动声景装置</span> <small>ARDUINO DEVICE</small></h4>
+        <p data-i18n="jl.d1d">旋钮划过四段时空——<b class="t-cyan">筑梦·古琴</b> → <b>同感·箫琵琶</b> → <b class="t-pink">悟命·二胡</b> → <b>幻灭·扬琴</b>。Arduino + DFPlayer 实体装置，把游戏的四幕情绪做成可以「拧」的音景。</p>
         <div class="derive-media">
           <img src="assets/img/device/build-1.webp" alt="互动装置实际搭建" loading="lazy" data-zoom>
           <img src="assets/img/device/build-2.webp" alt="互动装置实际搭建" loading="lazy" data-zoom>
@@ -191,10 +365,10 @@
         </video>
       </article>
       <article class="panel panel-dark reveal">
-        <h4>衍生 APP《金陵梦境 · 梦觉》 <small>COMPANION APP</small></h4>
-        <p>将游戏世界观延展为移动端梦境应用概念——以「梦觉」为线索的界面与体验设计。</p>
+        <h4><span data-i18n="jl.d2">衍生 APP《金陵梦境 · 梦觉》</span> <small>COMPANION APP</small></h4>
+        <p data-i18n="jl.d2d">将游戏世界观延展为移动端梦境应用概念——以「梦觉」为线索的界面与体验设计。</p>
         <div class="strip strip-mini" data-gallery="app-mengjue" data-count="26" data-h="150"></div>
-        <a class="btn btn-sm" href="assets/pdf/金陵梦境_梦觉APP.pdf" target="_blank">📄 查看完整方案</a>
+        <a class="btn btn-sm" href="assets/pdf/金陵梦境_梦觉APP.pdf" target="_blank" data-i18n="jl.d2b">📄 查看完整方案</a>
       </article>
     </div>
   </div>
@@ -205,16 +379,16 @@
   <span class="bigword bigword-light" aria-hidden="true">PAWNSHOP</span>
   <div class="issue-head">
     <span class="issue-num num-purple">ISSUE #02</span>
-    <h2 class="issue-title"><span class="glitch" data-text="记忆当铺">记忆当铺</span><small>THE MEMORY PAWNSHOP</small></h2>
-    <p class="issue-meta">五感沉浸式体验 · 校园策划课路演 · 8 人小组 / 主策划兼统筹 · 承担约 80% 工作量 · 2026.04</p>
+    <h2 class="issue-title"><span class="glitch" data-text="记忆当铺" data-i18n="ps.title">记忆当铺</span><small>THE MEMORY PAWNSHOP</small></h2>
+    <p class="issue-meta" data-i18n="ps.meta">五感沉浸式体验 · 校园策划课路演 · 8 人小组 / 主策划兼统筹 · 承担约 80% 工作量 · 2026.04</p>
   </div>
 
   <div class="two-col">
     <div class="speech reveal">
-      <p class="speech-big">“用五感，典当你的记忆。”</p>
-      <p>面向全校路演的沉浸式体验（「超级感官」命题）。把抽象情感转化为<b>可量化反馈</b>——按情感重量结算「典金」，配合逐步解锁的彩蛋机制；破解「去屏幕化」限制，用<b class="t-pink">听 / 嗅 / 触</b>三感搭建对应三段人生的感官舱。</p>
+      <p class="speech-big" data-i18n="ps.quote">“用五感，典当你的记忆。”</p>
+      <p data-i18n="ps.desc">面向全校路演的沉浸式体验（「超级感官」命题）。把抽象情感转化为<b>可量化反馈</b>——按情感重量结算「典金」，配合逐步解锁的彩蛋机制；破解「去屏幕化」限制，用<b class="t-pink">听 / 嗅 / 触</b>三感搭建对应三段人生的感官舱。</p>
       <ul class="flow-steps">
-        <li>典当</li><li>蒙眼入舱</li><li>睁眼探索</li><li>记忆长廊</li>
+        <li data-i18n="ps.f1">典当</li><li data-i18n="ps.f2">蒙眼入舱</li><li data-i18n="ps.f3">睁眼探索</li><li data-i18n="ps.f4">记忆长廊</li>
       </ul>
     </div>
     <div class="video-panel reveal">
@@ -223,21 +397,21 @@
           <source src="assets/video/pawnshop-vlog.mp4" type="video/mp4">
         </video>
       </div>
-      <span class="video-label">▶ 活动 vlog · 现场实录</span>
+      <span class="video-label" data-i18n="ps.vlog">▶ 活动 vlog · 现场实录</span>
     </div>
   </div>
 
   <div class="collage reveal">
-    <figure class="collage-item r-1"><img src="assets/img/pawnshop/receipt-design.webp" alt="典当单收据设计" loading="lazy" data-zoom><figcaption>典当单收据设计</figcaption></figure>
-    <figure class="collage-item r-2"><img src="assets/img/pawnshop/flowchart.webp" alt="活动流程图" loading="lazy" data-zoom><figcaption>活动流程图</figcaption></figure>
-    <figure class="collage-item r-3"><img src="assets/img/pawnshop/script-1.webp" alt="引导员台本" loading="lazy" data-zoom><figcaption>引导员台本（共三部分）</figcaption></figure>
-    <figure class="collage-item r-4"><img src="assets/img/pawnshop/purchase-list.webp" alt="采购清单与用途说明" loading="lazy" data-zoom><figcaption>采购清单与统筹</figcaption></figure>
+    <figure class="collage-item r-1"><img src="assets/img/pawnshop/receipt-design.webp" alt="典当单收据设计" loading="lazy" data-zoom><figcaption data-i18n="ps.c1">典当单收据设计</figcaption></figure>
+    <figure class="collage-item r-2"><img src="assets/img/pawnshop/flowchart.webp" alt="活动流程图" loading="lazy" data-zoom><figcaption data-i18n="ps.c2">活动流程图</figcaption></figure>
+    <figure class="collage-item r-3"><img src="assets/img/pawnshop/script-1.webp" alt="引导员台本" loading="lazy" data-zoom><figcaption data-i18n="ps.c3">引导员台本（共三部分）</figcaption></figure>
+    <figure class="collage-item r-4"><img src="assets/img/pawnshop/purchase-list.webp" alt="采购清单与用途说明" loading="lazy" data-zoom><figcaption data-i18n="ps.c4">采购清单与统筹</figcaption></figure>
   </div>
 
-  <h3 class="strip-title reveal">汇报 PPT <small>13P · 独立完成</small></h3>
+  <h3 class="strip-title reveal"><span data-i18n="ps.s1">汇报 PPT</span> <small data-i18n="ps.s1s">13P · 独立完成</small></h3>
   <div class="strip" data-gallery="pawnshop-ppt" data-count="13" data-h="170"></div>
   <div class="btn-row reveal">
-    <a class="btn" href="assets/pdf/记忆当铺_汇报PPT.pdf" target="_blank">📑 下载汇报 PPT</a>
+    <a class="btn" href="assets/pdf/记忆当铺_汇报PPT.pdf" target="_blank" data-i18n="ps.b1">📑 下载汇报 PPT</a>
   </div>
 </section>
 
@@ -246,15 +420,15 @@
   <span class="bigword" aria-hidden="true">SYSTEM</span>
   <div class="issue-head">
     <span class="issue-num num-cyan">ISSUE #03</span>
-    <h2 class="issue-title"><span class="glitch" data-text="你就是系统">你就是系统</span><small>HUMAN INTERACTIVE CANVAS</small></h2>
-    <p class="issue-meta">人体互动画布 · 数字艺术互动体验 · 8 人小组 / 主策划兼统筹 · 承担约 80% 工作量 · 2026.03</p>
+    <h2 class="issue-title"><span class="glitch" data-text="你就是系统" data-i18n="sy.title">你就是系统</span><small>HUMAN INTERACTIVE CANVAS</small></h2>
+    <p class="issue-meta" data-i18n="sy.meta">人体互动画布 · 数字艺术互动体验 · 8 人小组 / 主策划兼统筹 · 承担约 80% 工作量 · 2026.03</p>
   </div>
 
   <div class="two-col">
     <div class="speech speech-light reveal">
-      <p class="speech-big">“数字艺术 = 你的动作 + 系统的回应。”</p>
-      <p>面向全班 29 人的互动体验，主题与核心创意均由本人构思。设计<b class="t-cyan">「人肉实时渲染」管线</b>：体验者做动作 → 侧面模仿者复现 → 背面绘画者实时成画，构建动作—反馈闭环。<b>零硬件落地</b>，划分体验 / 绘画区与动线，制作循环讲解视频并培训执行。</p>
-      <p class="pipeline"><span>体验者</span>→<span>模仿者</span>→<span>绘画者</span>→<span class="pp-hot">实时成画</span></p>
+      <p class="speech-big" data-i18n="sy.quote">“数字艺术 = 你的动作 + 系统的回应。”</p>
+      <p data-i18n="sy.desc">面向全班 29 人的互动体验，主题与核心创意均由本人构思。设计<b class="t-cyan">「人肉实时渲染」管线</b>：体验者做动作 → 侧面模仿者复现 → 背面绘画者实时成画，构建动作—反馈闭环。<b>零硬件落地</b>，划分体验 / 绘画区与动线，制作循环讲解视频并培训执行。</p>
+      <p class="pipeline"><span data-i18n="sy.p1">体验者</span>→<span data-i18n="sy.p2">模仿者</span>→<span data-i18n="sy.p3">绘画者</span>→<span class="pp-hot" data-i18n="sy.p4">实时成画</span></p>
     </div>
     <div class="video-panel reveal">
       <div class="video-frame video-frame-cyan">
@@ -262,18 +436,18 @@
           <source src="assets/video/system-vlog.mp4" type="video/mp4">
         </video>
       </div>
-      <span class="video-label">▶ 活动 vlog</span>
+      <span class="video-label" data-i18n="sy.vlog">▶ 活动 vlog</span>
       <span class="burst burst-pink">哇!</span>
     </div>
   </div>
 
   <div class="sys-media reveal">
-    <figure class="panel panel-dark"><img src="assets/img/system/system-poster.webp" alt="宣传物料" loading="lazy" data-zoom><figcaption>宣传物料</figcaption></figure>
-    <figure class="panel panel-dark"><img src="assets/img/system/linjiechang-analysis.webp" alt="《临界场》看展记录与分析" loading="lazy" data-zoom><figcaption>前期独立产出：《临界场》空间叙事拆解</figcaption></figure>
+    <figure class="panel panel-dark"><img src="assets/img/system/system-poster.webp" alt="宣传物料" loading="lazy" data-zoom><figcaption data-i18n="sy.m1">宣传物料</figcaption></figure>
+    <figure class="panel panel-dark"><img src="assets/img/system/linjiechang-analysis.webp" alt="《临界场》看展记录与分析" loading="lazy" data-zoom><figcaption data-i18n="sy.m2">前期独立产出：《临界场》空间叙事拆解</figcaption></figure>
     <div class="sys-strip">
-      <h3 class="strip-title">宣讲 PPT <small>7P</small></h3>
+      <h3 class="strip-title"><span data-i18n="sy.s1">宣讲 PPT</span> <small>7P</small></h3>
       <div class="strip strip-mini" data-gallery="system-ppt" data-count="7" data-h="150"></div>
-      <a class="btn btn-sm" href="assets/pdf/你就是系统_宣讲PPT.pdf" target="_blank">📑 下载宣讲 PPT</a>
+      <a class="btn btn-sm" href="assets/pdf/你就是系统_宣讲PPT.pdf" target="_blank" data-i18n="sy.b1">📑 下载宣讲 PPT</a>
     </div>
   </div>
 </section>
@@ -282,13 +456,13 @@
 <section class="issue issue-light" id="gameart">
   <span class="bigword bigword-light" aria-hidden="true">ART!</span>
   <div class="issue-head">
-    <span class="issue-num num-pink">BONUS ISSUE · 番外</span>
-    <h2 class="issue-title"><span class="glitch" data-text="游戏美术">游戏美术</span><small>GAME ART PORTFOLIO</small></h2>
-    <p class="issue-meta">2D 角色设计 · 游戏场景构图与绘画 · 多格漫画分镜与排版 · 速写</p>
+    <span class="issue-num num-pink"><span data-i18n="ga.num">BONUS ISSUE · 番外</span></span>
+    <h2 class="issue-title"><span class="glitch" data-text="游戏美术" data-i18n="ga.title">游戏美术</span><small>GAME ART PORTFOLIO</small></h2>
+    <p class="issue-meta" data-i18n="ga.meta">2D 角色设计 · 游戏场景构图与绘画 · 多格漫画分镜与排版 · 速写</p>
   </div>
   <div class="strip strip-tall" data-gallery="gameart" data-count="34" data-h="260"></div>
   <div class="btn-row reveal">
-    <a class="btn" href="assets/pdf/莫心雅_游戏美术_说明.pdf" target="_blank">📄 美术能力说明</a>
+    <a class="btn" href="assets/pdf/莫心雅_游戏美术_说明.pdf" target="_blank" data-i18n="ga.b1">📄 美术能力说明</a>
   </div>
 </section>
 
@@ -297,28 +471,28 @@
   <span class="bigword" aria-hidden="true">GEAR</span>
   <div class="issue-head">
     <span class="issue-num num-purple">EQUIPMENT</span>
-    <h2 class="issue-title"><span class="glitch" data-text="装备库">装备库</span><small>SKILLS &amp; AI WORKFLOW</small></h2>
-    <p class="issue-meta">AI 工具链贯穿「设计 → 验证 → 产出」全流程 · 设计判断与取舍均由本人完成</p>
+    <h2 class="issue-title"><span class="glitch" data-text="装备库" data-i18n="sk.title">装备库</span><small>SKILLS &amp; AI WORKFLOW</small></h2>
+    <p class="issue-meta" data-i18n="sk.meta">AI 工具链贯穿「设计 → 验证 → 产出」全流程 · 设计判断与取舍均由本人完成</p>
   </div>
 
   <div class="wf-rail reveal">
-    <article class="wf-node"><span class="wf-step">01</span><b>设计 · 论证</b><p>Claude / Gemini / GPT 交叉讨论验证迭代，作「会反驳的策划搭档」产出概念文档</p></article>
-    <article class="wf-node"><span class="wf-step">02</span><b>概念美术</b><p>GPT Image 逐张打磨提示词，生成统一水墨风格全套概念图</p></article>
-    <article class="wf-node"><span class="wf-step">03</span><b>概念 PV</b><p>即梦 Seedance / 可灵图生视频，剪映剪辑 + AI 配音字幕，合成动态分镜</p></article>
-    <article class="wf-node"><span class="wf-step">04</span><b>工程交付</b><p>Claude Code 搭建 Next.js 导航网站，产出 PPT / PDF 交付物</p></article>
+    <article class="wf-node"><span class="wf-step">01</span><b data-i18n="sk.w1">设计 · 论证</b><p data-i18n="sk.w1d">Claude / Gemini / GPT 交叉讨论验证迭代，作「会反驳的策划搭档」产出概念文档</p></article>
+    <article class="wf-node"><span class="wf-step">02</span><b data-i18n="sk.w2">概念美术</b><p data-i18n="sk.w2d">GPT Image 逐张打磨提示词，生成统一水墨风格全套概念图</p></article>
+    <article class="wf-node"><span class="wf-step">03</span><b data-i18n="sk.w3">概念 PV</b><p data-i18n="sk.w3d">即梦 Seedance / 可灵图生视频，剪映剪辑 + AI 配音字幕，合成动态分镜</p></article>
+    <article class="wf-node"><span class="wf-step">04</span><b data-i18n="sk.w4">工程交付</b><p data-i18n="sk.w4d">Claude Code 搭建 Next.js 导航网站，产出 PPT / PDF 交付物</p></article>
   </div>
 
-  <div class="skill-tags reveal">
-    <div class="tag-group"><b>美术 / 视觉</b><span>Procreate</span><span>Figma</span><span>Canva</span><span>Pinterest</span><span>漫画分镜</span><span>速写</span></div>
-    <div class="tag-group"><b>工程 / 工具链</b><span>GitHub · Skills / MCP</span><span>Claude Code</span><span>Cursor</span><span>Vercel</span><span>Python</span><span>Git</span><span>Node.js / Next.js</span><span>React</span><span>Supabase</span></div>
-    <div class="tag-group"><b>影音</b><span>可灵 Kling</span><span>剪映</span><span>Suno</span></div>
+  <h3 class="strip-title reveal"><span data-i18n="sk.web">技能蛛网</span> <small data-i18n="sk.webs">SKILL UNIVERSE · 悬停点亮</small></h3>
+  <div class="web-universe reveal" id="webUniverse">
+    <svg class="web-svg" id="webSvg" aria-hidden="true"></svg>
+    <div class="web-nodes" id="webNodes"></div>
   </div>
 
-  <h3 class="strip-title reveal">玩家档案 <small>PLAYER PROFILE · 游戏经历与设计素养</small></h3>
+  <h3 class="strip-title reveal"><span data-i18n="sk.gamer">玩家档案</span> <small data-i18n="sk.gamers">PLAYER PROFILE · 游戏经历与设计素养</small></h3>
   <div class="gamer-grid reveal">
-    <article class="gamer-card gc-pink"><b>叙事 / 情感体验<i>核心方向</i></b><p>底特律：变人 · 艾迪芬奇的记忆 · 锈湖 · 全网公敌 · 纸房子 · Journey · Flower · 光遇 · 纪念碑谷</p></article>
-    <article class="gamer-card gc-cyan"><b>双人协作 / 非对称<i>核心方向</i></b><p>双人成行 · 双影奇境 · 胡闹厨房 · 猫和老鼠手游——研究非对称协作与信息差机制</p></article>
-    <article class="gamer-card gc-purple"><b>多品类涉猎</b><p>英雄联盟手游 · 和平精英 · 使命召唤手游 · 明日方舟 · 我的世界 · 奇迹暖暖 · 食物语 · Phigros</p></article>
+    <article class="gamer-card gc-pink"><b><span data-i18n="sk.g1">叙事 / 情感体验</span><i data-i18n="sk.gcore">核心方向</i></b><p>底特律：变人 · 艾迪芬奇的记忆 · 锈湖 · 全网公敌 · 纸房子 · Journey · Flower · 光遇 · 纪念碑谷</p></article>
+    <article class="gamer-card gc-cyan"><b><span data-i18n="sk.g2">双人协作 / 非对称</span><i data-i18n="sk.gcore2">核心方向</i></b><p data-i18n="sk.g2d">双人成行 · 双影奇境 · 胡闹厨房 · 猫和老鼠手游——研究非对称协作与信息差机制</p></article>
+    <article class="gamer-card gc-purple"><b data-i18n="sk.g3">多品类涉猎</b><p data-i18n="sk.g3d">英雄联盟手游 · 和平精英 · 使命召唤手游 · 明日方舟 · 我的世界 · 奇迹暖暖 · 食物语 · Phigros</p></article>
   </div>
 </section>
 
@@ -327,21 +501,59 @@
   <div class="contact-halftone"></div>
   <div class="contact-inner">
     <span class="issue-num">NEXT ISSUE…</span>
-    <h2 class="contact-title"><span class="glitch" data-text="一起做游戏？">一起做游戏？</span></h2>
-    <p class="contact-sub">意向岗位：游戏策划培训生（日常实习） · 随时可以聊</p>
-    <div class="contact-cards">
-      <a class="ccard" href="mailto:2062491054@qq.com"><small>EMAIL</small><b>2062491054@qq.com</b></a>
-      <a class="ccard" href="tel:13554137459"><small>PHONE</small><b>135-5413-7459</b></a>
-      <a class="ccard" href="https://github.com/Cynthia-Mo-Ya" target="_blank" rel="noopener"><small>GITHUB</small><b>Cynthia-Mo-Ya</b></a>
-      <a class="ccard ccard-hot" href="assets/pdf/莫心雅_游戏策划简历.pdf" target="_blank"><small>RESUME</small><b>📄 下载简历 PDF</b></a>
+    <h2 class="contact-title"><span class="glitch" data-text="一起做游戏？" data-i18n="ct.title">一起做游戏？</span></h2>
+    <p class="contact-sub" data-i18n="ct.sub">意向岗位：游戏策划培训生（日常实习） · 随时可以聊</p>
+
+    <div class="contact-flex">
+      <div class="contact-side">
+        <div class="ransom" aria-hidden="true">
+          <i>C</i><i>O</i><i>N</i><i>T</i><i>A</i><i>C</i><i>T</i><b></b><i>M</i><i>E</i>
+        </div>
+        <svg class="megaphone" viewBox="0 0 200 150" aria-hidden="true">
+          <defs><pattern id="mghd" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="currentColor"/></pattern></defs>
+          <g fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M28 70 L88 48 L150 18 L150 96 L88 72 L28 86 Z" fill="url(#mghd)"/>
+            <path d="M40 88 L52 126 L74 120 L64 84"/>
+            <path d="M160 30 q24 -8 30 -16 M162 56 q26 0 34 -4 M160 80 q22 8 30 18"/>
+          </g>
+        </svg>
+        <p class="contact-open"><b data-i18n="ct.open">OPEN TO</b><span data-i18n="ct.opend">游戏策划日常实习 · 叙事/系统/关卡方向 · 通常 24h 内回复</span></p>
+      </div>
+
+      <div class="contact-rows">
+        <a class="crow" href="mailto:2062491054@qq.com">
+          <span class="crow-base"><i>✉</i> 2062491054@qq.com</span>
+          <span class="crow-tape crow-tape-mail"><i>✉</i> 2062491054@qq.com</span>
+        </a>
+        <a class="crow" href="tel:13554137459">
+          <span class="crow-base"><i>☎</i> 135-5413-7459</span>
+          <span class="crow-tape crow-tape-tel"><i>☎</i> 135-5413-7459 <em>^_^</em></span>
+        </a>
+        <a class="crow" href="https://github.com/Cynthia-Mo-Ya" target="_blank" rel="noopener">
+          <span class="crow-base"><i>🐙</i> github.com/Cynthia-Mo-Ya</span>
+          <span class="crow-tape crow-tape-gh"><i>🐱</i> github / Cynthia-Mo-Ya</span>
+        </a>
+        <a class="crow crow-resume" href="assets/pdf/莫心雅_游戏策划简历.pdf" target="_blank">
+          <span class="crow-base"><i>🕷</i> <span data-i18n="ct.resume">Resume / 简历 PDF</span></span>
+          <span class="crow-tape crow-tape-cv"><i>🕷</i> RESUME <em>✦</em></span>
+        </a>
+      </div>
     </div>
   </div>
   <footer class="footer">
-    <p>© 2026 莫心雅 CYNTHIA · 用 <span class="t-pink">♥</span> 与蛛丝织成 · Inspired by the Spider-Verse / Earth-65</p>
+    <p data-i18n="ct.footer">© 2026 莫心雅 CYNTHIA · 用 <span class="t-pink">♥</span> 与蛛丝织成 · Inspired by the Spider-Verse / Earth-65</p>
   </footer>
 </section>
 
 </main>
+
+<!-- ════════ CARD DETAIL MODAL ════════ -->
+<div class="cardx" id="cardx" hidden>
+  <div class="cardx-card" id="cardxCard">
+    <button class="cardx-close" id="cardxClose">CLOSE ✕</button>
+    <div class="cardx-body" id="cardxBody"></div>
+  </div>
+</div>
 
 <!-- ════════ LIGHTBOX ════════ -->
 <div class="lightbox" id="lightbox" hidden>
@@ -354,6 +566,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/features.js"></script>
 </body>
 </html>

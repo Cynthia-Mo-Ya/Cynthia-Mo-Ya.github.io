@@ -160,11 +160,24 @@
       document.querySelectorAll('.reveal').forEach(function (el) { el.style.opacity = 1; });
     }
   }
+  /* title intro: A → PORTFOLIO letters slam in → of Cynthia */
+  if (hasGsap && !reduced) {
+    var lt = gsap.timeline();
+    lt.from('.lt-a', { y: -30, opacity: 0, duration: .3, ease: 'power2.out' })
+      .from('#ltWord i', {
+        scale: 2.2, opacity: 0, rotate: function (i) { return i % 2 ? 14 : -14; },
+        stagger: .07, duration: .35, ease: 'back.out(1.8)'
+      }, '-=.05')
+      .from('.lt-of', { y: 24, opacity: 0, duration: .3 }, '-=.1')
+      .from('.loader-sub', { opacity: 0, duration: .3 }, '-=.1');
+  }
+  var minShow = Date.now() + 1700;
   window.addEventListener('load', function () {
     var bar = loader.querySelector('.loader-bar i');
+    var wait = Math.max(0, minShow - Date.now());
     if (hasGsap && !reduced) {
-      gsap.to(bar, { width: '100%', duration: .6, ease: 'power2.out', onComplete: dismissLoader });
-    } else { dismissLoader(); }
+      gsap.to(bar, { width: '100%', duration: Math.max(.6, wait / 1000), ease: 'power1.inOut', onComplete: dismissLoader });
+    } else { setTimeout(dismissLoader, wait); }
   });
   /* safety: never trap users behind the loader */
   setTimeout(function () { if (document.body.contains(loader)) dismissLoader(); }, 4000);
