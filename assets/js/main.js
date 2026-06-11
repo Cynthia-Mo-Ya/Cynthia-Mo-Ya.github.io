@@ -9,8 +9,22 @@
   if (location.hash) {
     history.replaceState(null, '', location.pathname + location.search);
   }
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  /* 刷新永远回到顶部。注意：ScrollTrigger 的 refresh 会把 scrollRestoration 改回 auto，
+     浏览器随后仍会恢复上次滚动位置 —— 所以 load 后要多次重申 + 强制回顶 */
+  function forceTop() {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }
+  forceTop();
+  window.addEventListener('load', function () {
+    forceTop();
+    setTimeout(forceTop, 60);
+    setTimeout(forceTop, 350);
+    setTimeout(forceTop, 1000);
+  });
+  /* Safari 往返缓存(bfcache)恢复页面时也带回位置：pageshow 强制回顶 */
+  window.addEventListener('pageshow', forceTop);
+  window.addEventListener('pagehide', function () { window.scrollTo(0, 0); });
 
   /* ── build gallery strips ───────────────────────────── */
   var galleryNames = {
