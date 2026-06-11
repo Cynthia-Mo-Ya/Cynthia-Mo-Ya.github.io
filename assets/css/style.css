@@ -221,7 +221,20 @@ a { color: inherit; text-decoration: none; }
 }
 @keyframes splatSpin { to { transform: rotate(360deg); } }
 
-.hero-inner { position: relative; z-index: 2; max-width: 1100px; }
+.hero-inner {
+  position: relative; z-index: 2; max-width: 1320px;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(24px, 4vw, 64px); align-items: center;
+}
+/* 首屏右侧的简历档案夹 */
+.hero-side { display: flex; justify-content: center; }
+.hero-side .dossier-cover { width: min(290px, 100%); transform: rotate(1.8deg); }
+.hero-side .dossier-cover:hover { transform: rotate(.4deg) translateY(-8px); }
+.hero-side .dossier-spread { width: min(640px, 92vw); }
+@media (max-width: 1080px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-side { margin: 30px 0 44px; }
+}
 .comic-tag {
   display: inline-block; background: var(--ink); color: var(--cyan);
   font-family: var(--disp-en); letter-spacing: .18em; font-size: .85rem;
@@ -800,7 +813,7 @@ a { color: inherit; text-decoration: none; }
 .decode-layout {
   position: relative; z-index: 2;
   display: grid; grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(30px, 5vw, 90px); align-items: start;
+  gap: clamp(30px, 5vw, 90px); align-items: center;
   max-width: 1380px; margin: 0 auto;
 }
 .decode-right {
@@ -847,7 +860,7 @@ a { color: inherit; text-decoration: none; }
 .spider-stage { position: relative; display: flex; flex-direction: column; align-items: center; padding: 18px 0; width: 100%; }
 /* 蜘蛛身后的手织蛛网（JS 生成，Gwen 配色）：平时隐藏，悬停/点开蜘蛛时迸发 */
 .spider-backweb {
-  position: absolute; top: 50%; left: 50%; width: min(340px, 96%); aspect-ratio: 1;
+  position: absolute; top: 50%; left: 50%; width: min(420px, 96%); aspect-ratio: 1;
   transform: translate(-50%, -52%) rotate(-12deg) scale(.4);
   opacity: 0; pointer-events: none; overflow: visible;
   filter: drop-shadow(0 0 14px rgba(255, 46, 136, .35));
@@ -876,7 +889,7 @@ a { color: inherit; text-decoration: none; }
 }
 .spider-stage:hover .spider-bubble { transform: rotate(2deg) scale(1.05); opacity: 1; }
 .spider-svg {
-  position: relative; z-index: 2; width: clamp(110px, 12vw, 150px); height: auto;
+  position: relative; z-index: 2; width: clamp(140px, 16vw, 190px); height: auto;
   transition: transform .4s cubic-bezier(.2, 1.6, .4, 1), filter .3s;
   filter: drop-shadow(0 10px 22px rgba(255, 46, 136, .4));
 }

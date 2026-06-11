@@ -156,7 +156,11 @@
 
   /* ── loader + intro ─────────────────────────────────── */
   var loader = document.getElementById('loader');
+  var loaderDismissed = false;
   function dismissLoader() {
+    /* load 完成与 4s 兜底可能同时触发：跑两次会让 heroIntro 的 from() 把贴纸卡在 scale 0 */
+    if (loaderDismissed) return;
+    loaderDismissed = true;
     if (hasGsap && !reduced) {
       gsap.to(loader, {
         yPercent: -100, duration: .55, ease: 'power3.in', delay: .15,
@@ -198,7 +202,9 @@
       .from('.hero-zh', { x: -40, opacity: 0, duration: .4 }, '-=.2')
       .from('.role-chip', { y: 26, opacity: 0, stagger: .08, duration: .35 }, '-=.15')
       .from('.hero-line', { opacity: 0, y: 16, duration: .35 }, '-=.1')
-      .from('.sticker', { scale: 0, rotation: -14, opacity: 0, stagger: .1, duration: .4, ease: 'back.out(2)' }, '-=.1')
+      /* 贴纸有 CSS transition: transform，from() 会捕获到错误的终点 0 —— 必须用显式起止 + clearProps */
+      .fromTo('.sticker', { scale: 0, rotation: -14, opacity: 0 },
+        { scale: 1, rotation: 0, opacity: 1, stagger: .1, duration: .4, ease: 'back.out(2)', clearProps: 'transform,opacity' }, '-=.1')
       .from('.hero-scroll', { opacity: 0, duration: .4 })
       .from('.hero-marquee', { yPercent: 110, duration: .45, ease: 'power2.out' }, '-=.35');
   }

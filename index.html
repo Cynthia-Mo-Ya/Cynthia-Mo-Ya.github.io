@@ -9,7 +9,7 @@
 <meta property="og:description" content="把文学变成可以玩的梦 — 系统 / 叙事 / 关卡设计">
 <meta property="og:image" content="assets/img/jinling-art/jinling-art-01.webp">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="stylesheet" href="assets/css/style.css?v=5">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 </head>
 <body>
 
@@ -60,6 +60,7 @@
   <div class="hero-splat hero-splat-cyan" aria-hidden="true"></div>
 
   <div class="hero-inner">
+  <div class="hero-main">
     <div class="hero-tag comic-tag">
       <span class="blink">●</span> <span data-i18n="hero.tag">MULTIVERSE FILE · EARTH-65 · 中国 · 武汉</span>
     </div>
@@ -81,6 +82,58 @@
     </div>
 
     <a class="hero-scroll" href="#decode"><span data-i18n="hero.scroll">往下滑</span> <span class="thwip">THWIP!</span> ↓</a>
+  </div><!-- /hero-main -->
+
+  <!-- 简历档案夹：首屏大名右侧 -->
+  <div class="hero-side">
+    <div class="dossier" id="dossier">
+      <button class="dossier-cover" id="dossierCover">
+        <i class="dossier-clip" aria-hidden="true"></i>
+        <span class="dossier-tab">CYNTHIA</span>
+        <span class="dossier-plate">
+          <small>PERSONAL DOSSIER</small>
+          <b>CYNTHIA</b>
+          <em>Mo Xinya / Case File</em>
+        </span>
+        <span class="dossier-stamp" data-i18n="file.stamp">CONFIDENTIAL</span>
+        <span class="dossier-hint" data-i18n="file.open">⤷ 单击展开档案</span>
+        <i class="dossier-marks" aria-hidden="true"><u></u><u></u><u></u></i>
+      </button>
+
+      <div class="dossier-spread" id="dossierSpread" hidden>
+        <button class="dossier-close" id="dossierClose" data-i18n="file.close">⤶ 单击合上文档</button>
+        <div class="dossier-left">
+          <figure class="dos-polaroid">
+            <img src="assets/img/portrait.png" alt="莫心雅">
+            <figcaption>FILE 01 · born to design</figcaption>
+            <i class="sp-tape" aria-hidden="true"></i>
+          </figure>
+          <div class="dos-namecard">
+            <b>CYNTHIA</b>
+            <span data-i18n="file.name">莫心雅 · 游戏策划</span>
+          </div>
+          <div class="dos-sticky dos-sticky-y">
+            <b data-i18n="file.s1t">审美 / 策划 / AI 工作流</b>
+            <span data-i18n="file.s1">把文学变成可以玩的梦</span>
+          </div>
+          <div class="dos-sticky dos-sticky-r">
+            <b>PROOF</b>
+            <span data-i18n="file.s2">· 系统 / 叙事 / 关卡设计<br>· 5 件独立交付<br>· 80% 主策工作量 ×2</span>
+          </div>
+          <div class="dos-sticky dos-sticky-w">
+            <b data-i18n="file.s3t">教育</b>
+            <span data-i18n="file.s3">湖北大学 · 数媒艺术 2025–2029<br>学业排名 1/120 · 广美附中</span>
+          </div>
+        </div>
+        <div class="dossier-right">
+          <a class="dos-resume" href="assets/pdf/莫心雅_游戏策划简历.pdf" target="_blank">
+            <img src="assets/img/resume-preview.webp" alt="莫心雅简历预览" loading="lazy">
+            <span class="dos-resume-cta" data-i18n="file.read">点击阅读完整简历 ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div><!-- /hero-side -->
   </div>
 
   <div class="hero-marquee" aria-hidden="true">
@@ -139,7 +192,7 @@
   <div class="decode-right">
     <div class="spider-stage" id="spiderStage">
       <svg class="spider-backweb" id="spiderBackweb" aria-hidden="true"></svg>
-      <div class="spider-bubble" data-i18n="spider.bubble">CLICK ME<br>OR THE FILE</div>
+      <div class="spider-bubble" data-i18n="spider.bubble">CLICK ME!</div>
       <!-- ATSV 格温蜘蛛徽标（用户高清修复版，抠图） -->
       <img class="spider-svg" id="spiderSvg" src="assets/img/gwen-spider.png" alt="Gwen spider emblem" width="519" height="700">
 
@@ -152,55 +205,6 @@
           <input type="text" id="spInput" maxlength="120" data-i18n-ph="spider.ph" placeholder="问项目、能力、合作方式…" autocomplete="off">
           <button type="submit" id="spAsk">Ask</button>
         </form>
-      </div>
-    </div>
-
-    <!-- 牛皮纸档案夹 -->
-    <div class="dossier" id="dossier">
-      <button class="dossier-cover" id="dossierCover">
-        <i class="dossier-clip" aria-hidden="true"></i>
-        <span class="dossier-tab">CYNTHIA</span>
-        <span class="dossier-plate">
-          <small>PERSONAL DOSSIER</small>
-          <b>CYNTHIA</b>
-          <em>Mo Xinya / Case File</em>
-        </span>
-        <span class="dossier-stamp" data-i18n="file.stamp">CONFIDENTIAL</span>
-        <span class="dossier-hint" data-i18n="file.open">⤷ 单击展开档案</span>
-        <i class="dossier-marks" aria-hidden="true"><u></u><u></u><u></u></i>
-      </button>
-
-      <div class="dossier-spread" id="dossierSpread" hidden>
-        <button class="dossier-close" id="dossierClose" data-i18n="file.close">⤶ 单击合上文档</button>
-        <div class="dossier-left">
-          <figure class="dos-polaroid">
-            <img src="assets/img/portrait.png" alt="莫心雅">
-            <figcaption>FILE 01 · born to design</figcaption>
-            <i class="sp-tape" aria-hidden="true"></i>
-          </figure>
-          <div class="dos-namecard">
-            <b>CYNTHIA</b>
-            <span data-i18n="file.name">莫心雅 · 游戏策划</span>
-          </div>
-          <div class="dos-sticky dos-sticky-y">
-            <b data-i18n="file.s1t">审美 / 策划 / AI 工作流</b>
-            <span data-i18n="file.s1">把文学变成可以玩的梦</span>
-          </div>
-          <div class="dos-sticky dos-sticky-r">
-            <b>PROOF</b>
-            <span data-i18n="file.s2">· 系统 / 叙事 / 关卡设计<br>· 5 件独立交付<br>· 80% 主策工作量 ×2</span>
-          </div>
-          <div class="dos-sticky dos-sticky-w">
-            <b data-i18n="file.s3t">教育</b>
-            <span data-i18n="file.s3">湖北大学 · 数媒艺术 2025–2029<br>学业排名 1/120 · 广美附中</span>
-          </div>
-        </div>
-        <div class="dossier-right">
-          <a class="dos-resume" href="assets/pdf/莫心雅_游戏策划简历.pdf" target="_blank">
-            <img src="assets/img/resume-preview.webp" alt="莫心雅简历预览" loading="lazy">
-            <span class="dos-resume-cta" data-i18n="file.read">点击阅读完整简历 ↗</span>
-          </a>
-        </div>
       </div>
     </div>
   </div><!-- /decode-right -->
@@ -559,8 +563,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="assets/js/i18n.js?v=5"></script>
-<script src="assets/js/main.js?v=5"></script>
-<script src="assets/js/features.js?v=5"></script>
+<script src="assets/js/i18n.js?v=6"></script>
+<script src="assets/js/main.js?v=6"></script>
+<script src="assets/js/features.js?v=6"></script>
 </body>
 </html>
