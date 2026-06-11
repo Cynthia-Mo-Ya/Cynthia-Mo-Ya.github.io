@@ -845,18 +845,21 @@ a { color: inherit; text-decoration: none; }
 
 /* ───── spider QA ───── */
 .spider-stage { position: relative; display: flex; flex-direction: column; align-items: center; padding: 40px 0; width: 100%; }
-/* 蜘蛛身后的手织蛛网（JS 生成，Gwen 配色） */
+/* 蜘蛛身后的手织蛛网（JS 生成，Gwen 配色）：平时隐藏，悬停/点开蜘蛛时迸发 */
 .spider-backweb {
   position: absolute; top: 50%; left: 50%; width: min(460px, 96%); aspect-ratio: 1;
-  transform: translate(-50%, -52%) rotate(-6deg);
-  opacity: .8; pointer-events: none; overflow: visible;
-  transition: opacity .4s, transform .6s cubic-bezier(.2, 1.2, .4, 1);
+  transform: translate(-50%, -52%) rotate(-12deg) scale(.4);
+  opacity: 0; pointer-events: none; overflow: visible;
+  filter: drop-shadow(0 0 14px rgba(255, 46, 136, .35));
+  transition: opacity .4s, transform .65s cubic-bezier(.16, 1.5, .3, 1);
 }
 .spider-backweb path, .spider-backweb line { fill: none; stroke-linecap: round; }
-.spider-backweb .wb-main { stroke: rgba(237, 232, 248, .34); }
-.spider-backweb .wb-pink { stroke: rgba(255, 46, 136, .5); }
-.spider-backweb .wb-cyan { stroke: rgba(61, 242, 224, .42); }
-.spider-stage:hover .spider-backweb { opacity: 1; transform: translate(-50%, -52%) rotate(-2deg) scale(1.04); }
+.spider-backweb .wb-main { stroke: rgba(247, 240, 255, .5); }
+.spider-backweb .wb-pink { stroke: rgba(255, 61, 158, .85); }
+.spider-backweb .wb-cyan { stroke: rgba(78, 245, 230, .8); }
+.spider-stage:hover .spider-backweb, .spider-stage.webon .spider-backweb {
+  opacity: 1; transform: translate(-50%, -52%) rotate(-2deg) scale(1.05);
+}
 .spider-bubble {
   position: relative; z-index: 2;
   font-family: var(--disp-en); letter-spacing: .12em; font-size: 1rem;
@@ -873,13 +876,14 @@ a { color: inherit; text-decoration: none; }
 }
 .spider-stage:hover .spider-bubble { transform: rotate(2deg) scale(1.05); opacity: 1; }
 .spider-svg {
-  position: relative; z-index: 2; width: clamp(170px, 22vw, 240px); color: var(--pink);
-  transition: color .3s, transform .4s cubic-bezier(.2, 1.6, .4, 1);
+  position: relative; z-index: 2; width: clamp(150px, 18vw, 210px); height: auto;
+  transition: transform .4s cubic-bezier(.2, 1.6, .4, 1), filter .3s;
   filter: drop-shadow(0 10px 22px rgba(255, 46, 136, .4));
 }
-.spider-stage:hover .spider-svg { color: #FF5CA8; transform: scale(1.13) translateY(-10px); }
-.spider-svg .sp-glitch { transition: transform .25s; }
-.spider-stage:hover .sp-glitch { transform: translateX(2px); }
+.spider-stage:hover .spider-svg {
+  transform: scale(1.13) translateY(-10px);
+  filter: drop-shadow(0 14px 30px rgba(255, 46, 136, .65)) brightness(1.12) saturate(1.3);
+}
 .spider-hint { position: relative; z-index: 2; font-size: .8rem; opacity: .55; margin-top: 14px; }
 
 .spider-panel {

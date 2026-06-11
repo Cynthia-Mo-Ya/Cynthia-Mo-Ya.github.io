@@ -96,6 +96,8 @@
     spiderStage.addEventListener('click', function (e) {
       if (noteQa.contains(e.target)) return;
       noteQa.hidden = !noteQa.hidden;
+      /* 触屏没有 hover：点开问答时同步迸发身后的蛛网 */
+      spiderStage.classList.toggle('webon', !noteQa.hidden);
       if (!noteQa.hidden) {
         if (hasGsap && !reduced) {
           gsap.fromTo(noteQa, { y: 26, opacity: 0, rotate: -5 }, { y: 0, opacity: 1, rotate: -1.4, duration: .4, ease: 'back.out(1.6)' });
@@ -448,27 +450,28 @@
         });
       }
     });
-    /* idle shimmer: light a random node every 2s until hovered/tapped
-       —— 停止时必须清掉最后点亮的节点，否则会有一个永远亮着 */
-    var webTouched = false;
-    var shimmer = setInterval(function () {
-      if (document.hidden) return;
-      var all = webNodes.querySelectorAll('.wnode');
-      if (!all.length) return;
-      all.forEach(function (n) { n.classList.remove('lit'); });
-      all[Math.floor(Math.random() * all.length)].classList.add('lit');
-    }, 2000);
-    function stopShimmer(clearLit) {
-      if (webTouched) return;
-      webTouched = true;
-      clearInterval(shimmer);
-      if (clearLit) {
-        webNodes.querySelectorAll('.wnode.lit').forEach(function (n) { n.classList.remove('lit'); });
+    /* idle shimmer: light a random node every 2s until hovered
+       —— 只在有鼠标的设备上开启；触屏设备没有 mouseover 停不下来，会变成「永远有一个亮着」 */
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      var webTouched = false;
+      var shimmer = setInterval(function () {
+        if (document.hidden) return;
+        var all = webNodes.querySelectorAll('.wnode');
+        if (!all.length) return;
+        all.forEach(function (n) { n.classList.remove('lit'); });
+        all[Math.floor(Math.random() * all.length)].classList.add('lit');
+      }, 2000);
+      function stopShimmer(clearLit) {
+        if (webTouched) return;
+        webTouched = true;
+        clearInterval(shimmer);
+        if (clearLit) {
+          webNodes.querySelectorAll('.wnode.lit').forEach(function (n) { n.classList.remove('lit'); });
+        }
       }
+      webNodes.addEventListener('mouseover', function () { stopShimmer(true); }, { once: true });
+      webNodes.addEventListener('click', function () { stopShimmer(false); });
     }
-    webNodes.addEventListener('mouseover', function () { stopShimmer(true); }, { once: true });
-    /* 触屏没有 mouseover：点按由下方 toggle 处理点亮，这里只停掉闪烁 */
-    webNodes.addEventListener('click', function () { stopShimmer(false); });
   }
 
   /* ════════ loader word inject (PORTFOLIO letters) ════════ */
