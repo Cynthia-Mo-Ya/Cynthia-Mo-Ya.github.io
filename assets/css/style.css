@@ -1309,7 +1309,7 @@ a { color: inherit; text-decoration: none; }
   transform: rotate(var(--r, -3deg));
   box-shadow: 2px 3px 0 rgba(20, 16, 31, .5);
 }
-.ransom b { width: 14px; }
+.ransom b { flex-basis: 100%; height: 0; } /* 强制换行：CONTACT / ME */
 .ransom i:nth-child(1) { background: #fff; color: var(--ink); --r: -4deg; }
 .ransom i:nth-child(2) { background: var(--ink); color: var(--cyan); --r: 3deg; }
 .ransom i:nth-child(3) { background: var(--yellow); color: var(--ink); --r: -2deg; }
