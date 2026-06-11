@@ -38,7 +38,7 @@
     'decode.i': { zh: '沉浸体验 · 全程无 UI / 五感入梦', en: 'Immersion · UI-less worlds, five-sense dreams' },
     'decode.a': { zh: '美术功底 · 广美附中科班出身', en: 'Art-trained · GAFA affiliated school' },
 
-    'spider.bubble': { zh: 'CLICK ME!', en: 'CLICK ME!' },
+    'spider.bubble': { zh: 'CLICK ME!<br>点我 · 问我任何事', en: 'CLICK ME!<br>ASK ME ANYTHING' },
     'spider.noteq': { zh: '你有什么想问我的？', en: 'What do you want to ask me?' },
     'spider.welcome': { zh: '嗨！我是心雅的蜘蛛 🕷️ 项目、设计理念、AI 工作流、为什么是《红楼梦》……问点真的。', en: 'Hi! I am Cynthia\'s spider 🕷️ Projects, design philosophy, AI workflow, why Dream of the Red Chamber… ask me something real.' },
     'spider.ph': { zh: '问项目、能力、合作方式…', en: 'Ask about projects, skills, collaboration…' },
