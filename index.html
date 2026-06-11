@@ -54,7 +54,8 @@
 <!-- ════════ HERO ════════ -->
 <header class="hero" id="top">
   <div class="hero-halftone"></div>
-  <div class="hero-web hero-web-tl" aria-hidden="true"></div>
+  <svg class="hero-web hero-web-tl" id="heroWebTl" aria-hidden="true"></svg>
+  <div class="hero-checker" aria-hidden="true"></div>
   <div class="hero-splat hero-splat-pink" aria-hidden="true"></div>
   <div class="hero-splat hero-splat-cyan" aria-hidden="true"></div>
 
@@ -97,11 +98,11 @@
   <div class="issue-head">
     <span class="issue-num num-pink">CODENAME</span>
     <h2 class="issue-title"><span class="glitch" data-text="解码 CYNTHIA" data-i18n="decode.title">解码 CYNTHIA</span><small>DECODE THE NAME</small></h2>
-    <p class="issue-meta" data-i18n="decode.meta">七个字母 · 七种能力 · 把鼠标放上去试试</p>
+    <p class="issue-meta" data-i18n="decode.meta">七个字母 · 七种能力 · 点亮试试看</p>
   </div>
 
+  <div class="decode-layout">
   <div class="decode-wrap">
-    <div class="decode-ghost" aria-hidden="true"><i>C</i><i>Y</i><i>N</i><i>T</i><i>H</i><i>I</i><i>A</i></div>
     <ul class="decode-letters" id="decodeLetters">
       <li class="dletter" style="--lc: var(--pink)">
         <span class="dl-char">C</span>
@@ -134,21 +135,38 @@
     </ul>
   </div>
 
-  <!-- 蜘蛛问答 + 档案夹 -->
-  <div class="spider-zone" id="spiderZone">
+  <!-- 右侧：蜘蛛问答（上） + 档案夹（下） -->
+  <div class="decode-right">
     <div class="spider-stage" id="spiderStage">
-      <div class="spider-burst" aria-hidden="true"></div>
+      <svg class="spider-backweb" id="spiderBackweb" aria-hidden="true"></svg>
       <div class="spider-bubble" data-i18n="spider.bubble">CLICK ME<br>OR THE FILE</div>
-      <!-- Gwen 徽标风格蜘蛛：棱角长腿 -->
+      <!-- ATSV Gwen 徽标风蜘蛛：利刃长腿 + 故障切片 -->
       <svg class="spider-svg" id="spiderSvg" viewBox="0 0 220 200" aria-label="spider">
-        <g fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M96 84 L52 56 L20 64 M94 94 L42 90 L12 110 M96 104 L52 122 L40 156 M102 112 L84 144 L92 182"/>
-          <path d="M124 84 L168 56 L200 64 M126 94 L178 90 L208 110 M124 104 L168 122 L180 156 M118 112 L136 144 L128 182"/>
+        <g fill="currentColor">
+          <!-- 左侧四条利刃腿 -->
+          <polygon points="107,76 102,82 72,12 78,7"/>
+          <polygon points="99,87 94,92 30,34 36,27"/>
+          <polygon points="94,99 92,106 8,90 9,82"/>
+          <polygon points="95,112 101,118 54,192 46,186"/>
+          <!-- 右侧镜像 -->
+          <polygon points="113,76 118,82 148,12 142,7"/>
+          <polygon points="121,87 126,92 190,34 184,27"/>
+          <polygon points="126,99 128,106 212,90 211,82"/>
+          <polygon points="125,112 119,118 166,192 174,186"/>
+          <!-- 头 + 尖腹 -->
+          <polygon points="110,50 123,66 110,80 97,66"/>
+          <polygon points="110,80 128,96 120,136 110,156 100,136 92,96"/>
         </g>
-        <path d="M110 56 L120 66 L118 80 L110 86 L102 80 L100 66 Z" fill="currentColor"/>
-        <path d="M110 86 L126 96 L122 126 L110 142 L98 126 L94 96 Z" fill="currentColor"/>
-        <circle cx="104" cy="70" r="2.4" fill="#0B0814"/>
-        <circle cx="116" cy="70" r="2.4" fill="#0B0814"/>
+        <!-- Gwen 面罩眼 -->
+        <polygon points="99,70 104,59 107,68 103,73" fill="#fff"/>
+        <polygon points="121,70 116,59 113,68 117,73" fill="#fff"/>
+        <!-- 故障切片：青 / 白（细线，只压在身体上） -->
+        <g class="sp-glitch">
+          <polygon points="93,103 127,99 127,102 93,106" fill="var(--cyan)" opacity=".95"/>
+          <polygon points="97,122 123,119 123,121.5 97,124.5" fill="#fff" opacity=".85"/>
+          <polygon points="101,140 119,137.5 119,140 101,142.5" fill="var(--cyan)" opacity=".8"/>
+          <polygon points="100,62 120,60 120,62.5 100,64.5" fill="#fff" opacity=".7"/>
+        </g>
       </svg>
 
       <!-- 白色便签问答（点蜘蛛弹出） -->
@@ -211,7 +229,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </div><!-- /decode-right -->
+  </div><!-- /decode-layout -->
 </section>
 
 <!-- ════════ ISSUE #00 ABOUT ════════ -->
@@ -482,7 +501,7 @@
     <article class="wf-node"><span class="wf-step">04</span><b data-i18n="sk.w4">工程交付</b><p data-i18n="sk.w4d">Claude Code 搭建 Next.js 导航网站，产出 PPT / PDF 交付物</p></article>
   </div>
 
-  <h3 class="strip-title reveal"><span data-i18n="sk.web">技能蛛网</span> <small data-i18n="sk.webs">SKILL UNIVERSE · 悬停点亮</small></h3>
+  <h3 class="strip-title reveal"><span data-i18n="sk.web">技能蛛网</span> <small data-i18n="sk.webs">SKILL UNIVERSE · 点亮试试</small></h3>
   <div class="web-universe reveal" id="webUniverse">
     <svg class="web-svg" id="webSvg" aria-hidden="true"></svg>
     <div class="web-nodes" id="webNodes"></div>

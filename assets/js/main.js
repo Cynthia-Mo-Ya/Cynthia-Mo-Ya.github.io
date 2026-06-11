@@ -5,6 +5,13 @@
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasGsap = typeof gsap !== 'undefined';
 
+  /* ── 锚点残留修复：Safari 恢复标签页 / 刷新时带着 #hash 会直接跳到中间章节 ── */
+  if (location.hash) {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
   /* ── build gallery strips ───────────────────────────── */
   var galleryNames = {
     'jinling-art': '《金陵残梦》美术概念集',

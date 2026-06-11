@@ -29,7 +29,7 @@
     'hero.scroll': { zh: '往下滑', en: 'Scroll down' },
 
     'decode.title': { zh: '解码 CYNTHIA', en: 'DECODE CYNTHIA' },
-    'decode.meta': { zh: '七个字母 · 七种能力 · 把鼠标放上去试试', en: 'Seven letters · seven powers · hover to decode' },
+    'decode.meta': { zh: '七个字母 · 七种能力 · 点亮试试看', en: 'Seven letters · seven powers · light them up' },
     'decode.c': { zh: '双人协作 · 非对称机制研究者', en: 'Co-op design · asymmetric mechanics nerd' },
     'decode.y': { zh: '纺出故事线 · 也是一根蛛丝', en: 'Spinning yarns · also spider silk' },
     'decode.n': { zh: '叙事设计 · 文学 IP 的交互转生', en: 'Narrative design · literature reborn as play' },
@@ -155,7 +155,7 @@
     'sk.w4': { zh: '工程交付', en: 'Engineering' },
     'sk.w4d': { zh: 'Claude Code 搭建 Next.js 导航网站，产出 PPT / PDF 交付物', en: 'Claude Code builds the Next.js hub site, plus PPT / PDF deliverables' },
     'sk.web': { zh: '技能蛛网', en: 'Skill Web' },
-    'sk.webs': { zh: 'SKILL UNIVERSE · 悬停点亮', en: 'SKILL UNIVERSE · HOVER TO LIGHT UP' },
+    'sk.webs': { zh: 'SKILL UNIVERSE · 点亮试试', en: 'SKILL UNIVERSE · LIGHT THEM UP' },
     'sk.gamer': { zh: '玩家档案', en: 'Player Profile' },
     'sk.gamers': { zh: 'PLAYER PROFILE · 游戏经历与设计素养', en: 'GAMES PLAYED & DESIGN LITERACY' },
     'sk.g1': { zh: '叙事 / 情感体验', en: 'Narrative / Emotional' },

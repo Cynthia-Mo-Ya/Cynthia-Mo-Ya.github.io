@@ -19,6 +19,13 @@
     li.addEventListener('mouseleave', function () {
       if (ghosts[i]) ghosts[i].classList.remove('lit');
     });
+    /* 触屏：点按点亮 */
+    li.addEventListener('click', function () {
+      interacted = true;
+      var on = li.classList.contains('lit');
+      clearLit();
+      if (!on) li.classList.add('lit');
+    });
   });
   function clearLit() {
     clearInterval(autoTimer); autoTimer = null;
@@ -44,10 +51,6 @@
     gsap.from('#decodeLetters .dletter', {
       x: -90, opacity: 0, skewX: -12, stagger: .09, duration: .6, ease: 'power3.out',
       scrollTrigger: { trigger: '#decodeLetters', start: 'top 78%', onEnter: startAutoCycle }
-    });
-    gsap.from('.decode-ghost i', {
-      y: 60, opacity: 0, stagger: .07, duration: .6, ease: 'power3.out',
-      scrollTrigger: { trigger: '#decodeLetters', start: 'top 78%' }
     });
   }
 
@@ -298,74 +301,93 @@
   }
 
   /* ════════ 5. SKILL WEB ════════ */
+  /* 节点散布到整张网（半径 .4–1.0），不再挤在中心 */
   var NODES = [
-    { n: 'Claude', icon: 'claude', c: '#D97757', a: -90, r: .30 },
-    { n: 'GPT', icon: 'openai', c: '#10A37F', a: -52, r: .52 },
-    { n: 'Gemini', icon: 'googlegemini', c: '#886FBF', a: -125, r: .55 },
-    { n: 'DeepSeek', icon: 'deepseek', c: '#4D6BFE', a: -20, r: .30 },
-    { n: 'Figma', icon: 'figma', c: '#F24E1E', a: 175, r: .42 },
-    { n: 'Procreate', mono: 'P', c: '#3C91E6', a: 152, r: .68 },
-    { n: 'Canva', icon: 'canva', c: '#00C4CC', a: 200, r: .62 },
-    { n: 'Pinterest', icon: 'pinterest', c: '#E60023', a: 218, r: .38 },
-    { n: 'Notion', icon: 'notion', c: '#F0ECFF', a: -155, r: .80 },
-    { n: 'GitHub', icon: 'github', c: '#F0ECFF', a: 12, r: .55 },
-    { n: 'Git', icon: 'git', c: '#F05032', a: 32, r: .80 },
-    { n: 'Python', icon: 'python', c: '#3776AB', a: 55, r: .55 },
-    { n: 'React', icon: 'react', c: '#61DAFB', a: -68, r: .85 },
-    { n: 'Node.js', icon: 'nodedotjs', c: '#5FA04E', a: 80, r: .82 },
-    { n: 'Next.js', icon: 'nextdotjs', c: '#F0ECFF', a: -38, r: .72 },
-    { n: 'Supabase', icon: 'supabase', c: '#3FCF8E', a: 5, r: .92 },
-    { n: 'Vercel', icon: 'vercel', c: '#F0ECFF', a: -8, r: .60 },
-    { n: 'Cursor', icon: 'cursor', c: '#F0ECFF', a: -105, r: .76 },
-    { n: '剪映 CapCut', mono: '剪', c: '#00E5D0', a: 108, r: .56 },
-    { n: '即梦 Seedance', mono: '即', c: '#5B6CFF', a: 128, r: .82 },
-    { n: '可灵 Kling', mono: '灵', c: '#00E08F', a: 95, r: .34 },
-    { n: 'Suno', icon: 'suno', c: '#FF7847', a: 142, r: .48 }
+    { n: 'Claude', icon: 'claude', c: '#D97757', a: -90, r: .42 },
+    { n: 'GPT', icon: 'openai', c: '#10A37F', a: -58, r: .62 },
+    { n: 'Gemini', icon: 'googlegemini', c: '#886FBF', a: -118, r: .60 },
+    { n: 'DeepSeek', icon: 'deepseek', c: '#4D6BFE', a: -28, r: .48 },
+    { n: 'Figma', icon: 'figma', c: '#F24E1E', a: 168, r: .55 },
+    { n: 'Procreate', mono: 'P', c: '#3C91E6', a: 150, r: .85 },
+    { n: 'Canva', icon: 'canva', c: '#00C4CC', a: 192, r: .78 },
+    { n: 'Pinterest', icon: 'pinterest', c: '#E60023', a: 216, r: .58 },
+    { n: 'Notion', icon: 'notion', c: '#F0ECFF', a: -150, r: .82 },
+    { n: 'GitHub', icon: 'github', c: '#F0ECFF', a: 14, r: .68 },
+    { n: 'Git', icon: 'git', c: '#F05032', a: 34, r: .94 },
+    { n: 'Python', icon: 'python', c: '#3776AB', a: 54, r: .66 },
+    { n: 'React', icon: 'react', c: '#61DAFB', a: -72, r: .96 },
+    { n: 'Node.js', icon: 'nodedotjs', c: '#5FA04E', a: 78, r: .88 },
+    { n: 'Next.js', icon: 'nextdotjs', c: '#F0ECFF', a: -44, r: .86 },
+    { n: 'Supabase', icon: 'supabase', c: '#3FCF8E', a: 2, r: .96 },
+    { n: 'Vercel', icon: 'vercel', c: '#F0ECFF', a: -8, r: .52 },
+    { n: 'Cursor', icon: 'cursor', c: '#F0ECFF', a: -104, r: .90 },
+    { n: '剪映 CapCut', mono: '剪', c: '#00E5D0', a: 108, r: .60 },
+    { n: '即梦 Seedance', mono: '即', c: '#5B6CFF', a: 124, r: .92 },
+    { n: '可灵 Kling', mono: '灵', c: '#00E08F', a: 92, r: .48 },
+    { n: 'Suno', icon: 'suno', c: '#FF7847', a: 138, r: .62 }
   ];
 
   var webSvg = document.getElementById('webSvg');
   var webNodes = document.getElementById('webNodes');
 
-  function buildWeb() {
-    if (!webSvg) return;
-    var W = 1000, H = 625, cx = 500, cy = 295;
-    webSvg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
-    var rnd = (function (seed) {
-      return function () { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
-    })(65);
-    var spokes = 13, maxR = 560;
-    var angles = [];
-    var svg = '';
+  /* 共用的「手织蛛网」生成器：不规则辐线 + 下垂丝 + 外圈破口 + 锚丝（参考真实蛛网） */
+  function weaveWeb(svgEl, opt) {
+    if (!svgEl) return;
+    var W = opt.w, H = opt.h, cx = opt.cx, cy = opt.cy, maxR = opt.maxR;
+    var spokes = opt.spokes || 12, rings = opt.rings || 8, seed = opt.seed || 65;
+    var rnd = (function (s) {
+      return function () { s = (s * 9301 + 49297) % 233280; return s / 233280; };
+    })(seed);
+    svgEl.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    var angles = [], spokeLen = [], svg = '';
     for (var s = 0; s < spokes; s++) {
-      var a = (s / spokes) * Math.PI * 2 + (rnd() - .5) * .22;
-      angles.push(a);
-      var x2 = cx + Math.cos(a) * maxR, y2 = cy + Math.sin(a) * maxR;
-      svg += '<line x1="' + cx + '" y1="' + cy + '" x2="' + x2.toFixed(1) + '" y2="' + y2.toFixed(1) + '" stroke-width="' + (1.2 + rnd() * 1.2).toFixed(2) + '"/>';
+      angles.push((s / spokes) * Math.PI * 2 + (rnd() - .5) * .4);
+      spokeLen.push(maxR * (0.82 + rnd() * .3));
     }
-    for (var ring = 1; ring <= 7; ring++) {
-      var rr = (ring / 7) * maxR * (0.92 + rnd() * .12);
-      var d = '';
+    function cls(i) { return i % 6 === 1 ? 'wb-pink' : (i % 6 === 4 ? 'wb-cyan' : 'wb-main'); }
+    /* 辐线（部分延伸成锚丝） */
+    for (s = 0; s < spokes; s++) {
+      var len = spokeLen[s] * (s % 3 === 0 ? 1.22 : 1);
+      var x2 = cx + Math.cos(angles[s]) * len, y2 = cy + Math.sin(angles[s]) * len;
+      svg += '<line class="' + cls(s) + '" x1="' + cx + '" y1="' + cy + '" x2="' + x2.toFixed(1) + '" y2="' + y2.toFixed(1) + '" stroke-width="' + (0.9 + rnd() * 1.1).toFixed(2) + '"/>';
+    }
+    /* 螺旋圈：每段下垂，外圈带随机破口 */
+    for (var ring = 1; ring <= rings; ring++) {
+      var t = ring / rings;
+      var rr = Math.pow(t, 1.12) * maxR * (0.9 + rnd() * .16);
+      var d = '', drawing = false;
       for (var i = 0; i <= spokes; i++) {
-        var ai = angles[i % spokes];
-        var rj = rr * (0.94 + rnd() * .1);
-        var px = cx + Math.cos(ai) * rj, py = cy + Math.sin(ai) * rj;
-        if (i === 0) { d += 'M' + px.toFixed(1) + ' ' + py.toFixed(1); }
-        else {
-          var am = (angles[(i - 1) % spokes] + ai) / 2 + (ai < angles[(i - 1) % spokes] ? Math.PI : 0);
-          var sag = rj * (0.88 + rnd() * .05);
+        var si = i % spokes;
+        var rj = Math.min(rr * (0.86 + rnd() * .22), spokeLen[si]);
+        var px = cx + Math.cos(angles[si]) * rj, py = cy + Math.sin(angles[si]) * rj;
+        var torn = ring >= rings - 1 && rnd() < .22;
+        if (!drawing || i === 0) {
+          d += 'M' + px.toFixed(1) + ' ' + py.toFixed(1); drawing = true;
+        } else {
+          var prev = angles[(i - 1) % spokes];
+          var am = (prev + angles[si]) / 2 + (angles[si] < prev ? Math.PI : 0);
+          var sag = rj * (0.84 + rnd() * .08);
           var mx = cx + Math.cos(am) * sag, my = cy + Math.sin(am) * sag;
           d += ' Q' + mx.toFixed(1) + ' ' + my.toFixed(1) + ' ' + px.toFixed(1) + ' ' + py.toFixed(1);
         }
+        if (torn) drawing = false;
       }
-      svg += '<path d="' + d + '" stroke-width="' + (0.9 + ring * .16).toFixed(2) + '"/>';
+      svg += '<path class="' + cls(ring + 2) + '" d="' + d + '" stroke-width="' + (0.7 + t * 1.1).toFixed(2) + '"/>';
     }
-    webSvg.innerHTML = svg;
+    svgEl.innerHTML = svg;
+  }
+
+  function buildWeb() {
+    if (!webSvg) return;
+    weaveWeb(webSvg, { w: 1000, h: 625, cx: 500, cy: 300, maxR: 540, spokes: 13, rings: 9, seed: 65 });
+    /* 拉伸填满容器：窄屏上保证蛛网与按百分比定位的节点对齐 */
+    webSvg.setAttribute('preserveAspectRatio', 'none');
 
     var frag = document.createDocumentFragment();
     NODES.forEach(function (nd) {
       var rad = nd.a * Math.PI / 180;
-      var nx = 50 + Math.cos(rad) * nd.r * 46;
-      var ny = 47 + Math.sin(rad) * nd.r * 44;
+      var nx = 50 + Math.cos(rad) * nd.r * 48;
+      var ny = 48 + Math.sin(rad) * nd.r * 45;
       var b = document.createElement('button');
       b.className = 'wnode';
       b.style.setProperty('--x', nx.toFixed(1) + '%');
@@ -393,6 +415,22 @@
   }
   buildWeb();
 
+  /* 蜘蛛身后的手织蛛网（同一生成器，另一组种子） */
+  weaveWeb(document.getElementById('spiderBackweb'), { w: 460, h: 460, cx: 230, cy: 218, maxR: 225, spokes: 12, rings: 8, seed: 24 });
+  /* hero 左上角的四分之一蛛网 */
+  weaveWeb(document.getElementById('heroWebTl'), { w: 380, h: 380, cx: 6, cy: 6, maxR: 360, spokes: 14, rings: 8, seed: 7 });
+
+  /* 触屏：点按技能节点点亮 / 再点熄灭 */
+  if (webNodes) {
+    webNodes.addEventListener('click', function (e) {
+      var node = e.target.closest('.wnode');
+      if (!node) return;
+      var on = node.classList.contains('lit');
+      webNodes.querySelectorAll('.wnode.lit').forEach(function (n) { n.classList.remove('lit'); });
+      if (!on) node.classList.add('lit');
+    });
+  }
+
   if (hasGsap && !reduced && typeof ScrollTrigger !== 'undefined' && webSvg) {
     gsap.set('#webUniverse', { scale: .3, opacity: 0, filter: 'blur(14px)' });
     gsap.set('.wnode', { scale: 0, opacity: 0 });
@@ -410,16 +448,27 @@
         });
       }
     });
-    /* idle shimmer: light a random node every 2s until hovered */
+    /* idle shimmer: light a random node every 2s until hovered/tapped
+       —— 停止时必须清掉最后点亮的节点，否则会有一个永远亮着 */
     var webTouched = false;
-    webNodes.addEventListener('mouseover', function () { webTouched = true; }, { once: true });
-    setInterval(function () {
-      if (webTouched || document.hidden) return;
+    var shimmer = setInterval(function () {
+      if (document.hidden) return;
       var all = webNodes.querySelectorAll('.wnode');
       if (!all.length) return;
       all.forEach(function (n) { n.classList.remove('lit'); });
       all[Math.floor(Math.random() * all.length)].classList.add('lit');
     }, 2000);
+    function stopShimmer(clearLit) {
+      if (webTouched) return;
+      webTouched = true;
+      clearInterval(shimmer);
+      if (clearLit) {
+        webNodes.querySelectorAll('.wnode.lit').forEach(function (n) { n.classList.remove('lit'); });
+      }
+    }
+    webNodes.addEventListener('mouseover', function () { stopShimmer(true); }, { once: true });
+    /* 触屏没有 mouseover：点按由下方 toggle 处理点亮，这里只停掉闪烁 */
+    webNodes.addEventListener('click', function () { stopShimmer(false); });
   }
 
   /* ════════ loader word inject (PORTFOLIO letters) ════════ */
