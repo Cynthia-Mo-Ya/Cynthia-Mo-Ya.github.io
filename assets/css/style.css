@@ -1032,20 +1032,23 @@ a { color: inherit; text-decoration: none; }
   transition: transform .4s cubic-bezier(.2, 1.8, .4, 1) .05s, opacity .25s;
 }
 .pcard:hover .pc-wham { opacity: 1; transform: translateX(-50%) rotate(4deg) scale(1); }
+/* Gwen 四连格：粉×白 / 青×电蓝 / 紫×薰衣草 / 白×冰蓝，互不重复 */
 .pcard-1 .pc-burst { background:
-  radial-gradient(circle, rgba(255,227,77,.55) 1.6px, transparent 2.2px) 0 0/13px 13px,
-  repeating-conic-gradient(from 12deg at 50% 32%, rgba(255,46,136,.85) 0 7deg, rgba(255,150,40,.8) 7deg 14deg, rgba(20,16,31,.92) 14deg 26deg); }
-.pcard-2 .pc-burst { background:
   radial-gradient(circle, rgba(61,242,224,.5) 1.6px, transparent 2.2px) 0 0/13px 13px,
-  repeating-conic-gradient(from 40deg at 50% 32%, rgba(61,242,224,.85) 0 7deg, rgba(123,47,242,.85) 7deg 14deg, rgba(20,16,31,.92) 14deg 26deg); }
+  repeating-conic-gradient(from 12deg at 50% 32%, rgba(255,46,136,.9) 0 7deg, rgba(255,255,255,.85) 7deg 14deg, rgba(20,16,31,.92) 14deg 26deg); }
+.pcard-2 .pc-burst { background:
+  radial-gradient(circle, rgba(255,46,136,.45) 1.6px, transparent 2.2px) 0 0/13px 13px,
+  repeating-conic-gradient(from 40deg at 50% 32%, rgba(61,242,224,.85) 0 7deg, rgba(42,107,255,.85) 7deg 14deg, rgba(20,16,31,.92) 14deg 26deg); }
 .pcard-3 .pc-burst { background:
-  radial-gradient(circle, rgba(255,46,136,.5) 1.6px, transparent 2.2px) 0 0/13px 13px,
-  repeating-conic-gradient(from 70deg at 50% 32%, rgba(255,227,77,.9) 0 7deg, rgba(255,46,136,.85) 7deg 14deg, rgba(20,16,31,.92) 14deg 26deg); }
+  radial-gradient(circle, rgba(255,255,255,.4) 1.6px, transparent 2.2px) 0 0/13px 13px,
+  repeating-conic-gradient(from 70deg at 50% 32%, rgba(123,47,242,.9) 0 7deg, rgba(183,148,246,.8) 7deg 14deg, rgba(20,16,31,.92) 14deg 26deg); }
 .pcard-4 .pc-burst { background:
-  radial-gradient(circle, rgba(183,148,246,.5) 1.6px, transparent 2.2px) 0 0/13px 13px,
-  repeating-conic-gradient(from 100deg at 50% 32%, rgba(123,47,242,.9) 0 7deg, rgba(61,242,224,.85) 7deg 14deg, rgba(20,16,31,.92) 14deg 26deg); }
-.pcard-2 .pc-wham { background: var(--cyan-deep); }
-.pcard-3 .pc-wham { background: var(--purple); }
+  radial-gradient(circle, rgba(255,46,136,.4) 1.6px, transparent 2.2px) 0 0/13px 13px,
+  repeating-conic-gradient(from 100deg at 50% 32%, rgba(255,255,255,.92) 0 7deg, rgba(159,216,255,.8) 7deg 14deg, rgba(20,16,31,.92) 14deg 26deg); }
+.pcard-1 .pc-wham { background: var(--ink); text-shadow: 2px 2px 0 var(--pink); }
+.pcard-2 .pc-wham { background: var(--pink-deep); }
+.pcard-3 .pc-wham { background: var(--cyan-deep); }
+.pcard-4 .pc-wham { background: var(--purple); }
 .pcard:hover .pc-tags { color: #fff; }
 @media (max-width: 720px) {
   .cards-rail { grid-template-columns: 1fr; }
