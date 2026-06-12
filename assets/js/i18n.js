@@ -7,7 +7,7 @@
 
     'nav.decode': { zh: '代号', en: 'Codename' },
     'nav.about': { zh: '起源', en: 'Origin' },
-    'nav.cards': { zh: '卡牌', en: 'Cards' },
+    'nav.cards': { zh: '连载', en: 'Comics' },
     'nav.jinling': { zh: '金陵残梦', en: 'Jinling' },
     'nav.pawnshop': { zh: '记忆当铺', en: 'Pawnshop' },
     'nav.system': { zh: '你就是系统', en: 'System' },
@@ -71,8 +71,8 @@
     'about.p3': { zh: '关卡设计', en: 'Level Design' },
     'about.p3d': { zh: '从关卡概念到垂直切片全流程，含分屏交互脚本、镜头语言与多阶段 Boss 设计。', en: 'Full pipeline from level concept to vertical slice: split-screen interaction scripts, camera language, multi-phase boss design.' },
 
-    'cards.title': { zh: '作品卡牌', en: 'PROJECT CARDS' },
-    'cards.meta': { zh: '悬停上色 · 点击翻面看详情', en: 'Hover to ink · click to flip' },
+    'cards.title': { zh: '作品连载', en: 'COMIC PAGES' },
+    'cards.meta': { zh: '悬停上色 · 点开分格看详情', en: 'Hover to ink · click a panel for details' },
     'cards.c1t': { zh: '金陵残梦', en: 'Remnant Dream of Jinling' },
     'cards.c1tag': { zh: '双人叙事冒险 / 个人独立 / PC·Steam', en: 'Co-op narrative adventure / solo work / PC·Steam' },
     'cards.c1b': { zh: '以《红楼梦》为蓝本，两名玩家在同一世界看见不同真相。', en: 'Based on Dream of the Red Chamber — two players see two truths in one world.' },
