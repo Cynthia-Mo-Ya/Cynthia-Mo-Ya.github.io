@@ -294,12 +294,14 @@
   });
 
   if (hasGsap && !reduced && typeof ScrollTrigger !== 'undefined') {
-    gsap.from('.pcard', {
-      opacity: 0, scale: .55, y: 130, filter: 'blur(10px)',
-      stagger: .12, duration: .8, ease: 'power3.out',
-      scrollTrigger: { trigger: '#cardsRail', start: 'top 82%' },
-      clearProps: 'filter,transform'
-    });
+    /* 整张漫画页甩入；.pcard 自身有 CSS transition，不能逐卡 from() */
+    gsap.fromTo('#cardsRail',
+      { opacity: 0, y: 110, rotation: -2.5 },
+      {
+        opacity: 1, y: 0, rotation: 0, duration: .8, ease: 'power3.out',
+        scrollTrigger: { trigger: '#cardsRail', start: 'top 82%' },
+        clearProps: 'opacity,transform'
+      });
   }
 
   /* ════════ 5. SKILL WEB ════════ */

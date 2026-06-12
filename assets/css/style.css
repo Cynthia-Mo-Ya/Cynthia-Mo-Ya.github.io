@@ -944,45 +944,94 @@ a { color: inherit; text-decoration: none; }
 .sp-form button:disabled { opacity: .5; cursor: wait; transform: none; }
 .sp-note { font-size: .75rem; opacity: .5; margin-top: 12px; }
 
-/* ───── project cards ───── */
+/* ───── project cards · 多格漫画 COMIC PAGE ───── */
 .cards-rail {
   position: relative; z-index: 2; perspective: 1200px;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-  gap: clamp(18px, 2.6vw, 32px); max-width: 1280px;
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: clamp(14px, 2vw, 26px);
+  max-width: 1040px;
+  padding: clamp(16px, 2.6vw, 32px);
+  background:
+    radial-gradient(rgba(20, 16, 31, .09) 1px, transparent 1.5px) 0 0 / 12px 12px,
+    linear-gradient(150deg, #FDFBFF 0%, #F2EAFC 100%);
+  border: 4px solid var(--ink); border-radius: 6px;
+  box-shadow: 12px 12px 0 rgba(255, 46, 136, .9), 12px 12px 0 3px var(--ink);
+}
+.cards-rail::before {
+  content: 'EARTH-65 / CYNTHIA COMICS / PAGE 01';
+  position: absolute; top: -36px; left: 4px;
+  font-family: var(--disp-en); font-size: .85rem; letter-spacing: .2em;
+  color: rgba(237, 232, 248, .55);
+}
+.cards-rail::after {
+  content: 'TO BE CONTINUED...';
+  position: absolute; right: 20px; bottom: -17px; z-index: 4;
+  font-family: var(--disp-en); font-size: .95rem; letter-spacing: .12em;
+  background: var(--yellow); color: var(--ink);
+  border: 3px solid var(--ink); padding: 2px 14px;
+  transform: rotate(-2deg);
 }
 .pcard {
   position: relative; overflow: hidden; cursor: pointer; text-align: left;
-  min-height: clamp(360px, 30vw, 460px);
-  display: flex; flex-direction: column; justify-content: flex-end; gap: 8px;
-  padding: 24px 22px;
+  min-height: clamp(280px, 24vw, 380px);
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 7px;
+  padding: 20px 20px 18px;
   color: #EDE8F8; font-family: var(--body);
-  background:
-    repeating-linear-gradient(0deg, rgba(237,232,248,.045) 0 2px, transparent 2px 7px),
-    linear-gradient(160deg, #16101f 0%, #0e0a18 100%);
-  border: 2.5px solid rgba(237, 232, 248, .16); border-radius: 18px;
-  transition: transform .3s, border-color .3s, box-shadow .3s;
+  background: linear-gradient(160deg, #221833 0%, #120d1f 100%);
+  border: 3px solid var(--ink); border-radius: 4px;
+  filter: grayscale(1) brightness(.78) contrast(.92);
+  transition: filter .35s, transform .3s, box-shadow .3s;
 }
-.pcard:hover { transform: translateY(-10px) rotate(-1deg) scale(1.02); border-color: #fff; box-shadow: 0 18px 50px rgba(255, 46, 136, .35); }
-.pc-num { font-family: var(--disp-en); letter-spacing: .15em; font-size: .85rem; opacity: .5; }
-.pc-icon { font-size: 2.6rem; line-height: 1; filter: grayscale(1) opacity(.5); transition: filter .3s, transform .3s; }
-.pcard:hover .pc-icon { filter: none; transform: scale(1.15) rotate(-6deg); }
-.pc-title { font-family: var(--disp-zh); font-weight: 400; font-size: 1.7rem; line-height: 1.2; }
-.pc-tags { font-size: .75rem; letter-spacing: .04em; color: var(--cyan); opacity: .85; }
-.pc-blurb { font-size: .85rem; line-height: 1.7; opacity: .75; }
+.pcard:nth-child(odd) { transform: rotate(-.5deg); }
+.pcard:nth-child(even) { transform: rotate(.45deg); }
+.pcard:hover {
+  filter: none; z-index: 3;
+  transform: rotate(0deg) scale(1.045);
+  box-shadow: 0 16px 44px rgba(20, 16, 31, .55);
+}
+.pcard::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(11, 8, 20, 0) 36%, rgba(11, 8, 20, .88) 82%);
+}
+.pc-num {
+  position: absolute; top: -3px; left: -3px; z-index: 2;
+  font-family: var(--disp-en); font-size: .82rem; letter-spacing: .14em;
+  background: var(--yellow); color: var(--ink);
+  border: 3px solid var(--ink); border-radius: 0 0 4px 0;
+  padding: 3px 12px 2px;
+}
+.pc-icon, .pc-title, .pc-tags, .pc-blurb { position: relative; z-index: 2; }
+.pc-icon { font-size: 2.4rem; line-height: 1; transition: transform .3s; }
+.pcard:hover .pc-icon { transform: scale(1.18) rotate(-6deg); }
+.pc-title { font-family: var(--disp-zh); font-weight: 400; font-size: 1.7rem; line-height: 1.2; text-shadow: 2px 2px 0 rgba(11, 8, 20, .85); }
+.pc-tags { font-size: .75rem; letter-spacing: .04em; color: var(--cyan); opacity: .9; text-shadow: 0 1px 4px rgba(11, 8, 20, .9); }
+.pc-blurb { font-size: .85rem; line-height: 1.7; opacity: .85; text-shadow: 0 1px 4px rgba(11, 8, 20, .9); }
 .pc-burst {
-  position: absolute; inset: 0; opacity: 0; transform: scale(1.15); pointer-events: none;
+  position: absolute; inset: 0; z-index: 1; opacity: .92; transform: scale(1.05);
+  pointer-events: none;
   transition: opacity .35s, transform .45s;
 }
 .pcard:hover .pc-burst { opacity: 1; transform: scale(1); }
+.pc-speed {
+  position: absolute; inset: -22%; z-index: 1; pointer-events: none; opacity: 0;
+  background: repeating-linear-gradient(115deg, transparent 0 13px, rgba(255, 255, 255, .15) 13px 15px);
+  transition: opacity .3s;
+}
+.pcard:hover .pc-speed { opacity: 1; animation: pc-speedline .5s linear infinite; }
+@keyframes pc-speedline {
+  from { transform: translateX(0); }
+  to { transform: translateX(-16.56px); }
+}
 .pc-wham {
-  position: absolute; top: 16%; left: 50%; transform: translateX(-50%) rotate(-7deg) scale(.6);
+  position: absolute; top: 14%; left: 50%; opacity: 0;
+  transform: translateX(-50%) rotate(-7deg) scale(.5);
   font-family: var(--disp-en); font-style: normal; font-size: 2.1rem; color: #fff;
   background: var(--pink); padding: 10px 22px;
   clip-path: polygon(3% 20%, 22% 8%, 50% 0%, 79% 9%, 97% 22%, 100% 55%, 88% 88%, 55% 100%, 21% 92%, 0% 62%);
   text-shadow: 2px 2px 0 var(--ink);
-  transition: transform .4s cubic-bezier(.2, 1.8, .4, 1) .05s;
+  transition: transform .4s cubic-bezier(.2, 1.8, .4, 1) .05s, opacity .25s;
 }
-.pcard:hover .pc-wham { transform: translateX(-50%) rotate(4deg) scale(1); }
+.pcard:hover .pc-wham { opacity: 1; transform: translateX(-50%) rotate(4deg) scale(1); }
 .pcard-1 .pc-burst { background:
   radial-gradient(circle, rgba(255,227,77,.55) 1.6px, transparent 2.2px) 0 0/13px 13px,
   repeating-conic-gradient(from 12deg at 50% 32%, rgba(255,46,136,.85) 0 7deg, rgba(255,150,40,.8) 7deg 14deg, rgba(20,16,31,.92) 14deg 26deg); }
@@ -997,10 +1046,17 @@ a { color: inherit; text-decoration: none; }
   repeating-conic-gradient(from 100deg at 50% 32%, rgba(123,47,242,.9) 0 7deg, rgba(61,242,224,.85) 7deg 14deg, rgba(20,16,31,.92) 14deg 26deg); }
 .pcard-2 .pc-wham { background: var(--cyan-deep); }
 .pcard-3 .pc-wham { background: var(--purple); }
-.pcard > *:not(.pc-burst) { position: relative; z-index: 2; }
-.pcard .pc-burst { position: absolute; z-index: 1; }
-.pcard:hover .pc-title, .pcard:hover .pc-blurb { text-shadow: 0 2px 8px rgba(11, 8, 20, .9); }
-.pcard:hover .pc-tags { color: #fff; text-shadow: 0 2px 6px rgba(11, 8, 20, .9); }
+.pcard:hover .pc-tags { color: #fff; }
+@media (max-width: 720px) {
+  .cards-rail { grid-template-columns: 1fr; }
+  .cards-rail::before { font-size: .72rem; top: -30px; }
+  .pcard { min-height: 240px; }
+}
+@media (hover: none) {
+  /* 触屏没有悬停：直接全彩 + 拟声词常驻 */
+  .pcard { filter: none; }
+  .pc-wham { opacity: 1; transform: translateX(-50%) rotate(-5deg) scale(.85); }
+}
 
 /* card detail modal */
 .cardx {
