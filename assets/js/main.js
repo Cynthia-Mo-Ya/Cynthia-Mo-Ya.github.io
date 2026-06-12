@@ -194,6 +194,7 @@
         stagger: .07, duration: .35, ease: 'back.out(1.8)'
       }, '-=.05')
       .from('.lt-of', { y: 24, opacity: 0, duration: .3 }, '-=.1')
+      .from('.lt-name', { scale: .35, opacity: 0, rotation: -16, duration: .45, ease: 'back.out(2.2)' }, '-=.05')
       .from('.loader-sub', { opacity: 0, duration: .3 }, '-=.1');
   }
   var minShow = Date.now() + 1700;

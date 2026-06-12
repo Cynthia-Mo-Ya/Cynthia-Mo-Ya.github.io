@@ -1193,7 +1193,27 @@ a { color: inherit; text-decoration: none; }
   font-family: 'Segoe Script', 'Brush Script MT', 'Snell Roundhand', cursive;
   color: #F6F1E6; font-size: clamp(1.8rem, 5vw, 3.4rem); line-height: 1.1;
 }
-.lt-of em { font-style: normal; }
+.lt-of { font-size: clamp(1.4rem, 3.2vw, 2.2rem); opacity: .85; }
+/* Cynthia 独立一行：手写签名体 + 玫粉霓虹，与 PORTFOLIO 的印刷大字形成对比 */
+.lt-name {
+  position: relative;
+  font-family: 'Segoe Script', 'Brush Script MT', 'Snell Roundhand', cursive;
+  font-size: clamp(3rem, 10.5vw, 7.4rem); line-height: 1.08;
+  color: var(--pink);
+  transform: rotate(-3deg);
+  padding: 0 .25em .08em;
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, .9),
+    0 2px 22px rgba(255, 46, 136, .6),
+    0 0 46px rgba(255, 46, 136, .35);
+}
+.lt-name::after {
+  content: ''; position: absolute; left: 10%; right: 6%; bottom: -.04em;
+  height: clamp(3px, .6vw, 5px); border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--cyan) 18%, var(--cyan) 78%, transparent);
+  transform: rotate(-1.2deg);
+  box-shadow: 0 0 14px rgba(61, 242, 224, .55);
+}
 .lt-word {
   display: flex; align-items: baseline;
   font-family: var(--disp-en);
