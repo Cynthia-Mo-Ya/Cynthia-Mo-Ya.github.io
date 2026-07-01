@@ -9,7 +9,7 @@
 <meta property="og:description" content="把文学变成可以玩的梦 — 系统 / 叙事 / 关卡设计">
 <meta property="og:image" content="assets/img/jinling-art/jinling-art-01.webp">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="stylesheet" href="assets/css/style.css?v=12">
+<link rel="stylesheet" href="assets/css/style.css?v=18">
 </head>
 <body>
 
@@ -40,14 +40,37 @@
     <button class="nav-burger" id="navBurger" aria-label="菜单"><i></i><i></i><i></i></button>
   </div>
   <div class="nav-links" id="navLinks">
-    <a href="#decode" data-num="ID" data-i18n="nav.decode">代号</a>
-    <a href="#about" data-num="00" data-i18n="nav.about">起源</a>
-    <a href="#cards" data-num="PV" data-i18n="nav.cards">连载</a>
-    <a href="#jinling" data-num="01" data-i18n="nav.jinling">金陵残梦</a>
-    <a href="#pawnshop" data-num="02" data-i18n="nav.pawnshop">记忆当铺</a>
-    <a href="#system" data-num="03" data-i18n="nav.system">你就是系统</a>
-    <a href="#gameart" data-num="EX" data-i18n="nav.gameart">游戏美术</a>
-    <a href="#skills" data-num="SK" data-i18n="nav.skills">装备库</a>
+    <div class="nav-group">
+      <button class="nav-parent" type="button" data-num="ID"><span data-i18n="nav.cAbout">关于</span><i class="nav-caret" aria-hidden="true"></i></button>
+      <div class="nav-sub">
+        <a href="#decode" data-i18n="nav.decode">代号</a>
+        <a href="#about" data-i18n="nav.about">起源</a>
+      </div>
+    </div>
+    <a href="#cards" class="nav-solo" data-num="PV" data-i18n="nav.cards">连载</a>
+    <div class="nav-group">
+      <button class="nav-parent" type="button" data-num="GD"><span data-i18n="nav.cDesign">游戏设计</span><i class="nav-caret" aria-hidden="true"></i></button>
+      <div class="nav-sub">
+        <a href="#jinling" data-i18n="nav.jinling">金陵残梦</a>
+        <a href="#farm" data-i18n="nav.farm">闹鬼农场</a>
+        <a href="#moba" data-i18n="nav.moba">玛卡薇</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <button class="nav-parent" type="button" data-num="EV"><span data-i18n="nav.cEvent">活动策划</span><i class="nav-caret" aria-hidden="true"></i></button>
+      <div class="nav-sub">
+        <a href="#pawnshop" data-i18n="nav.pawnshop">记忆当铺</a>
+        <a href="#system" data-i18n="nav.system">你就是系统</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <button class="nav-parent" type="button" data-num="PM"><span data-i18n="nav.cMore">项目 · 美术</span><i class="nav-caret" aria-hidden="true"></i></button>
+      <div class="nav-sub">
+        <a href="#aipm" data-i18n="nav.aipm">项目管理</a>
+        <a href="#gameart" data-i18n="nav.gameart">游戏美术</a>
+      </div>
+    </div>
+    <a href="#skills" class="nav-solo" data-num="SK" data-i18n="nav.skills">装备库</a>
     <a href="#contact" class="nav-cta" data-num="!!" data-i18n="nav.contact">联系我</a>
   </div>
 </nav>
@@ -101,6 +124,7 @@
         <i class="dossier-marks" aria-hidden="true"><u></u><u></u><u></u></i>
       </button>
 
+      <div class="dossier-backdrop" id="dossierBackdrop" hidden></div>
       <div class="dossier-spread" id="dossierSpread" hidden>
         <button class="dossier-close" id="dossierClose" data-i18n="file.close">⤶ 单击合上文档</button>
         <div class="dossier-left">
@@ -127,10 +151,20 @@
           </div>
         </div>
         <div class="dossier-right">
-          <a class="dos-resume" href="assets/pdf/莫心雅_游戏策划简历.pdf?v=3" target="_blank">
-            <img src="assets/img/resume-preview.webp?v=2" alt="莫心雅简历预览" loading="lazy">
+          <a class="dos-resume" href="assets/pdf/莫心雅_游戏策划简历.pdf?v=4" target="_blank">
+            <img src="assets/img/resume-preview.webp?v=3" alt="莫心雅简历预览" loading="lazy">
             <span class="dos-resume-cta" data-i18n="file.read">点击阅读完整简历 ↗</span>
           </a>
+          <div class="dos-build" tabindex="0">
+            <span class="dos-build-tab">FOR YOU!</span>
+            <h4 class="dos-build-title">WHAT I CAN <em>BUILD</em></h4>
+            <ol class="dos-build-list">
+              <li><b>01</b><span><i data-i18n="build.b1t">系统设计</i><small data-i18n="build.b1s">完整策划案 · 玩法循环 / 关系系统 / 多结局</small></span></li>
+              <li><b>02</b><span><i data-i18n="build.b2t">叙事设计</i><small data-i18n="build.b2s">文学 IP → 交互转生 · 分支 / 情感关卡</small></span></li>
+              <li><b>03</b><span><i data-i18n="build.b3t">关卡设计</i><small data-i18n="build.b3s">UE5 白盒 → 垂直切片 · 动线 / 指引 / Boss</small></span></li>
+              <li><b>04</b><span><i data-i18n="build.b4t">AI 工作流</i><small data-i18n="build.b4s">概念 → 概念图 / PV → 工程上线交付</small></span></li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
@@ -264,43 +298,91 @@
     <p class="issue-meta" data-i18n="cards.meta">悬停上色 · 点开分格看详情</p>
   </div>
 
-  <div class="cards-rail" id="cardsRail">
-    <button class="pcard pcard-1" data-card="jinling">
-      <span class="pc-num">PANEL 01</span>
-      <span class="pc-burst" aria-hidden="true"><i class="pc-wham">WHAM!</i></span>
-      <span class="pc-speed" aria-hidden="true"></span>
-      <span class="pc-icon" aria-hidden="true">🏮</span>
-      <b class="pc-title" data-i18n="cards.c1t">金陵残梦</b>
-      <small class="pc-tags" data-i18n="cards.c1tag">双人叙事冒险 / 个人独立 / PC·Steam</small>
-      <span class="pc-blurb" data-i18n="cards.c1b">以《红楼梦》为蓝本，两名玩家在同一世界看见不同真相。</span>
-    </button>
-    <button class="pcard pcard-2" data-card="derive">
-      <span class="pc-num">PANEL 01.5</span>
-      <span class="pc-burst" aria-hidden="true"><i class="pc-wham">BZZT!</i></span>
-      <span class="pc-speed" aria-hidden="true"></span>
-      <span class="pc-icon" aria-hidden="true">🎛️</span>
-      <b class="pc-title" data-i18n="cards.c2t">衍生宇宙</b>
-      <small class="pc-tags" data-i18n="cards.c2tag">Arduino 声景装置 / 衍生 APP</small>
-      <span class="pc-blurb" data-i18n="cards.c2b">把游戏的四幕情绪做成可以「拧」的实体音景，再延展成移动端梦境应用。</span>
-    </button>
-    <button class="pcard pcard-3" data-card="pawnshop">
-      <span class="pc-num">PANEL 02</span>
-      <span class="pc-burst" aria-hidden="true"><i class="pc-wham">CRASH!</i></span>
-      <span class="pc-speed" aria-hidden="true"></span>
-      <span class="pc-icon" aria-hidden="true">🏷️</span>
-      <b class="pc-title" data-i18n="cards.c3t">记忆当铺</b>
-      <small class="pc-tags" data-i18n="cards.c3tag">五感沉浸体验 / 主策划 / 全校路演</small>
-      <span class="pc-blurb" data-i18n="cards.c3b">用五感典当记忆，按情感重量结算「典金」。</span>
-    </button>
-    <button class="pcard pcard-4" data-card="system">
-      <span class="pc-num">PANEL 03</span>
-      <span class="pc-burst" aria-hidden="true"><i class="pc-wham">POW!</i></span>
-      <span class="pc-speed" aria-hidden="true"></span>
-      <span class="pc-icon" aria-hidden="true">🎨</span>
-      <b class="pc-title" data-i18n="cards.c4t">你就是系统</b>
-      <small class="pc-tags" data-i18n="cards.c4tag">人体互动画布 / 主策划 / 零硬件</small>
-      <span class="pc-blurb" data-i18n="cards.c4b">数字艺术 = 你的动作 + 系统的回应，人肉实时渲染管线。</span>
-    </button>
+  <!-- 翻开的一本漫画书：左页 6 格 + 右页 1 格 + 待续 -->
+  <div class="comicbook" id="comicbook">
+    <div class="cb-book">
+      <!-- 左页 -->
+      <div class="cb-page cb-page-l">
+        <span class="cb-folio">EARTH-65 · CYNTHIA COMICS · PAGE 1</span>
+        <div class="cb-grid">
+          <button class="pcard cbp pc-jinling" data-card="jinling">
+            <span class="pc-ph" aria-hidden="true">🏮</span>
+            <img class="pc-cover" src="assets/img/covers/cover-jinling.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+            <span class="pc-num">PANEL 01</span>
+            <span class="pc-face">
+              <b class="pc-title" data-i18n="cards.c1t">金陵残梦</b>
+              <small class="pc-tags" data-i18n="cards.c1tag">双人叙事冒险 / 个人独立 / PC·Steam</small>
+            </span>
+          </button>
+          <button class="pcard cbp pc-derive" data-card="derive">
+            <span class="pc-ph" aria-hidden="true">🎛️</span>
+            <img class="pc-cover" src="assets/img/covers/cover-derive.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+            <span class="pc-num">PANEL 01½</span>
+            <span class="pc-face">
+              <b class="pc-title" data-i18n="cards.c2t">衍生宇宙</b>
+              <small class="pc-tags" data-i18n="cards.c2tag">Arduino 声景装置 / 衍生 APP</small>
+            </span>
+          </button>
+          <button class="pcard cbp pc-pawnshop" data-card="pawnshop">
+            <span class="pc-ph" aria-hidden="true">🏷️</span>
+            <img class="pc-cover" src="assets/img/covers/cover-pawnshop.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+            <span class="pc-num">PANEL 02</span>
+            <span class="pc-face">
+              <b class="pc-title" data-i18n="cards.c3t">记忆当铺</b>
+              <small class="pc-tags" data-i18n="cards.c3tag">五感沉浸体验 / 主策划 / 全校路演</small>
+            </span>
+          </button>
+          <button class="pcard cbp pc-system" data-card="system">
+            <span class="pc-ph" aria-hidden="true">🎨</span>
+            <img class="pc-cover" src="assets/img/covers/cover-system.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+            <span class="pc-num">PANEL 03</span>
+            <span class="pc-face">
+              <b class="pc-title" data-i18n="cards.c4t">你就是系统</b>
+              <small class="pc-tags" data-i18n="cards.c4tag">人体互动画布 / 主策划 / 零硬件</small>
+            </span>
+          </button>
+          <button class="pcard cbp pc-farm" data-card="farm">
+            <span class="pc-ph" aria-hidden="true">👻</span>
+            <img class="pc-cover" src="assets/img/covers/cover-farm.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+            <span class="pc-num">PANEL 04</span>
+            <span class="pc-face">
+              <b class="pc-title" data-i18n="cards.c5t">闹鬼农场</b>
+              <small class="pc-tags" data-i18n="cards.c5tag">UE5 关卡白盒 / 个人独立 / 寻物解谜 + 轻战斗</small>
+            </span>
+          </button>
+          <button class="pcard cbp pc-moba" data-card="moba">
+            <span class="pc-ph" aria-hidden="true">🛡️</span>
+            <img class="pc-cover" src="assets/img/covers/cover-moba.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+            <span class="pc-num">PANEL 05</span>
+            <span class="pc-face">
+              <b class="pc-title" data-i18n="cards.c6t">玛卡薇 · 缚命船医</b>
+              <small class="pc-tags" data-i18n="cards.c6tag">LOLM 英雄设计 / 个人独立 / 数值 · 对抗平衡</small>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 右页 -->
+      <div class="cb-page cb-page-r">
+        <span class="cb-folio cb-folio-r">PAGE 2 · 最新 LATEST</span>
+        <div class="cb-grid cb-grid-r">
+          <button class="pcard cbp cbp-feature pc-aipm" data-card="aipm">
+            <span class="pc-ph" aria-hidden="true">📊</span>
+            <img class="pc-cover" src="assets/img/covers/cover-aipm.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+            <span class="pc-num">PANEL 06</span>
+            <span class="pc-face">
+              <b class="pc-title" data-i18n="cards.c7t">AI 项目管理</b>
+              <small class="pc-tags" data-i18n="cards.c7tag">游戏项目管理 / AI 工作流 / 在线风险看板</small>
+            </span>
+          </button>
+          <div class="cb-tbc" aria-hidden="false">
+            <b class="cb-tbc-big" data-i18n="cards.tbc">TO BE CONTINUED…</b>
+            <small data-i18n="cards.tbcs">下一话 · 更多作品正在赶来</small>
+          </div>
+        </div>
+        <span class="cb-curl" aria-hidden="true"></span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -308,7 +390,7 @@
 <section class="issue issue-dark" id="jinling">
   <span class="bigword" aria-hidden="true">JINLING</span>
   <div class="issue-head">
-    <span class="issue-num num-pink"><span data-i18n="jl.num">ISSUE #01 · 主线</span></span>
+    <span class="issue-num num-pink"><span data-i18n="jl.num">ISSUE #01 · 游戏概念设计</span></span>
     <h2 class="issue-title"><span class="glitch" data-text="金陵残梦" data-i18n="jl.title">金陵残梦</span><small>REMNANT DREAM OF JINLING</small></h2>
     <p class="issue-meta" data-i18n="jl.meta">个人独立完成 · 策划 / 叙事 / 关卡 / 美术 / AI 工作流 · 2026.03 – 至今</p>
   </div>
@@ -380,7 +462,7 @@
 <section class="issue issue-light" id="pawnshop">
   <span class="bigword bigword-light" aria-hidden="true">PAWNSHOP</span>
   <div class="issue-head">
-    <span class="issue-num num-purple">ISSUE #02</span>
+    <span class="issue-num num-purple"><span data-i18n="ps.num">ISSUE #02 · 活动策划</span></span>
     <h2 class="issue-title"><span class="glitch" data-text="记忆当铺" data-i18n="ps.title">记忆当铺</span><small>THE MEMORY PAWNSHOP</small></h2>
     <p class="issue-meta" data-i18n="ps.meta">五感沉浸式体验 · 校园策划课路演 · 8 人小组 / 主策划兼统筹 · 承担约 80% 工作量 · 2026.04</p>
   </div>
@@ -421,7 +503,7 @@
 <section class="issue issue-dark" id="system">
   <span class="bigword" aria-hidden="true">SYSTEM</span>
   <div class="issue-head">
-    <span class="issue-num num-cyan">ISSUE #03</span>
+    <span class="issue-num num-cyan"><span data-i18n="sy.num">ISSUE #03 · 活动策划</span></span>
     <h2 class="issue-title"><span class="glitch" data-text="你就是系统" data-i18n="sy.title">你就是系统</span><small>HUMAN INTERACTIVE CANVAS</small></h2>
     <p class="issue-meta" data-i18n="sy.meta">人体互动画布 · 数字艺术互动体验 · 8 人小组 / 主策划兼统筹 · 承担约 80% 工作量 · 2026.03</p>
   </div>
@@ -451,6 +533,113 @@
       <div class="strip strip-mini" data-gallery="system-ppt" data-count="7" data-h="150"></div>
       <a class="btn btn-sm" href="assets/pdf/你就是系统_宣讲PPT.pdf" target="_blank" data-i18n="sy.b1">📑 下载宣讲 PPT</a>
     </div>
+  </div>
+</section>
+
+<!-- ════════ ISSUE #04 闹鬼农场（关卡设计） ════════ -->
+<section class="issue issue-black" id="farm">
+  <span class="bigword" aria-hidden="true">FARM</span>
+  <div class="issue-head">
+    <span class="issue-num num-cyan"><span data-i18n="fm.num">ISSUE #04 · 关卡设计</span></span>
+    <h2 class="issue-title"><span class="glitch" data-text="闹鬼农场" data-i18n="fm.title">闹鬼农场</span><small>HAUNTED FARM · UE5 WHITE-BOX</small></h2>
+    <p class="issue-meta" data-i18n="fm.meta">个人独立完成 · 关卡设计 / UE5.8 白盒 · 寻物解谜 + 轻战斗</p>
+  </div>
+
+  <div class="jl-intro">
+    <div class="speech speech-light reveal">
+      <p class="speech-big" data-i18n="fm.quote">“让老莫安息，<br>让农场重新活过来。”</p>
+      <p data-i18n="fm.desc">一张 150×150m · 固定夜晚 · 微恐治愈的 <b>UE5.8 白盒关卡</b>。你扮演闯入农场的旅人，帮鬼魂老农<b class="t-cyan">老莫</b>找回散落各处的 6 件遗物、6 段记忆，让他安息、让农场破晓复活。主玩法寻物解谜，副玩法轻战斗（守门恶灵）。</p>
+    </div>
+    <ul class="jl-highlights reveal">
+      <li><b data-i18n="fm.h1">叙事即关卡骨架</b><span data-i18n="fm.h1d">老莫一生「希望→相爱→成家→失去→孤独→释怀」的情感弧线，决定 6 件遗物由低到高、由易到难的摆放——难度递进与情感递进合一。</span></li>
+      <li><b data-i18n="fm.h2">集齐遗物 · 破晓复活</b><span data-i18n="fm.h2d">散落各处的 6 件遗物、6 段记忆逐一归位，集齐后触发「破晓复活」结局——夜色农场在黎明中重新活过来。</span></li>
+      <li><b data-i18n="fm.h3">成体系的关卡指引性</b><span data-i18n="fm.h3d">不靠任务箭头，用高处观察点、三类灯光语义（金=终点／青=任务点／暖=路径）、动作教学曲线、NPC 兜底与防迷路 HUD，把视线自然勾向目标。</span></li>
+      <li><b data-i18n="fm.h4">蓝图落地 + 诚实取舍</b><span data-i18n="fm.h4d">收集计数、集齐通关、破晓结局与轻战斗皆蓝图实现；玩法外以占位符＋文档／录屏讲意图，坚持「宁可少而完整，不做多而半残」。</span></li>
+    </ul>
+  </div>
+
+  <div class="video-panel reveal">
+    <div class="video-frame video-frame-cyan">
+      <video controls preload="none" poster="assets/img/posters/farm.jpg">
+        <source src="assets/video/farm-walkthrough.mp4" type="video/mp4">
+      </video>
+    </div>
+    <span class="video-label" data-i18n="fm.pv">▶ 关卡解说录屏 · UE5 白盒实机走查</span>
+    <span class="burst burst-cyan">PLAY!</span>
+  </div>
+
+  <h3 class="strip-title reveal"><span data-i18n="fm.s1">关卡设计文档</span> <small data-i18n="fm.s1s">LEVEL DESIGN DOC · 9P · 点击放大</small></h3>
+  <div class="strip" data-gallery="farm" data-count="9" data-h="330"></div>
+
+  <div class="btn-row reveal">
+    <a class="btn" href="assets/pdf/闹鬼农场_关卡设计文档.pdf" target="_blank" data-i18n="fm.b1">📄 完整关卡设计文档</a>
+  </div>
+</section>
+
+<!-- ════════ ISSUE #05 玛卡薇（系统 / 英雄设计） ════════ -->
+<section class="issue issue-light" id="moba">
+  <span class="bigword bigword-light" aria-hidden="true">MAKAVI</span>
+  <div class="issue-head">
+    <span class="issue-num num-pink"><span data-i18n="mb.num">ISSUE #05 · 英雄设计</span></span>
+    <h2 class="issue-title"><span class="glitch" data-text="玛卡薇 · 缚命船医" data-i18n="mb.title">玛卡薇 · 缚命船医</span><small>MAKAVI · CHAMPION &amp; COUNTERPLAY DESIGN</small></h2>
+    <p class="issue-meta" data-i18n="mb.meta">个人独立完成 · 英雄设计 / 数值与对抗平衡 · LOLM 7.1g · 2026</p>
+  </div>
+
+  <div class="jl-intro">
+    <div class="speech reveal">
+      <p class="speech-big" data-i18n="mb.quote">“你死不了——<br>今天，我替你扛。”</p>
+      <p data-i18n="mb.desc">一份《英雄联盟手游》英雄设计课题。先以国服 <b>1290 场</b>一手体验，从故事 / 美术 / 机制三维度拆解全游戏最难平衡的软辅<b class="t-cyan">「悠米」</b>，提炼出「极低个人能动性 ↔ 极高团队影响力」的结构性难题；再据此原创功能辅<b class="t-pink">「缚命船医 · 玛卡薇」</b>——招牌大招 R「替死契」把队友本会致死的伤害按 50/65/80% 接到自己身上。</p>
+    </div>
+    <ul class="jl-highlights reveal">
+      <li><b data-i18n="mb.h1">从拆解到原创</b><span data-i18n="mb.h1d">以 1290 场一手体验拆解软辅「悠米」，提炼出「低能动性↔高影响力」的结构性难题作为设计命题。</span></li>
+      <li><b data-i18n="mb.h2">招牌大招 R「替死契」承伤转移</b><span data-i18n="mb.h2d">玛卡薇把队友本会致死的伤按 50/65/80% 接到自己身上——补上手游保护辅「没人走过的空位」。</span></li>
+      <li><b data-i18n="mb.h3">完整数值框架 + 15 级加点</b><span data-i18n="mb.h3d">五技能逐项给出伤害/CD/蓝耗/护盾成长与功率梯度：只 R 最强、其余压平但下限做足。</span></li>
+      <li><b data-i18n="mb.h4">AI 建模四步平衡评估</b><span data-i18n="mb.h4d">不靠纯 Excel 手算，用 AI 搭对局模拟环境，按基础对标→木桩→全对局→调整预案验证「不过强、不偏弱、不挤占」。</span></li>
+    </ul>
+  </div>
+
+  <h3 class="strip-title reveal"><span data-i18n="mb.s1">英雄设计文档</span> <small data-i18n="mb.s1s">CHAMPION DESIGN · 25P · 拆解 → 原创 → 平衡评估</small></h3>
+  <div class="strip" data-gallery="moba" data-count="25" data-h="330"></div>
+
+  <div class="btn-row reveal">
+    <a class="btn" href="assets/pdf/MOBA英雄设计_玛卡薇.pdf" target="_blank" data-i18n="mb.b1">📄 完整英雄设计文档</a>
+  </div>
+</section>
+
+<!-- ════════ ISSUE #06 AI 赋能游戏项目管理 ════════ -->
+<section class="issue issue-dark" id="aipm">
+  <span class="bigword" aria-hidden="true">PROJECT</span>
+  <div class="issue-head">
+    <span class="issue-num num-purple"><span data-i18n="pm.num">ISSUE #06 · 项目管理</span></span>
+    <h2 class="issue-title"><span class="glitch" data-text="AI 赋能游戏项目管理" data-i18n="pm.title">AI 赋能游戏项目管理</span><small>AI-EMPOWERED GAME PROJECT MANAGEMENT</small></h2>
+    <p class="issue-meta" data-i18n="pm.meta">个人作业 · 游戏项目管理 / 新人 PM 全链路推演 · 蓝本：英雄联盟手游 7.1「全速竞逐」</p>
+  </div>
+
+  <div class="jl-intro">
+    <div class="aipm-col-l">
+      <div class="speech speech-light reveal">
+        <p class="speech-big" data-i18n="pm.quote">“AI 做杠杆，<br>不做拐杖。”</p>
+        <p data-i18n="pm.desc">以《英雄联盟手游》7.1「全速竞逐」为蓝本，沿「快速接手 → 冲刺管理 → 复盘规划」全链路推演一名新人 PM 的工作方法：项目认知地图、48h 上手 SOP、冲刺期人力/需求/范围三冲突决策、需求变更会议纪要、版本复盘框架与三个月 Roadmap，并落地一块<b class="t-cyan">已上线的「版本风险与进度看板」</b>。</p>
+      </div>
+      <figure class="board-figure reveal">
+        <img src="assets/img/aipm/kanban.webp" alt="版本风险与进度看板" loading="lazy" data-zoom>
+        <figcaption data-i18n="pm.board">在线「版本风险与进度看板」· 进度 · 风险 · 舆情，一屏收敛</figcaption>
+      </figure>
+    </div>
+    <ul class="jl-highlights reveal">
+      <li><b data-i18n="pm.h1">全链路 PM 推演</b><span data-i18n="pm.h1d">快速接手→冲刺管理→复盘规划：认知地图、48h 上手 SOP、复盘框架与三个月 Roadmap 一气贯通。</span></li>
+      <li><b data-i18n="pm.h2">一屏收敛的在线看板</b><span data-i18n="pm.h2d">「进度 · 三大风险 · 舆情健康度」一屏收敛，已部署上线（Vercel），支撑早预警、早决策。</span></li>
+      <li><b data-i18n="pm.h3">冲突分诊 · 资源一本账</b><span data-i18n="pm.h3d">以「紧急度×影响面」把人力/需求/范围三案排成一个冲刺方案，而非三个孤立决定。</span></li>
+      <li><b data-i18n="pm.h4">AI 做杠杆不做拐杖</b><span data-i18n="pm.h4d">一手优先、双源交叉、敢列局限；AI 出方案、人拍板与校正，附完整人机交互记录。</span></li>
+    </ul>
+  </div>
+
+  <h3 class="strip-title reveal"><span data-i18n="pm.s1">全流程交付文档</span> <small data-i18n="pm.s1s">PM DELIVERABLE · 17P · 认知地图 → 冲突决策 → 复盘 Roadmap</small></h3>
+  <div class="strip" data-gallery="aipm" data-count="17" data-h="330"></div>
+
+  <div class="btn-row reveal">
+    <a class="btn btn-pink" href="https://lol-risk-dashboard.vercel.app" target="_blank" rel="noopener" data-i18n="pm.b1">⚡ 打开在线风险看板</a>
+    <a class="btn" href="assets/pdf/AI赋能游戏项目管理.pdf" target="_blank" data-i18n="pm.b2">📄 完整 PM 交付文档</a>
   </div>
 </section>
 
@@ -568,8 +757,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="assets/js/i18n.js?v=9"></script>
-<script src="assets/js/main.js?v=9"></script>
-<script src="assets/js/features.js?v=9"></script>
+<script src="assets/js/i18n.js?v=13"></script>
+<script src="assets/js/main.js?v=11"></script>
+<script src="assets/js/features.js?v=13"></script>
 </body>
 </html>

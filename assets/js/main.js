@@ -33,7 +33,10 @@
     'app-mengjue': '《金陵梦境·梦觉》APP',
     'pawnshop-ppt': '《记忆当铺》汇报 PPT',
     'system-ppt': '《你就是系统》宣讲 PPT',
-    'gameart': '游戏美术作品集'
+    'gameart': '游戏美术作品集',
+    'farm': '《闹鬼农场》关卡设计文档',
+    'moba': '《玛卡薇·缚命船医》英雄设计文档',
+    'aipm': 'AI 赋能游戏项目管理'
   };
 
   document.querySelectorAll('.strip[data-gallery]').forEach(function (strip) {
@@ -122,14 +125,29 @@
     nav.classList.toggle('is-hidden', y > 420 && y > lastY && !links.classList.contains('open'));
     lastY = y;
   }, { passive: true });
+  function closeNav() {
+    burger.classList.remove('open');
+    links.classList.remove('open');
+    links.querySelectorAll('.nav-group.open').forEach(function (g) { g.classList.remove('open'); });
+  }
   burger.addEventListener('click', function () {
     burger.classList.toggle('open');
     links.classList.toggle('open');
+    if (!links.classList.contains('open')) links.querySelectorAll('.nav-group.open').forEach(function (g) { g.classList.remove('open'); });
   });
   links.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', function () {
-      burger.classList.remove('open');
-      links.classList.remove('open');
+    a.addEventListener('click', closeNav);
+  });
+  // 母目录：移动端点按展开/收起子目录（桌面端靠 hover）
+  links.querySelectorAll('.nav-parent').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        var g = btn.closest('.nav-group');
+        var wasOpen = g.classList.contains('open');
+        links.querySelectorAll('.nav-group.open').forEach(function (o) { o.classList.remove('open'); });
+        if (!wasOpen) g.classList.add('open');
+      }
     });
   });
 

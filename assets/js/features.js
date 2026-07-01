@@ -167,18 +167,25 @@
   var dossierCover = document.getElementById('dossierCover');
   var dossierSpread = document.getElementById('dossierSpread');
   var dossierClose = document.getElementById('dossierClose');
+  var dossierBackdrop = document.getElementById('dossierBackdrop');
 
   function openDossier() {
     dossierCover.hidden = true;
     dossierSpread.hidden = false;
+    if (dossierBackdrop) dossierBackdrop.hidden = false;
+    document.body.classList.add('dossier-open');
     if (hasGsap && !reduced) {
       gsap.fromTo(dossierSpread, { rotationY: -70, opacity: 0, transformOrigin: 'left center' },
         { rotationY: 0, opacity: 1, duration: .55, ease: 'power3.out' });
-      gsap.from('.dossier-left > *', { y: 26, opacity: 0, stagger: .08, delay: .2, duration: .4 });
-      gsap.from('.dossier-right', { x: 40, opacity: 0, delay: .3, duration: .4 });
+      if (dossierBackdrop) gsap.fromTo(dossierBackdrop, { opacity: 0 }, { opacity: 1, duration: .4 });
+      gsap.from('.dossier-left > *', { y: 26, opacity: 0, stagger: .07, delay: .2, duration: .4 });
+      gsap.from('.dossier-right > *', { x: 40, opacity: 0, stagger: .1, delay: .3, duration: .4 });
     }
   }
   function closeDossier() {
+    document.body.classList.remove('dossier-open');
+    if (dossierBackdrop && hasGsap && !reduced) gsap.to(dossierBackdrop, { opacity: 0, duration: .3, onComplete: function () { dossierBackdrop.hidden = true; } });
+    else if (dossierBackdrop) dossierBackdrop.hidden = true;
     if (hasGsap && !reduced) {
       gsap.to(dossierSpread, {
         rotationY: -60, opacity: 0, duration: .35, ease: 'power2.in',
@@ -194,6 +201,10 @@
   }
   if (dossierCover) dossierCover.addEventListener('click', openDossier);
   if (dossierClose) dossierClose.addEventListener('click', closeDossier);
+  if (dossierBackdrop) dossierBackdrop.addEventListener('click', closeDossier);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && dossierSpread && !dossierSpread.hidden) closeDossier();
+  });
 
   /* ════════ 4. PROJECT CARDS ════════ */
   var CARD_DATA = {
@@ -235,6 +246,36 @@
       role: { zh: '我的角色：主题与核心创意 / 管线设计 / 动线规划 / 汇报 PPT，约 80% 工作量。', en: 'My role: theme & concept / pipeline design / floor plan / final deck — about 80% of the work.' },
       video: 'assets/video/system-vlog.mp4', poster: 'assets/img/posters/system-vlog.jpg',
       links: [{ t: { zh: '查看完整档案 ↓', en: 'Full file below ↓' }, h: '#system' }]
+    },
+    farm: {
+      chips: { zh: ['UE5.8 白盒关卡', '寻物解谜 + 轻战斗', '个人独立完成'], en: ['UE5.8 white-box', 'Puzzle + light combat', 'Solo project'] },
+      title: { zh: '闹鬼农场', en: 'Haunted Farm' },
+      sub: 'HAUNTED FARM · UE5 WHITE-BOX',
+      desc: { zh: '150×150m 固定夜晚 · 微恐治愈的 UE5.8 白盒关卡。帮鬼魂老农老莫找回 6 件遗物、6 段记忆——把他一生「希望 → 失去 → 释怀」的情感弧线做成由低到高、由易到难的动线，高潮落在最难爬的风车顶。主玩法寻物解谜，副玩法轻战斗。', en: 'A 150×150m permanent-night, mildly-eerie UE5.8 white-box level. Help ghost farmer Old Mo recover 6 relics and 6 memories — his life arc (hope → loss → peace) becomes a low-to-high, easy-to-hard route, climaxing at the hardest-to-reach windmill top.' },
+      role: { zh: '我的角色：100% —— 关卡概念 / 动线与指引 / 叙事 / UE5 白盒搭建 / 蓝图玩法 / 解说录屏。', en: 'My role: 100% — level concept / routing & guidance / narrative / UE5 white-box / Blueprint gameplay / narrated capture.' },
+      video: 'assets/video/farm-walkthrough.mp4', poster: 'assets/img/posters/farm.jpg',
+      links: [{ t: { zh: '查看完整档案 ↓', en: 'Full file below ↓' }, h: '#farm' }]
+    },
+    moba: {
+      chips: { zh: ['LOLM 英雄设计', '数值 · 对抗平衡', '个人独立完成'], en: ['Wild Rift champion', 'Numbers & counterplay', 'Solo project'] },
+      title: { zh: '玛卡薇 · 缚命船医', en: 'Makavi · Bonebinder Surgeon' },
+      sub: 'CHAMPION & COUNTERPLAY DESIGN',
+      desc: { zh: '拆解全游戏最难平衡的软辅「悠米」，提炼「低能动性 ↔ 高影响力」难题，原创一个承伤守护者。招牌大招 R「替死契」把队友本会致死的伤按 50/65/80% 接到自己身上；含五技能数值框架、15 级加点与 AI 建模四步平衡评估。', en: 'Deconstructs the game\'s hardest-to-balance enchanter Yuumi, distills "low agency ↔ high impact," and answers with an original damage-taking guardian. Ultimate "Death Pact (R)" transfers 50/65/80% of a teammate\'s lethal damage; ships a full numbers framework, level-15 order and an AI-modeled balance pass.' },
+      role: { zh: '我的角色：100% —— 拆解分析 / 英雄机制 / 数值框架 / 对抗与平衡评估 / 美术与台词设定。', en: 'My role: 100% — teardown / kit design / numbers / counterplay & balance / art & voice direction.' },
+      image: 'assets/img/moba/moba-07.webp',
+      links: [{ t: { zh: '查看完整档案 ↓', en: 'Full file below ↓' }, h: '#moba' }]
+    },
+    aipm: {
+      chips: { zh: ['游戏项目管理', 'AI 工作流', '在线看板已上线'], en: ['Game project mgmt', 'AI workflow', 'Live dashboard'] },
+      title: { zh: 'AI 赋能游戏项目管理', en: 'AI-Empowered Game PM' },
+      sub: 'AI-EMPOWERED GAME PM',
+      desc: { zh: '以 LOLM 7.1 为蓝本推演新人 PM 全链路：认知地图、48h 上手 SOP、冲刺期三冲突决策、需求变更会议纪要、版本复盘与三个月 Roadmap，并落地一块已上线的「版本风险与进度看板」。核心态度：AI 做杠杆，不做拐杖。', en: 'A new-PM full-lifecycle playbook on LOL Mobile 7.1: cognition map, 48h onboarding SOP, three sprint conflicts, a change-review record, a retro framework and a three-month roadmap — plus a live "version risk & progress dashboard." Stance: AI as leverage, not a crutch.' },
+      role: { zh: '我的角色：个人作业 —— 认知地图 / SOP / 冲突决策 / 会议纪要 / 复盘 Roadmap / 在线看板搭建。', en: 'My role: solo coursework — cognition map / SOP / conflict decisions / minutes / retro roadmap / live dashboard.' },
+      image: 'assets/img/aipm/kanban.webp',
+      links: [
+        { t: { zh: '⚡ 在线风险看板', en: '⚡ Live risk dashboard' }, h: 'https://lol-risk-dashboard.vercel.app', hot: true, ext: true },
+        { t: { zh: '查看完整档案 ↓', en: 'Full file below ↓' }, h: '#aipm' }
+      ]
     }
   };
 
@@ -254,7 +295,11 @@
     html += '<span class="cx-sub">' + d.sub + '</span>';
     html += '<p class="cx-desc">' + d.desc[lang] + '</p>';
     html += '<p class="cx-role">' + d.role[lang] + '</p>';
-    html += '<div class="cx-video"><video controls preload="metadata" poster="' + d.poster + '"><source src="' + d.video + '" type="video/mp4"></video></div>';
+    if (d.video) {
+      html += '<div class="cx-video"><video controls preload="metadata" poster="' + d.poster + '"><source src="' + d.video + '" type="video/mp4"></video></div>';
+    } else if (d.image) {
+      html += '<div class="cx-video"><img src="' + d.image + '" alt="" loading="lazy"></div>';
+    }
     html += '<div class="cx-links">' + d.links.map(function (lk) {
       return '<a href="' + lk.h + '"' + (lk.hot ? ' class="hot"' : '') + (lk.ext ? ' target="_blank" rel="noopener"' : '') + '>' + lk.t[lang] + '</a>';
     }).join('') + '</div>';
@@ -295,11 +340,11 @@
 
   if (hasGsap && !reduced && typeof ScrollTrigger !== 'undefined') {
     /* 整张漫画页甩入；.pcard 自身有 CSS transition，不能逐卡 from() */
-    gsap.fromTo('#cardsRail',
+    gsap.fromTo('#comicbook',
       { opacity: 0, y: 110, rotation: -2.5 },
       {
         opacity: 1, y: 0, rotation: 0, duration: .8, ease: 'power3.out',
-        scrollTrigger: { trigger: '#cardsRail', start: 'top 82%' },
+        scrollTrigger: { trigger: '#comicbook', start: 'top 82%' },
         clearProps: 'opacity,transform'
       });
   }
@@ -328,7 +373,8 @@
     { n: '剪映 CapCut', mono: '剪', c: '#00E5D0', a: 108, r: .60 },
     { n: '即梦 Seedance', mono: '即', c: '#5B6CFF', a: 124, r: .92 },
     { n: '可灵 Kling', mono: '灵', c: '#00E08F', a: 92, r: .48 },
-    { n: 'Suno', icon: 'suno', c: '#FF7847', a: 138, r: .62 }
+    { n: 'Suno', icon: 'suno', c: '#FF7847', a: 138, r: .62 },
+    { n: 'UE · 虚幻引擎', icon: 'unrealengine', c: '#B9A6FF', a: 66, r: .78 }
   ];
 
   var webSvg = document.getElementById('webSvg');
