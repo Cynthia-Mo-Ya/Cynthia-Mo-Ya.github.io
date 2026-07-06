@@ -525,7 +525,7 @@
   /* ════════ loader word inject (PORTFOLIO letters) ════════ */
   var ltWord = document.getElementById('ltWord');
   if (ltWord) {
-    var cols = ['#FF2E88', '#F6E8C8', '#FFFFFF', '#3DF2E0', '#FF2E88', '#F6E8C8', '#3DF2E0', '#FFFFFF', '#FF2E88'];
+    var cols = ['#FF3E9D', '#B388FF', '#FFFFFF', '#4CC9F0', '#FF3E9D', '#B388FF', '#4CC9F0', '#FFFFFF', '#FF3E9D'];
     'PORTFOLIO'.split('').forEach(function (ch, i) {
       var sp = document.createElement('i');
       sp.textContent = ch;
