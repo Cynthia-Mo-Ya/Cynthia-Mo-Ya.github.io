@@ -216,7 +216,8 @@
       role: { zh: '我的角色：100% —— 策划 / 叙事 / 关卡 / 美术 / AI 工作流，全部独立完成。', en: 'My role: 100% — design / narrative / levels / art / AI workflow, all solo.' },
       video: 'assets/video/jinling-pv.mp4', poster: 'assets/img/posters/jinling-pv.jpg',
       links: [
-        { t: { zh: '⚡ 交互导航网站', en: '⚡ Interactive hub' }, h: 'https://jinling-canmeng.vercel.app', hot: true, ext: true },
+        { t: { zh: '🎮 在线试玩 · 黛玉章可玩切片', en: '🎮 Play the demo · Daiyu chapter slice' }, h: 'https://jinling-canmeng-demo.vercel.app', hot: true, ext: true },
+        { t: { zh: '⚡ 交互导航网站', en: '⚡ Interactive hub' }, h: 'https://jinling-canmeng.vercel.app', ext: true },
         { t: { zh: '查看完整档案 ↓', en: 'Full file below ↓' }, h: '#jinling' }
       ]
     },

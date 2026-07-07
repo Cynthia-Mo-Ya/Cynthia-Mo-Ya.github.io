@@ -131,6 +131,8 @@
     'jl.s1': { zh: '美术概念集', en: 'Art Concept Collection' },
     'jl.s1s': { zh: 'ART CONCEPT COLLECTION · 35P · 点击放大', en: '35 PAGES · CLICK TO ZOOM' },
     'jl.s2': { zh: '概念 PPT 节选', en: 'Concept Deck' },
+    'jl.demo': { zh: '🎮 在线试玩 · 黛玉章可玩切片', en: '🎮 PLAY THE DEMO · Daiyu Chapter Slice' },
+    'jl.demoNote': { zh: '境内网络若打不开，需切换外网环境', en: 'May require VPN access in mainland China' },
     'jl.b1': { zh: '⚡ 进入交互式导航网站', en: '⚡ Open the interactive hub site' },
     'jl.b2': { zh: '📄 完整概念设计文档', en: '📄 Full concept design doc' },
     'jl.b3': { zh: '📑 概念 PPT', en: '📑 Concept deck PDF' },
