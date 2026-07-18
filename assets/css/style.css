@@ -1804,6 +1804,17 @@ body.dossier-open { overflow: hidden; }
   min-height: clamp(430px, 40vw, 560px); padding: 6px 8px 6px 22px;
 }
 .dos-resume { position: relative; z-index: 3; width: 80%; }
+/* 项目管理方向简历：策划简历下方的青色贴条按钮 */
+.dos-resume-alt {
+  position: relative; z-index: 3; display: block; width: 80%;
+  margin-top: 12px; padding: 10px 14px; text-align: center;
+  background: var(--cyan); color: var(--ink); text-decoration: none;
+  font-weight: 800; font-size: .84rem;
+  border: 2.5px solid var(--ink); box-shadow: 4px 4px 0 var(--pink-deep);
+  transform: rotate(-.8deg);
+  transition: transform .25s, box-shadow .25s;
+}
+.dos-resume-alt:hover { transform: rotate(0) translateY(-2px); box-shadow: 4px 6px 0 var(--pink-deep), 0 0 24px rgba(76, 201, 240, .35); }
 /* 「WHAT I CAN BUILD」——参考 eiddie：几乎与简历同高的大报纸条，从右后方探出 */
 .dos-build {
   position: absolute; z-index: 1;
@@ -1852,6 +1863,7 @@ body.dossier-open { overflow: hidden; }
   .dossier-left > * { position: relative; top: auto; left: auto; width: auto !important; }
   .dossier-right { min-height: 0; padding: 0; }
   .dos-resume { width: 100%; }
+  .dos-resume-alt { width: 100%; }
   .dos-build { position: relative; top: auto; bottom: auto; right: auto; width: 100%; margin-top: 18px; transform: rotate(-1deg); }
   .dos-build:hover, .dos-build:focus-within { transform: rotate(0) scale(1.02); }
 }

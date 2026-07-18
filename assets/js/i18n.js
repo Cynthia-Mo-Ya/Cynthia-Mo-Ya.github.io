@@ -3,7 +3,7 @@
   'use strict';
 
   var D = {
-    'loader.sub': { zh: '莫心雅 · 游戏策划个人作品集 · EARTH-65', en: 'MO XINYA · GAME DESIGNER PORTFOLIO · EARTH-65' },
+    'loader.sub': { zh: '莫心雅 · 游戏策划 × 项目管理 · EARTH-65', en: 'MO XINYA · GAME DESIGN × PROJECT MGMT · EARTH-65' },
 
     'nav.decode': { zh: '代号', en: 'Codename' },
     'nav.about': { zh: '起源', en: 'Origin' },
@@ -23,16 +23,17 @@
     'nav.cMore': { zh: '项目 · 美术', en: 'PM · Art' },
 
     'hero.tag': { zh: 'MULTIVERSE FILE · EARTH-65 · 中国 · 武汉', en: 'MULTIVERSE FILE · EARTH-65 · WUHAN, CHINA' },
-    'hero.role1': { zh: '游戏策划', en: 'GAME PLANNER' },
-    'hero.role2': { zh: '叙事 · 系统 · 关卡', en: 'NARRATIVE · SYSTEMS · LEVELS' },
+    'hero.role1': { zh: '游戏策划', en: 'GAME DESIGNER' },
+    'hero.role2': { zh: '项目管理 · 叙事 · 系统 · 关卡', en: 'PROJECT MGMT · NARRATIVE · SYSTEMS · LEVELS' },
     'hero.line': { zh: '把文学变成<em>可以玩的梦</em>。', en: 'Turning literature into <em>playable dreams</em>.' },
     'hero.st1': { zh: '专业第一', en: 'Top of Class' },
     'hero.st1s': { zh: '湖北大学 · 数字媒体艺术', en: 'Hubei University · Digital Media Art' },
     'hero.st2u': { zh: '件', en: '' },
     'hero.st2': { zh: '独立交付', en: 'Solo Deliverables' },
     'hero.st2s': { zh: '《金陵残梦》完整概念', en: 'Full concept of Jinling project' },
-    'hero.st3': { zh: '主策工作量', en: 'Lead-design Load' },
-    'hero.st3s': { zh: '两个落地体验项目', en: 'Across two shipped experiences' },
+    'hero.st3u': { zh: '次', en: '×' },
+    'hero.st3': { zh: '主策划兼统筹', en: 'Lead & Coordinator' },
+    'hero.st3s': { zh: '8 人团队 · 落地体验项目', en: '8-person team · shipped experiences' },
     'hero.scroll': { zh: '往下滑', en: 'Scroll down' },
 
     'decode.title': { zh: '解码 CYNTHIA', en: 'DECODE CYNTHIA' },
@@ -55,13 +56,14 @@
     'file.stamp': { zh: 'CONFIDENTIAL', en: 'CONFIDENTIAL' },
     'file.open': { zh: '⤷ 单击展开档案', en: '⤷ Click to open the file' },
     'file.close': { zh: '⤶ 单击合上文档', en: '⤶ Click to close' },
-    'file.name': { zh: '莫心雅 · 游戏策划', en: 'Mo Xinya · Game Designer' },
+    'file.name': { zh: '莫心雅 · 游戏策划 / 项目管理', en: 'Mo Xinya · Game Designer / PM' },
     'file.s1t': { zh: '审美 / 策划 / AI 工作流', en: 'Aesthetics / Design / AI workflow' },
     'file.s1': { zh: '把文学变成可以玩的梦', en: 'Turning literature into playable dreams' },
-    'file.s2': { zh: '· 系统 / 叙事 / 关卡设计<br>· 5 件独立交付<br>· 80% 主策工作量 ×2', en: '· Systems / narrative / level design<br>· 5 solo deliverables<br>· 80% lead-design load ×2' },
+    'file.s2': { zh: '· 系统 / 叙事 / 关卡设计<br>· 5 件独立交付<br>· 8 人团队主策划兼统筹 ×2', en: '· Systems / narrative / level design<br>· 5 solo deliverables<br>· Lead & coordinator of 8-person team ×2' },
     'file.s3t': { zh: '教育', en: 'EDU' },
     'file.s3': { zh: '湖北大学 · 数媒艺术 2025–2029<br>学业排名 1/120 · 广美附中', en: 'Hubei University · DMA 2025–2029<br>Rank 1/120 · GAFA affiliated school' },
-    'file.read': { zh: '点击阅读完整简历 ↗', en: 'Read the full resume ↗' },
+    'file.read': { zh: '点击阅读策划简历 ↗', en: 'Read the game-design resume ↗' },
+    'file.readPm': { zh: '📋 项目管理方向简历 ↗', en: '📋 Project-management resume ↗' },
     'build.b1t': { zh: '系统设计', en: 'Systems Design' },
     'build.b1s': { zh: '完整策划案 · 玩法循环 / 关系系统 / 多结局', en: 'Full design doc · loop / relationships / endings' },
     'build.b2t': { zh: '叙事设计', en: 'Narrative Design' },
@@ -70,6 +72,8 @@
     'build.b3s': { zh: 'UE5 白盒 → 垂直切片 · 动线 / 指引 / Boss', en: 'UE5 white-box → vertical slice · routing / guidance / boss' },
     'build.b4t': { zh: 'AI 工作流', en: 'AI Workflow' },
     'build.b4s': { zh: '概念 → 概念图 / PV → 工程上线交付', en: 'Concept → art / PV → shipped engineering' },
+    'build.b5t': { zh: '项目统筹', en: 'Project Coordination' },
+    'build.b5s': { zh: '48h SOP / 风险看板 / 复盘 Roadmap', en: '48h SOP / risk dashboard / retro roadmap' },
 
     'about.title': { zh: '起源故事', en: 'ORIGIN STORY' },
     'about.quote': { zh: '“被美术耽误的策划，被策划点燃的美术。”', en: '"An artist sidetracked into design; a designer set on fire by art."' },
@@ -85,6 +89,8 @@
     'about.p2d': { zh: '擅长把文学 IP 转化为交互叙事——分支叙事、情感驱动关卡、「玩法即叙事 / 视角即叙事」融合方案。', en: 'Turns literary IP into interactive narrative — branching stories, emotion-driven levels, "mechanics as narrative / perspective as narrative".' },
     'about.p3': { zh: '关卡设计', en: 'Level Design' },
     'about.p3d': { zh: '从关卡概念到垂直切片全流程，含分屏交互脚本、镜头语言与多阶段 Boss 设计。', en: 'Full pipeline from level concept to vertical slice: split-screen interaction scripts, camera language, multi-phase boss design.' },
+    'about.p4': { zh: '项目统筹', en: 'Project Coordination' },
+    'about.p4d': { zh: '两次带 8 人团队主策划兼统筹——定分工、写台本、做培训、盯节点；以 LOLM 为蓝本推演 PM 全链路，落地在线风险看板。', en: 'Twice lead & coordinator of an 8-person team — set the split, wrote the scripts, ran the training, tracked the milestones; plus a full PM playbook on LOL Mobile with a live risk dashboard.' },
 
     'cards.title': { zh: '作品连载', en: 'COMIC PAGES' },
     'cards.meta': { zh: '翻开这本连载 · 悬停上色 · 点开任意分格看详情', en: 'Open the serial · hover to ink · click any panel' },
@@ -145,7 +151,7 @@
     'jl.d2b': { zh: '📄 查看完整方案', en: '📄 Full proposal PDF' },
 
     'ps.title': { zh: '记忆当铺', en: 'MEMORY PAWNSHOP' },
-    'ps.meta': { zh: '五感沉浸式体验 · 校园策划课路演 · 8 人小组 / 主策划兼统筹 · 承担约 80% 工作量 · 2026.04', en: 'Five-sense immersive experience · campus roadshow · 8-person team / lead designer & coordinator · ~80% of workload · 2026.04' },
+    'ps.meta': { zh: '五感沉浸式体验 · 校园策划课路演 · 8 人小组 / 主策划兼统筹（分工 · 台本 · 培训 · 节点） · 2026.04', en: 'Five-sense immersive experience · campus roadshow · 8-person team / lead designer & coordinator · 2026.04' },
     'ps.quote': { zh: '“用五感，典当你的记忆。”', en: '"Pawn your memories — through the five senses."' },
     'ps.desc': { zh: '面向全校路演的沉浸式体验（「超级感官」命题）。把抽象情感转化为<b>可量化反馈</b>——按情感重量结算「典金」，配合逐步解锁的彩蛋机制；破解「去屏幕化」限制，用<b class="t-pink">听 / 嗅 / 触</b>三感搭建对应三段人生的感官舱。', en: 'A campus-wide immersive show (brief: "super senses"). Abstract feelings become <b>quantifiable feedback</b> — "pawn gold" settled by emotional weight, with gradually unlocked easter eggs. Under a no-screen constraint, <b class="t-pink">hearing / smell / touch</b> pods stage three stages of a life.' },
     'ps.f1': { zh: '典当', en: 'Pawn' }, 'ps.f2': { zh: '蒙眼入舱', en: 'Blindfolded entry' }, 'ps.f3': { zh: '睁眼探索', en: 'Eyes-open explore' }, 'ps.f4': { zh: '记忆长廊', en: 'Memory corridor' },
@@ -159,7 +165,7 @@
     'ps.b1': { zh: '📑 下载汇报 PPT', en: '📑 Download the deck' },
 
     'sy.title': { zh: '你就是系统', en: 'YOU ARE THE SYSTEM' },
-    'sy.meta': { zh: '人体互动画布 · 数字艺术互动体验 · 8 人小组 / 主策划兼统筹 · 承担约 80% 工作量 · 2026.03', en: 'Human interactive canvas · digital-art experience · 8-person team / lead designer · ~80% of workload · 2026.03' },
+    'sy.meta': { zh: '人体互动画布 · 数字艺术互动体验 · 8 人小组 / 主策划兼统筹（创意 · 管线 · 动线 · 培训） · 2026.03', en: 'Human interactive canvas · digital-art experience · 8-person team / lead designer & coordinator · 2026.03' },
     'sy.quote': { zh: '“数字艺术 = 你的动作 + 系统的回应。”', en: '"Digital art = your motion + the system\'s response."' },
     'sy.desc': { zh: '面向全班 29 人的互动体验，主题与核心创意均由本人构思。设计<b class="t-cyan">「人肉实时渲染」管线</b>：体验者做动作 → 侧面模仿者复现 → 背面绘画者实时成画，构建动作—反馈闭环。<b>零硬件落地</b>，划分体验 / 绘画区与动线，制作循环讲解视频并培训执行。', en: 'An interactive piece for a 29-person class; theme and core idea both mine. A <b class="t-cyan">"human real-time render" pipeline</b>: the participant moves → a mimic restages it → a painter renders it live, closing the action–feedback loop. <b>Zero hardware</b>: zoned floor plan, looping tutorial video, trained executors.' },
     'sy.p1': { zh: '体验者', en: 'Participant' }, 'sy.p2': { zh: '模仿者', en: 'Mimic' }, 'sy.p3': { zh: '绘画者', en: 'Painter' }, 'sy.p4': { zh: '实时成画', en: 'Live painting' },
@@ -222,6 +228,7 @@
     'pm.s1s': { zh: 'PM DELIVERABLE · 17P · 认知地图 → 冲突决策 → 复盘 Roadmap', en: 'PM DELIVERABLE · 17 PAGES · cognition → decisions → roadmap' },
     'pm.b1': { zh: '⚡ 打开在线风险看板', en: '⚡ Open the live dashboard' },
     'pm.b2': { zh: '📄 完整 PM 交付文档', en: '📄 Full PM deliverable' },
+    'pm.b3': { zh: '📋 项目管理简历', en: '📋 PM resume' },
 
     'ga.num': { zh: 'BONUS ISSUE · 番外', en: 'BONUS ISSUE' },
     'ga.title': { zh: '游戏美术', en: 'GAME ART' },
@@ -251,10 +258,11 @@
     'sk.g3d': { zh: '英雄联盟手游 · 和平精英 · 使命召唤手游 · 明日方舟 · 我的世界 · 奇迹暖暖 · 食物语 · Phigros', en: 'Wild Rift · PUBG Mobile · CoD Mobile · Arknights · Minecraft · Miracle Nikki · Food Fantasy · Phigros' },
 
     'ct.title': { zh: '一起做游戏？', en: 'MAKE GAMES TOGETHER?' },
-    'ct.sub': { zh: '意向岗位：游戏策划培训生（日常实习） · 随时可以聊', en: 'Looking for: game design trainee (part-time internship) · always up for a chat' },
+    'ct.sub': { zh: '意向岗位：游戏策划 / 项目管理（日常实习） · 随时可以聊', en: 'Looking for: game design / project management internships · always up for a chat' },
     'ct.open': { zh: 'OPEN TO', en: 'OPEN TO' },
-    'ct.opend': { zh: '游戏策划日常实习 · 叙事/系统/关卡方向 · 通常 24h 内回复', en: 'Game design internships · narrative / systems / levels · usually replies within 24h' },
-    'ct.resume': { zh: 'Resume / 简历 PDF', en: 'Resume / PDF' },
+    'ct.opend': { zh: '游戏策划 / 项目管理日常实习 · 叙事 · 系统 · 关卡 · 统筹 · 通常 24h 内回复', en: 'Game design & PM internships · narrative / systems / levels / coordination · usually replies within 24h' },
+    'ct.resume': { zh: '策划简历 PDF', en: 'Game-design resume' },
+    'ct.resumePm': { zh: '项目管理简历 PDF', en: 'PM resume' },
     'ct.footer': { zh: '© 2026 莫心雅 CYNTHIA · 用 <span class="t-pink">♥</span> 与蛛丝织成 · Inspired by the Spider-Verse / Earth-65', en: '© 2026 MO XINYA / CYNTHIA · woven with <span class="t-pink">♥</span> and webbing · Inspired by the Spider-Verse / Earth-65' }
   };
 
@@ -264,8 +272,8 @@
   function apply() {
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
     document.title = lang === 'zh'
-      ? '莫心雅 CYNTHIA · 游戏策划 Game Designer'
-      : 'CYNTHIA MO · Game Designer Portfolio';
+      ? '莫心雅 CYNTHIA · 游戏策划 × 项目管理'
+      : 'CYNTHIA MO · Game Designer & PM Portfolio';
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var entry = D[el.dataset.i18n];
       if (entry) el.innerHTML = entry[lang];

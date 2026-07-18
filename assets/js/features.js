@@ -58,9 +58,12 @@
   var PROXY_URL = 'https://cynthia-spider.vercel.app/api/ask';
 
   var KB = [
+    { k: /项目管理|统筹|敏捷|看板|风险|复盘|\bpm\b|agile|scrum|kanban|dashboard/i,
+      zh: 'PM 方向的代表作是「AI 赋能游戏项目管理」：以 LOLM 7.1 为蓝本推演新人 PM 全链路——认知地图、48h 上手 SOP、冲刺期三冲突决策、复盘框架与三个月 Roadmap，还有一块已上线的「版本风险与进度看板」。再加上两次带 8 人团队主策划兼统筹的落地经验（定分工、写台本、做培训、盯节点），她相信 PM 最关键的是让信息透明、让节奏可控。',
+      en: 'Her flagship PM work: "AI-Empowered Game PM" — a new-PM full-lifecycle playbook on LOL Mobile 7.1 (cognition map, 48h onboarding SOP, sprint conflict decisions, retro framework, three-month roadmap) plus a live version-risk dashboard. Add twice leading an 8-person team as lead designer & coordinator, and her core belief: a PM\'s job is keeping information transparent and the rhythm under control.' },
     { k: /项目|做过|作品|经历|project|work/i,
-      zh: '心雅有四组代表作：①《金陵残梦》——以《红楼梦》为蓝本的双人分屏叙事冒险概念，独立交付 5 件（概念文档/美术集/PV/PPT/导航网站）；②它的衍生宇宙——Arduino 声景装置 + 梦境 APP 概念；③《记忆当铺》五感沉浸体验；④《你就是系统》人体互动画布。往下滑，每一个都有完整档案。',
-      en: 'Four flagship works: 1) Remnant Dream of Jinling — a split-screen co-op narrative concept based on Dream of the Red Chamber, with 5 solo deliverables; 2) its spin-offs — an Arduino soundscape device + a dream-app concept; 3) The Memory Pawnshop, a five-sense immersive show; 4) You Are The System, a human interactive canvas. Scroll down for full files.' },
+      zh: '心雅有五组代表作：①《金陵残梦》——以《红楼梦》为蓝本的双人分屏叙事冒险概念，独立交付 5 件（概念文档/美术集/PV/PPT/导航网站）；②它的衍生宇宙——Arduino 声景装置 + 梦境 APP 概念；③《记忆当铺》五感沉浸体验；④《你就是系统》人体互动画布；⑤「AI 赋能游戏项目管理」——PM 全链路课题 + 已上线的风险看板。往下滑，每一个都有完整档案。',
+      en: 'Five flagship works: 1) Remnant Dream of Jinling — a split-screen co-op narrative concept based on Dream of the Red Chamber, with 5 solo deliverables; 2) its spin-offs — an Arduino soundscape device + a dream-app concept; 3) The Memory Pawnshop, a five-sense immersive show; 4) You Are The System, a human interactive canvas; 5) AI-Empowered Game PM — a full-lifecycle PM playbook with a live risk dashboard. Scroll down for full files.' },
     { k: /红楼|文学|ip|改编|为什么/i,
       zh: '为什么是《红楼梦》？因为它本身就是一场「双视角的梦」——世人看见繁华，黛玉看见将散的宴席。心雅把这种「同一世界、两套真相」转译成双人分屏机制：石青看见结构，温遇看见情感，缺一不可。文学不是皮，是机制的源头。',
       en: 'Why Dream of the Red Chamber? Because the novel itself is a dream with two readings — the world sees splendor, Daiyu sees the feast about to scatter. Cynthia translates that into split-screen mechanics: one player reads structure, the other reads emotion, and neither view alone can finish the game. Literature is not a skin here — it is where the mechanics come from.' },
@@ -68,8 +71,8 @@
       zh: '她的 AI 工作流四步走：Claude/Gemini/GPT 交叉论证当「会反驳的策划搭档」→ GPT Image 统一水墨概念图 → 即梦/可灵生成动态分镜、剪映成片 → Claude Code 做工程交付（你现在看到的这个网站也是）。所有设计判断由她本人拍板。',
       en: 'Her AI workflow has four steps: Claude/Gemini/GPT cross-examination as "design partners who talk back" → GPT Image for a consistent ink-wash art set → Jimeng/Kling animatics edited in CapCut → Claude Code for engineering delivery (including this very site). Every design call is hers.' },
     { k: /团队|合作|实习|岗位|招|join|team|intern/i,
-      zh: '她在找游戏策划培训生/日常实习，方向是叙事、系统、关卡。想要的团队：认真做体验、愿意让新人真的上手干活。她的习惯是把活儿干到 80% 工作量那种程度（有两个项目为证）。联系方式在页面最底下 👇',
-      en: 'She is looking for a game-design trainee / part-time internship in narrative, systems or level design — a team that takes player experience seriously and lets juniors actually build things. Her track record: carrying ~80% of the workload on two shipped projects. Contact info at the bottom 👇' },
+      zh: '她正同时看两条线：游戏策划 和 项目管理（都是日常实习）。策划线方向是叙事、系统、关卡；PM 线有 LOLM 蓝本的全链路课题和已上线的风险看板背书。想要的团队：认真做体验、愿意让新人真的上手干活。联系方式在页面最底下 👇',
+      en: 'She is open to two tracks: game design and project management (both part-time internships). Design side: narrative, systems, levels; PM side: a full-lifecycle playbook on LOL Mobile plus a live risk dashboard to show for it. She wants a team that takes player experience seriously and lets juniors actually build things. Contact info at the bottom 👇' },
     { k: /教育|学校|大学|学历|背景|school|edu/i,
       zh: '湖北大学数字媒体艺术本科（2025–2029），学业排名 1/120 专业第一；之前是广州美术学院附属中等美术学校美术方向，还有约一年动画专项训练。美术是童子功，策划是主修。',
       en: 'BA in Digital Media Art at Hubei University (2025–2029), ranked 1/120 — top of the major. Before that: the GAFA-affiliated art school plus ~a year of animation training. Art is her foundation; design is her major.' },
@@ -231,11 +234,11 @@
       links: [{ t: { zh: '查看完整档案 ↓', en: 'Full file below ↓' }, h: '#jinling' }]
     },
     pawnshop: {
-      chips: { zh: ['全校路演落地', '8 人组 · 主策划', '80% 工作量'], en: ['Campus-wide show', 'Team of 8 · lead', '80% of workload'] },
+      chips: { zh: ['全校路演落地', '8 人组 · 主策划兼统筹', '台本 · 培训 · 采购'], en: ['Campus-wide show', 'Team of 8 · lead & coordinator', 'Scripts · training · procurement'] },
       title: { zh: '记忆当铺', en: 'The Memory Pawnshop' },
       sub: 'THE MEMORY PAWNSHOP',
       desc: { zh: '「用五感典当记忆」：典当 → 蒙眼入舱 → 睁眼探索 → 记忆长廊四段动线；情感重量结算「典金」+ 逐步解锁彩蛋；零屏幕，用听/嗅/触三感舱对应三段人生。', en: '"Pawn your memories through the senses": a four-beat journey — pawn, blindfolded entry, eyes-open exploration, memory corridor. Pawn gold settled by emotional weight, easter eggs unlocking stage by stage, zero screens — hearing/smell/touch pods for three stages of a life.' },
-      role: { zh: '我的角色：核心创意 / 体验动线 / 台本与培训 / 采购统筹 / 汇报 PPT，约 80% 工作量。', en: 'My role: core concept / experience flow / scripts & training / procurement / final deck — about 80% of the work.' },
+      role: { zh: '我的角色：主策划兼统筹——核心创意 / 体验动线 / 台本与培训 / 采购统筹 / 汇报 PPT，定分工、盯节点，把八个人拧成一场落地路演。', en: 'My role: lead designer & coordinator — core concept / experience flow / scripts & training / procurement / final deck; set the split, tracked the milestones, turned eight people into one live show.' },
       video: 'assets/video/pawnshop-vlog.mp4', poster: 'assets/img/posters/pawnshop-vlog.jpg',
       links: [{ t: { zh: '查看完整档案 ↓', en: 'Full file below ↓' }, h: '#pawnshop' }]
     },
@@ -244,7 +247,7 @@
       title: { zh: '你就是系统 · 人体互动画布', en: 'You Are The System' },
       sub: 'HUMAN INTERACTIVE CANVAS',
       desc: { zh: '「数字艺术 = 你的动作 + 系统的回应」。人肉实时渲染管线：体验者动作 → 模仿者复现 → 绘画者实时成画，构成动作—反馈闭环；划区动线 + 循环讲解视频 + 执行培训，零硬件落地。', en: '"Digital art = your motion + the system\'s response." A human render pipeline: participant moves → mimic restages → painter renders live, closing the loop — zoned floor plan, looping tutorial video, trained executors, zero hardware.' },
-      role: { zh: '我的角色：主题与核心创意 / 管线设计 / 动线规划 / 汇报 PPT，约 80% 工作量。', en: 'My role: theme & concept / pipeline design / floor plan / final deck — about 80% of the work.' },
+      role: { zh: '我的角色：主策划兼统筹——主题与核心创意 / 管线设计 / 动线规划 / 汇报 PPT，制作循环讲解视频并培训执行。', en: 'My role: lead designer & coordinator — theme & concept / pipeline design / floor plan / final deck; made the looping tutorial video and trained the executors.' },
       video: 'assets/video/system-vlog.mp4', poster: 'assets/img/posters/system-vlog.jpg',
       links: [{ t: { zh: '查看完整档案 ↓', en: 'Full file below ↓' }, h: '#system' }]
     },
