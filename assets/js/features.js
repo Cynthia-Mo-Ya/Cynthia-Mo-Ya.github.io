@@ -58,9 +58,9 @@
   var PROXY_URL = 'https://cynthia-spider.vercel.app/api/ask';
 
   var KB = [
-    { k: /项目管理|统筹|敏捷|看板|风险|复盘|\bpm\b|agile|scrum|kanban|dashboard/i,
-      zh: 'PM 方向的代表作是「AI 赋能游戏项目管理」：以 LOLM 7.1 为蓝本推演新人 PM 全链路——认知地图、48h 上手 SOP、冲刺期三冲突决策、复盘框架与三个月 Roadmap，还有一块已上线的「版本风险与进度看板」。再加上两次带 8 人团队主策划兼统筹的落地经验（定分工、写台本、做培训、盯节点），她相信 PM 最关键的是让信息透明、让节奏可控。',
-      en: 'Her flagship PM work: "AI-Empowered Game PM" — a new-PM full-lifecycle playbook on LOL Mobile 7.1 (cognition map, 48h onboarding SOP, sprint conflict decisions, retro framework, three-month roadmap) plus a live version-risk dashboard. Add twice leading an 8-person team as lead designer & coordinator, and her core belief: a PM\'s job is keeping information transparent and the rhythm under control.' },
+    { k: /项目管理|统筹|敏捷|看板|风险|复盘|光核|共创营|\bpm\b|agile|scrum|kanban|dashboard/i,
+      zh: 'PM 方向的代表作是「AI 赋能游戏项目管理」（光核共创营课题三）：以 LOLM 7.1 为蓝本推演新人 PM 全链路——认知地图、48h 上手 SOP、冲刺期三冲突决策、复盘框架与三个月 Roadmap，还有一块已上线的「版本风险与进度看板」。她以结业总分第一从光核共创营一期毕业（三份课题 10/10/8），再加上两次带 8 人团队主策划兼统筹的落地经验，她相信 PM 最关键的是让信息透明、让节奏可控。',
+      en: 'Her flagship PM work: "AI-Empowered Game PM" (co-creation camp brief #3) — a new-PM full-lifecycle playbook on LOL Mobile 7.1 (cognition map, 48h onboarding SOP, sprint conflict decisions, retro framework, three-month roadmap) plus a live version-risk dashboard. She graduated from LIGHTSPEED STUDIOS\' co-creation camp S1 with the No.1 overall score (briefs 10/10/8). Add twice leading an 8-person team as lead & coordinator, and her core belief: a PM\'s job is keeping information transparent and the rhythm under control.' },
     { k: /项目|做过|作品|经历|project|work/i,
       zh: '心雅有五组代表作：①《金陵残梦》——以《红楼梦》为蓝本的双人分屏叙事冒险概念，独立交付 5 件（概念文档/美术集/PV/PPT/导航网站）；②它的衍生宇宙——Arduino 声景装置 + 梦境 APP 概念；③《记忆当铺》五感沉浸体验；④《你就是系统》人体互动画布；⑤「AI 赋能游戏项目管理」——PM 全链路课题 + 已上线的风险看板。往下滑，每一个都有完整档案。',
       en: 'Five flagship works: 1) Remnant Dream of Jinling — a split-screen co-op narrative concept based on Dream of the Red Chamber, with 5 solo deliverables; 2) its spin-offs — an Arduino soundscape device + a dream-app concept; 3) The Memory Pawnshop, a five-sense immersive show; 4) You Are The System, a human interactive canvas; 5) AI-Empowered Game PM — a full-lifecycle PM playbook with a live risk dashboard. Scroll down for full files.' },
@@ -73,9 +73,9 @@
     { k: /团队|合作|实习|岗位|招|join|team|intern/i,
       zh: '她正同时看两条线：游戏策划 和 项目管理（都是日常实习）。策划线方向是叙事、系统、关卡；PM 线有 LOLM 蓝本的全链路课题和已上线的风险看板背书。想要的团队：认真做体验、愿意让新人真的上手干活。联系方式在页面最底下 👇',
       en: 'She is open to two tracks: game design and project management (both part-time internships). Design side: narrative, systems, levels; PM side: a full-lifecycle playbook on LOL Mobile plus a live risk dashboard to show for it. She wants a team that takes player experience seriously and lets juniors actually build things. Contact info at the bottom 👇' },
-    { k: /教育|学校|大学|学历|背景|school|edu/i,
-      zh: '湖北大学数字媒体艺术本科（2025–2029），学业排名 1/120 专业第一；之前是广州美术学院附属中等美术学校美术方向，还有约一年动画专项训练。美术是童子功，策划是主修。',
-      en: 'BA in Digital Media Art at Hubei University (2025–2029), ranked 1/120 — top of the major. Before that: the GAFA-affiliated art school plus ~a year of animation training. Art is her foundation; design is her major.' },
+    { k: /教育|学校|大学|学历|背景|结业|school|edu/i,
+      zh: '湖北大学数字媒体艺术本科（2025–2029），学业排名 1/120 专业第一；之前是广州美术学院附属中等美术学校美术方向，还有约一年动画专项训练。2026 年以结业总分第一从光子「光核共创营」一期毕业（优秀结业生，三份课题 10/10/8）。美术是童子功，策划与统筹是主修。',
+      en: 'BA in Digital Media Art at Hubei University (2025–2029), ranked 1/120 — top of the major. Before that: the GAFA-affiliated art school plus ~a year of animation training. In 2026 she graduated from LIGHTSPEED STUDIOS\' co-creation camp S1 as a distinguished graduate with the No.1 overall score (briefs 10/10/8). Art is her foundation; design and coordination are her major.' },
     { k: /游戏|玩|喜欢|品味|play|game/i,
       zh: '她的游戏库分三层：叙事情感向（底特律变人、艾迪芬奇、锈湖、Journey、光遇）是核心；双人协作/非对称（双人成行、双影奇境、胡闹厨房、猫鼠）是研究方向；再加 MOBA/射击/养成/音游的广撒网。玩得多，拆得更多。',
       en: 'Three layers in her library: narrative/emotional games (Detroit, Edith Finch, Rusty Lake, Journey, Sky) at the core; co-op/asymmetric titles (It Takes Two, Split Fiction, Overcooked, Tom & Jerry Chase) as a research track; plus a wide net of MOBA / shooter / sim / rhythm. She plays a lot — and deconstructs more.' },
@@ -274,7 +274,7 @@
       title: { zh: 'AI 赋能游戏项目管理', en: 'AI-Empowered Game PM' },
       sub: 'AI-EMPOWERED GAME PM',
       desc: { zh: '以 LOLM 7.1 为蓝本推演新人 PM 全链路：认知地图、48h 上手 SOP、冲刺期三冲突决策、需求变更会议纪要、版本复盘与三个月 Roadmap，并落地一块已上线的「版本风险与进度看板」。核心态度：AI 做杠杆，不做拐杖。', en: 'A new-PM full-lifecycle playbook on LOL Mobile 7.1: cognition map, 48h onboarding SOP, three sprint conflicts, a change-review record, a retro framework and a three-month roadmap — plus a live "version risk & progress dashboard." Stance: AI as leverage, not a crutch.' },
-      role: { zh: '我的角色：个人作业 —— 认知地图 / SOP / 冲突决策 / 会议纪要 / 复盘 Roadmap / 在线看板搭建。', en: 'My role: solo coursework — cognition map / SOP / conflict decisions / minutes / retro roadmap / live dashboard.' },
+      role: { zh: '我的角色：光核共创营课题三，个人独立完成 —— 认知地图 / SOP / 冲突决策 / 会议纪要 / 复盘 Roadmap / 在线看板搭建。', en: 'My role: co-creation camp brief #3, all solo — cognition map / SOP / conflict decisions / minutes / retro roadmap / live dashboard.' },
       image: 'assets/img/aipm/kanban.webp',
       links: [
         { t: { zh: '⚡ 在线风险看板', en: '⚡ Live risk dashboard' }, h: 'https://lol-risk-dashboard.vercel.app', hot: true, ext: true },
