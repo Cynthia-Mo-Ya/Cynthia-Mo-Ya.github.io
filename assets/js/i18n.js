@@ -31,7 +31,7 @@
     'hero.st4s': { zh: '光子工作室群 · 结业总分第一', en: 'LIGHTSPEED STUDIOS · No.1 overall at graduation' },
     'hero.st2u': { zh: '件', en: '' },
     'hero.st2': { zh: '完整作品', en: 'Complete Works' },
-    'hero.st2s': { zh: '从游戏概念到在线看板', en: 'From game concepts to a live dashboard' },
+    'hero.st2s': { zh: '从游戏设计到项目管理', en: 'From game design to project management' },
     'hero.st3u': { zh: '次', en: '×' },
     'hero.st3': { zh: '主策划兼统筹', en: 'Lead & Coordinator' },
     'hero.st3s': { zh: '8 人团队 · 落地体验项目', en: '8-person team · shipped experiences' },
