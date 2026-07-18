@@ -34,7 +34,7 @@
     'hero.st2': { zh: '完整作品', en: 'Complete Works' },
     'hero.st2s': { zh: '从游戏设计到项目管理', en: 'From game design to project management' },
     'hero.scroll': { zh: '往下滑', en: 'Scroll down' },
-    'hero.resume': { zh: '📄 一页综合简历 · 策划 × 项目管理 ↗', en: '📄 One-page resume · Design × PM ↗' },
+    'hero.resume': { zh: '📄 个人简历 PDF ↗', en: '📄 Resume PDF ↗' },
 
     'decode.title': { zh: '解码 CYNTHIA', en: 'DECODE CYNTHIA' },
     'decode.meta': { zh: '七个字母 · 七种能力 · 点亮试试看', en: 'Seven letters · seven powers · light them up' },
