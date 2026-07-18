@@ -23,7 +23,7 @@
 
     'hero.tag': { zh: 'MULTIVERSE FILE · EARTH-65 · 中国 · 武汉', en: 'MULTIVERSE FILE · EARTH-65 · WUHAN, CHINA' },
     'hero.role1': { zh: '游戏策划', en: 'GAME DESIGNER' },
-    'hero.role2': { zh: '项目管理 · 叙事 · 系统 · 关卡', en: 'PROJECT MGMT · NARRATIVE · SYSTEMS · LEVELS' },
+    'hero.rolePm': { zh: '项目管理', en: 'PROJECT MGMT' },
     'hero.line': { zh: '把文学变成<em>可以玩的梦</em>。', en: 'Turning literature into <em>playable dreams</em>.' },
     'hero.st1': { zh: '专业第一', en: 'Top of Class' },
     'hero.st1s': { zh: '湖北大学 · 数字媒体艺术', en: 'Hubei University · Digital Media Art' },
