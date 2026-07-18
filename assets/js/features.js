@@ -84,8 +84,8 @@
       en: 'Email 2062491054@qq.com, phone 135-5413-7459, GitHub @Cynthia-Mo-Ya. The colorful tapes at the bottom of the page are all clickable — the resume PDF is there too.' }
   ];
   var KB_FALLBACK = {
-    zh: '这个问题有点超出我的蛛网范围🕸️ 试试问：她的项目、AI 工作流、为什么选《红楼梦》、想加入什么团队，或者直接发邮件 2062491054@qq.com 问真人。',
-    en: 'That one is a bit outside my web 🕸️ Try asking about her projects, AI workflow, why Dream of the Red Chamber, or what team she wants — or email the human directly: 2062491054@qq.com.'
+    zh: '这个问题有点超出我的蛛网范围🕸️ 试试问：她的作品、项目统筹、AI 工作流、为什么选《红楼梦》、想加入什么团队，或者直接发邮件 2062491054@qq.com 问真人。',
+    en: 'That one is a bit outside my web 🕸️ Try asking about her works, project coordination, AI workflow, why Dream of the Red Chamber, or what team she wants — or email the human directly: 2062491054@qq.com.'
   };
 
   var spiderStage = document.getElementById('spiderStage');
