@@ -3,7 +3,7 @@
   'use strict';
 
   var D = {
-    'loader.sub': { zh: '莫心雅 · 游戏策划 × 项目管理 · EARTH-65', en: 'MO XINYA · GAME DESIGN × PROJECT MGMT · EARTH-65' },
+    'loader.sub': { zh: '莫心雅 · 策划 × 项目管理 × 美术 · EARTH-65', en: 'MO XINYA · DESIGN × PM × ART · EARTH-65' },
 
     'nav.decode': { zh: '代号', en: 'Codename' },
     'nav.about': { zh: '起源', en: 'Origin' },
@@ -24,6 +24,7 @@
     'hero.tag': { zh: 'MULTIVERSE FILE · EARTH-65 · 中国 · 武汉', en: 'MULTIVERSE FILE · EARTH-65 · WUHAN, CHINA' },
     'hero.role1': { zh: '游戏策划', en: 'GAME DESIGNER' },
     'hero.rolePm': { zh: '项目管理', en: 'PROJECT MGMT' },
+    'hero.roleArt': { zh: '游戏美术', en: 'GAME ARTIST' },
     'hero.line': { zh: '会造梦，也会让梦<em>如期上线</em>。', en: 'I build dreams — and <em>ship them on time</em>.' },
     'hero.st1': { zh: '专业第一', en: 'Top of Class' },
     'hero.st1s': { zh: '湖北大学 · 数字媒体艺术', en: 'Hubei University · Digital Media Art' },
@@ -54,7 +55,7 @@
     'file.stamp': { zh: 'CONFIDENTIAL', en: 'CONFIDENTIAL' },
     'file.open': { zh: '⤷ 单击展开档案', en: '⤷ Click to open the file' },
     'file.close': { zh: '⤶ 单击合上文档', en: '⤶ Click to close' },
-    'file.name': { zh: '莫心雅 · 游戏策划 / 项目管理', en: 'Mo Xinya · Game Designer / PM' },
+    'file.name': { zh: '莫心雅 · 策划 / 项目管理 / 美术', en: 'Mo Xinya · Designer / PM / Artist' },
     'file.s1t': { zh: '审美 / 策划 / 统筹 / AI 工作流', en: 'Aesthetics / Design / Coordination / AI' },
     'file.s1': { zh: '会造梦，也会让梦如期上线', en: 'Builds dreams — ships them on time' },
     'file.s2': { zh: '· 系统 / 叙事 / 关卡设计<br>· 7 件完整作品<br>· 8 人团队主策划兼统筹 ×2', en: '· Systems / narrative / level design<br>· 7 complete works<br>· Lead & coordinator of 8-person team ×2' },
@@ -271,8 +272,8 @@
   function apply() {
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
     document.title = lang === 'zh'
-      ? '莫心雅 CYNTHIA · 游戏策划 × 项目管理'
-      : 'CYNTHIA MO · Game Designer & PM Portfolio';
+      ? '莫心雅 CYNTHIA · 游戏策划 × 项目管理 × 游戏美术'
+      : 'CYNTHIA MO · Design × PM × Art Portfolio';
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var entry = D[el.dataset.i18n];
       if (entry) el.innerHTML = entry[lang];
