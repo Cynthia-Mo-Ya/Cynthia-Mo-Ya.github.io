@@ -37,7 +37,6 @@
     'hero.resume': { zh: '📄 个人简历 PDF ↗', en: '📄 Resume PDF ↗' },
 
     'decode.title': { zh: '解码 CYNTHIA', en: 'DECODE CYNTHIA' },
-    'decode.meta': { zh: '七个字母 · 七种能力 · 点亮试试看', en: 'Seven letters · seven powers · light them up' },
     'decode.c': { zh: '统筹协调 · 把团队拧成一股绳', en: 'Coordination · spinning a team into one thread' },
     'decode.y': { zh: '纺出故事线 · 也是一根蛛丝', en: 'Spinning yarns · also spider silk' },
     'decode.n': { zh: '叙事设计 · 文学 IP 的交互转生', en: 'Narrative design · literature reborn as play' },
