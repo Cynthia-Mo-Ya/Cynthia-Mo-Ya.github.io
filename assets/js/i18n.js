@@ -62,6 +62,7 @@
     'file.s3t': { zh: '教育', en: 'EDU' },
     'file.s3': { zh: '湖北大学 · 数媒艺术 2025–2029<br>学业排名 1/120 · 广美附中<br>光核共创营一期 · 结业总分第一', en: 'Hubei University · DMA 2025–2029<br>Rank 1/120 · GAFA affiliated school<br>LIGHTSPEED camp S1 · No.1 overall' },
     'file.read': { zh: '点击阅读完整简历 ↗', en: 'Read the full resume ↗' },
+    'file.readGd': { zh: '🎮 游戏策划方向简历 ↗', en: '🎮 Game-design resume ↗' },
     'file.readPm': { zh: '📋 项目管理方向简历 ↗', en: '📋 Project-management resume ↗' },
     'build.b1t': { zh: '系统设计', en: 'Systems Design' },
     'build.b1s': { zh: '完整策划案 · 玩法循环 / 关系系统 / 多结局', en: 'Full design doc · loop / relationships / endings' },
