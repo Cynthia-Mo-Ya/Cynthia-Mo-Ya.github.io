@@ -364,7 +364,7 @@
   /* 节点散布到整张网（半径 .4–1.0），不再挤在中心 */
   var NODES = [
     { n: 'Claude', icon: 'claude', c: '#D97757', a: -90, r: .42 },
-    { n: 'GPT', icon: 'openai', c: '#10A37F', a: -58, r: .62 },
+    { n: 'ChatGPT', icon: 'openai', c: '#10A37F', a: -58, r: .62 },
     { n: 'Gemini', icon: 'googlegemini', c: '#886FBF', a: -118, r: .60 },
     { n: 'DeepSeek', icon: 'deepseek', c: '#4D6BFE', a: -28, r: .48 },
     { n: 'Figma', icon: 'figma', c: '#F24E1E', a: 168, r: .55 },
@@ -381,11 +381,11 @@
     { n: 'Supabase', icon: 'supabase', c: '#3FCF8E', a: 2, r: .96 },
     { n: 'Vercel', icon: 'vercel', c: '#F0ECFF', a: -8, r: .52 },
     { n: 'Cursor', icon: 'cursor', c: '#F0ECFF', a: -104, r: .90 },
-    { n: '剪映 CapCut', mono: '剪', c: '#00E5D0', a: 108, r: .60 },
-    { n: '即梦 Seedance', mono: '即', c: '#5B6CFF', a: 124, r: .92 },
-    { n: '可灵 Kling', mono: '灵', c: '#00E08F', a: 92, r: .48 },
+    { n: '剪映 CapCut', icon: 'capcut', c: '#00E5D0', a: 108, r: .60 },
+    { n: '即梦 AI', mono: '即', c: '#5B6CFF', a: 124, r: .92 },
+    { n: '可灵 AI', mono: '灵', c: '#00E08F', a: 92, r: .48 },
     { n: 'Suno', icon: 'suno', c: '#FF7847', a: 138, r: .62 },
-    { n: 'UE · 虚幻引擎', icon: 'unrealengine', c: '#B9A6FF', a: 66, r: .78 }
+    { n: 'Unreal Engine', icon: 'unrealengine', c: '#B9A6FF', a: 66, r: .78 }
   ];
 
   var webSvg = document.getElementById('webSvg');
@@ -438,11 +438,20 @@
     svgEl.innerHTML = svg;
   }
 
+  /* 织网 viewBox 跟随容器实际宽高比：preserveAspectRatio:none 拉伸填满时
+     圆网不再被压扁 / 拉长（手机竖版容器曾把网拉成一长条） */
+  function weaveUniverse() {
+    var uni = document.getElementById('webUniverse');
+    var uw = uni && uni.clientWidth ? uni.clientWidth : 1000;
+    var uh = uni && uni.clientHeight ? uni.clientHeight : 625;
+    var H = Math.max(300, Math.round(1000 * uh / uw));
+    weaveWeb(webSvg, { w: 1000, h: H, cx: 500, cy: Math.round(H * .48), maxR: 540, spokes: 13, rings: 9, seed: 65 });
+    webSvg.setAttribute('preserveAspectRatio', 'none');
+  }
+
   function buildWeb() {
     if (!webSvg) return;
-    weaveWeb(webSvg, { w: 1000, h: 625, cx: 500, cy: 300, maxR: 540, spokes: 13, rings: 9, seed: 65 });
-    /* 拉伸填满容器：窄屏上保证蛛网与按百分比定位的节点对齐 */
-    webSvg.setAttribute('preserveAspectRatio', 'none');
+    weaveUniverse();
 
     var frag = document.createDocumentFragment();
     NODES.forEach(function (nd) {
@@ -475,6 +484,13 @@
     webNodes.appendChild(frag);
   }
   buildWeb();
+  /* 转屏 / 改窗口尺寸后按新比例重织（节点是百分比定位，无需重建） */
+  var webResizeT;
+  window.addEventListener('resize', function () {
+    if (!webSvg) return;
+    clearTimeout(webResizeT);
+    webResizeT = setTimeout(weaveUniverse, 200);
+  });
 
   /* 蜘蛛身后的手织蛛网（同一生成器，另一组种子） */
   weaveWeb(document.getElementById('spiderBackweb'), { w: 460, h: 460, cx: 230, cy: 218, maxR: 225, spokes: 12, rings: 8, seed: 24 });

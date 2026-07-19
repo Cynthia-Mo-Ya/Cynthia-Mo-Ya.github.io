@@ -1282,14 +1282,16 @@ a { color: inherit; text-decoration: none; }
   .decode-wrap { justify-content: center; }
 }
 @media (max-width: 900px) {
-  .web-universe { aspect-ratio: auto; height: 560px; }
+  /* 高度不写死：用 padding 按宽度比例撑，JS 织网同步该比例，网不变形 */
+  .web-universe { aspect-ratio: auto; height: auto; min-height: 0; }
+  .web-universe::before { content: ""; display: block; padding-top: 92%; }
   .nav-right { margin-left: auto; }
 }
 @media (max-width: 560px) {
   .sp-presets { grid-template-columns: 1fr; }
   .dl-char { font-size: 3.4rem; }
   .dl-info b { font-size: 1.05rem; }
-  .web-universe { height: 480px; }
+  .web-universe::before { padding-top: 112%; }
   .wnode { padding: 8px; }
   .wnode-ic, .wnode-mono { width: 21px; height: 21px; font-size: .9rem; }
 }
