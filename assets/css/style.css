@@ -1633,13 +1633,15 @@ body.dossier-open { overflow: hidden; }
 body.dossier-open .nav { visibility: hidden; pointer-events: none; }
 
 .dossier-spread {
-  /* inset 简写老 Safari 不认，写全四边 */
-  position: fixed; top: 0; right: 0; bottom: 0; left: 0; margin: auto; z-index: 9992;
+  /* 弹窗标准几何：translate 居中 + 内容自撑高 + max-height 封顶。
+     不用 fit-content（部分 iOS WebKit 在 grid+fixed 上把它算塌成一条）、
+     不用 inset 简写（老内核不认）、不用 margin:auto 居中（依赖 fit-content） */
+  position: fixed; top: 50%; left: 50%; right: auto; bottom: auto; margin: 0; z-index: 9992;
+  -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
   width: 94vw; width: min(1180px, 94vw);
-  height: -moz-fit-content; height: fit-content;
-  max-height: 92vh; max-height: 92svh;   /* svh：iPad/手机 Safari 的 vh 含地址栏，用 vh 会裁掉底部 */
+  max-height: 88vh; max-height: 92svh;   /* svh：iPad/手机 Safari 的 vh 含地址栏，用 vh 会裁掉底部 */
   overflow-x: hidden; overflow-y: auto;
-  -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
+  overscroll-behavior: contain;
   grid-template-columns: 0.92fr 1.08fr;
   padding: 52px clamp(20px, 2.6vw, 40px) clamp(24px, 2.6vw, 38px);
 }
