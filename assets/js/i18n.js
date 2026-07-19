@@ -93,7 +93,7 @@
     'about.p3d': { zh: '广美附中科班 + 动画专项——2D 角色 / 场景构图 / 漫画分镜 / 速写，审美是所有交付的底色。', en: 'GAFA-affiliated school + animation training — 2D characters / scene composition / comic storyboards / sketching; taste underpins every deliverable.' },
 
     'cards.title': { zh: '作品连载', en: 'COMIC PAGES' },
-    'cards.meta': { zh: '翻开这本连载 · 悬停上色 · 点开任意分格看详情', en: 'Open the serial · hover to ink · click any panel' },
+    'cards.meta': { zh: '封面直出 · 悬停点亮 · 点开任意一张看详情', en: 'Covers up front · hover to light up · click any card' },
     'cards.c1t': { zh: '金陵残梦', en: 'Remnant Dream of Jinling' },
     'cards.c1tag': { zh: '双人叙事冒险 / 个人独立 / PC·Steam', en: 'Co-op narrative adventure / solo work / PC·Steam' },
     'cards.c1b': { zh: '以《红楼梦》为蓝本，两名玩家在同一世界看见不同真相。', en: 'Based on Dream of the Red Chamber — two players see two truths in one world.' },

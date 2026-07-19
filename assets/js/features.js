@@ -343,12 +343,12 @@
   });
 
   if (hasGsap && !reduced && typeof ScrollTrigger !== 'undefined') {
-    /* 整张漫画页甩入；.pcard 自身有 CSS transition，不能逐卡 from() */
-    gsap.fromTo('#comicbook',
+    /* 整面卡牌墙甩入；.pcard 自身有 CSS transition，不能逐卡 from() */
+    gsap.fromTo('#cardsRail',
       { opacity: 0, y: 110, rotation: -2.5 },
       {
         opacity: 1, y: 0, rotation: 0, duration: .8, ease: 'power3.out',
-        scrollTrigger: { trigger: '#comicbook', start: 'top 82%' },
+        scrollTrigger: { trigger: '#cardsRail', start: 'top 82%' },
         clearProps: 'opacity,transform'
       });
   }

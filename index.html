@@ -9,7 +9,7 @@
 <meta property="og:description" content="会造梦，也会让梦如期上线 — 美术 / 策划 / 统筹">
 <meta property="og:image" content="assets/img/jinling-art/jinling-art-01.webp">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="stylesheet" href="assets/css/style.css?v=27">
+<link rel="stylesheet" href="assets/css/style.css?v=28">
 </head>
 <body>
 
@@ -295,94 +295,92 @@
   <span class="bigword" aria-hidden="true">COMIC</span>
   <div class="issue-head">
     <span class="issue-num num-cyan">COMIC PAGES</span>
-    <h2 class="issue-title"><span class="glitch" data-text="作品连载" data-i18n="cards.title">作品连载</span><small>PICK A PANEL</small></h2>
-    <p class="issue-meta" data-i18n="cards.meta">悬停上色 · 点开分格看详情</p>
+    <h2 class="issue-title"><span class="glitch" data-text="作品连载" data-i18n="cards.title">作品连载</span><small>PICK A CARD</small></h2>
+    <p class="issue-meta" data-i18n="cards.meta">封面直出 · 悬停点亮 · 点开看详情</p>
   </div>
 
-  <!-- 翻开的一本漫画书：左页 6 格 + 右页 1 格 + 待续 -->
-  <div class="comicbook" id="comicbook">
-    <div class="cb-book">
-      <!-- 左页 -->
-      <div class="cb-page cb-page-l">
-        <span class="cb-folio">EARTH-65 · CYNTHIA COMICS · PAGE 1</span>
-        <div class="cb-grid">
-          <button class="pcard cbp pc-jinling" data-card="jinling">
-            <span class="pc-ph" aria-hidden="true">🏮</span>
-            <img class="pc-cover" src="assets/img/covers/cover-jinling.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
-            <span class="pc-num">PANEL 01</span>
-            <span class="pc-face">
-              <b class="pc-title" data-i18n="cards.c1t">金陵残梦</b>
-              <small class="pc-tags" data-i18n="cards.c1tag">双人叙事冒险 / 个人独立 / PC·Steam</small>
-            </span>
-          </button>
-          <button class="pcard cbp pc-derive" data-card="derive">
-            <span class="pc-ph" aria-hidden="true">🎛️</span>
-            <img class="pc-cover" src="assets/img/covers/cover-derive.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
-            <span class="pc-num">PANEL 01½</span>
-            <span class="pc-face">
-              <b class="pc-title" data-i18n="cards.c2t">衍生宇宙</b>
-              <small class="pc-tags" data-i18n="cards.c2tag">Arduino 声景装置 / 衍生 APP</small>
-            </span>
-          </button>
-          <button class="pcard cbp pc-pawnshop" data-card="pawnshop">
-            <span class="pc-ph" aria-hidden="true">🏷️</span>
-            <img class="pc-cover" src="assets/img/covers/cover-pawnshop.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
-            <span class="pc-num">PANEL 02</span>
-            <span class="pc-face">
-              <b class="pc-title" data-i18n="cards.c3t">记忆当铺</b>
-              <small class="pc-tags" data-i18n="cards.c3tag">五感沉浸体验 / 主策划兼统筹 / 全校路演</small>
-            </span>
-          </button>
-          <button class="pcard cbp pc-system" data-card="system">
-            <span class="pc-ph" aria-hidden="true">🎨</span>
-            <img class="pc-cover" src="assets/img/covers/cover-system.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
-            <span class="pc-num">PANEL 03</span>
-            <span class="pc-face">
-              <b class="pc-title" data-i18n="cards.c4t">你就是系统</b>
-              <small class="pc-tags" data-i18n="cards.c4tag">人体互动画布 / 主策划兼统筹 / 零硬件</small>
-            </span>
-          </button>
-          <button class="pcard cbp pc-farm" data-card="farm">
-            <span class="pc-ph" aria-hidden="true">👻</span>
-            <img class="pc-cover" src="assets/img/covers/cover-farm.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
-            <span class="pc-num">PANEL 04</span>
-            <span class="pc-face">
-              <b class="pc-title" data-i18n="cards.c5t">闹鬼农场</b>
-              <small class="pc-tags" data-i18n="cards.c5tag">UE5 关卡白盒 / 个人独立 / 寻物解谜 + 轻战斗</small>
-            </span>
-          </button>
-          <button class="pcard cbp pc-moba" data-card="moba">
-            <span class="pc-ph" aria-hidden="true">🛡️</span>
-            <img class="pc-cover" src="assets/img/covers/cover-moba.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
-            <span class="pc-num">PANEL 05</span>
-            <span class="pc-face">
-              <b class="pc-title" data-i18n="cards.c6t">玛卡薇 · 缚命船医</b>
-              <small class="pc-tags" data-i18n="cards.c6tag">LOLM 英雄设计 / 个人独立 / 数值 · 对抗平衡</small>
-            </span>
-          </button>
-        </div>
-      </div>
-
-      <!-- 右页 -->
-      <div class="cb-page cb-page-r">
-        <span class="cb-folio cb-folio-r">PAGE 2 · 最新 LATEST</span>
-        <div class="cb-grid cb-grid-r">
-          <button class="pcard cbp cbp-feature pc-aipm" data-card="aipm">
-            <span class="pc-ph" aria-hidden="true">📊</span>
-            <img class="pc-cover" src="assets/img/covers/cover-aipm.webp?v=2" alt="" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
-            <span class="pc-num">PANEL 06</span>
-            <span class="pc-face">
-              <b class="pc-title" data-i18n="cards.c7t">AI 项目管理</b>
-              <small class="pc-tags" data-i18n="cards.c7tag">游戏项目管理 / AI 工作流 / 在线风险看板</small>
-            </span>
-          </button>
-          <div class="cb-tbc" aria-hidden="false">
-            <b class="cb-tbc-big" data-i18n="cards.tbc">TO BE CONTINUED…</b>
-            <small data-i18n="cards.tbcs">下一话 · 更多作品正在赶来</small>
-          </div>
-        </div>
-        <span class="cb-curl" aria-hidden="true"></span>
-      </div>
+  <!-- 封面卡牌墙：7 张作品卡 + 待续位 -->
+  <div class="cards-rail" id="cardsRail">
+    <button class="pcard pc-jinling" data-card="jinling">
+      <span class="pc-frame">
+        <span class="pc-ph" aria-hidden="true">🏮</span>
+        <img class="pc-cover" src="assets/img/covers/cover-jinling.webp?v=2" alt="" loading="lazy" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+        <span class="pc-num">PANEL 01</span>
+      </span>
+      <span class="pc-face">
+        <b class="pc-title" data-i18n="cards.c1t">金陵残梦</b>
+        <small class="pc-tags" data-i18n="cards.c1tag">双人叙事冒险 / 个人独立 / PC·Steam</small>
+      </span>
+    </button>
+    <button class="pcard pc-derive" data-card="derive">
+      <span class="pc-frame">
+        <span class="pc-ph" aria-hidden="true">🎛️</span>
+        <img class="pc-cover" src="assets/img/covers/cover-derive.webp?v=2" alt="" loading="lazy" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+        <span class="pc-num">PANEL 01½</span>
+      </span>
+      <span class="pc-face">
+        <b class="pc-title" data-i18n="cards.c2t">衍生宇宙</b>
+        <small class="pc-tags" data-i18n="cards.c2tag">Arduino 声景装置 / 衍生 APP</small>
+      </span>
+    </button>
+    <button class="pcard pc-pawnshop" data-card="pawnshop">
+      <span class="pc-frame">
+        <span class="pc-ph" aria-hidden="true">🏷️</span>
+        <img class="pc-cover" src="assets/img/covers/cover-pawnshop.webp?v=2" alt="" loading="lazy" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+        <span class="pc-num">PANEL 02</span>
+      </span>
+      <span class="pc-face">
+        <b class="pc-title" data-i18n="cards.c3t">记忆当铺</b>
+        <small class="pc-tags" data-i18n="cards.c3tag">五感沉浸体验 / 主策划兼统筹 / 全校路演</small>
+      </span>
+    </button>
+    <button class="pcard pc-system" data-card="system">
+      <span class="pc-frame">
+        <span class="pc-ph" aria-hidden="true">🎨</span>
+        <img class="pc-cover" src="assets/img/covers/cover-system.webp?v=2" alt="" loading="lazy" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+        <span class="pc-num">PANEL 03</span>
+      </span>
+      <span class="pc-face">
+        <b class="pc-title" data-i18n="cards.c4t">你就是系统</b>
+        <small class="pc-tags" data-i18n="cards.c4tag">人体互动画布 / 主策划兼统筹 / 零硬件</small>
+      </span>
+    </button>
+    <button class="pcard pc-farm" data-card="farm">
+      <span class="pc-frame">
+        <span class="pc-ph" aria-hidden="true">👻</span>
+        <img class="pc-cover" src="assets/img/covers/cover-farm.webp?v=2" alt="" loading="lazy" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+        <span class="pc-num">PANEL 04</span>
+      </span>
+      <span class="pc-face">
+        <b class="pc-title" data-i18n="cards.c5t">闹鬼农场</b>
+        <small class="pc-tags" data-i18n="cards.c5tag">UE5 关卡白盒 / 个人独立 / 寻物解谜 + 轻战斗</small>
+      </span>
+    </button>
+    <button class="pcard pc-moba" data-card="moba">
+      <span class="pc-frame">
+        <span class="pc-ph" aria-hidden="true">🛡️</span>
+        <img class="pc-cover" src="assets/img/covers/cover-moba.webp?v=2" alt="" loading="lazy" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+        <span class="pc-num">PANEL 05</span>
+      </span>
+      <span class="pc-face">
+        <b class="pc-title" data-i18n="cards.c6t">玛卡薇 · 缚命船医</b>
+        <small class="pc-tags" data-i18n="cards.c6tag">LOLM 英雄设计 / 个人独立 / 数值 · 对抗平衡</small>
+      </span>
+    </button>
+    <button class="pcard pc-aipm" data-card="aipm">
+      <span class="pc-frame">
+        <span class="pc-ph" aria-hidden="true">📊</span>
+        <img class="pc-cover" src="assets/img/covers/cover-aipm.webp?v=2" alt="" loading="lazy" onerror="this.closest('.pcard').classList.add('no-cover');this.remove()">
+        <span class="pc-num">PANEL 06</span>
+      </span>
+      <span class="pc-face">
+        <b class="pc-title" data-i18n="cards.c7t">AI 项目管理</b>
+        <small class="pc-tags" data-i18n="cards.c7tag">游戏项目管理 / AI 工作流 / 在线风险看板</small>
+      </span>
+    </button>
+    <div class="rail-tbc" aria-hidden="true">
+      <b class="rail-tbc-big" data-i18n="cards.tbc">TO BE CONTINUED…</b>
+      <small data-i18n="cards.tbcs">下一话 · 更多作品正在赶来</small>
     </div>
   </div>
 </section>
@@ -771,8 +769,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="assets/js/i18n.js?v=27"></script>
+<script src="assets/js/i18n.js?v=28"></script>
 <script src="assets/js/main.js?v=11"></script>
-<script src="assets/js/features.js?v=17"></script>
+<script src="assets/js/features.js?v=18"></script>
 </body>
 </html>
