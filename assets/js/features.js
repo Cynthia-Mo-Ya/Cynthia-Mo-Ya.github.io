@@ -172,6 +172,13 @@
   var dossierClose = document.getElementById('dossierClose');
   var dossierBackdrop = document.getElementById('dossierBackdrop');
 
+  /* 浮层挪到 body 下：原位置在 .hero-inner(z-index:2) 层叠上下文里，
+     后续区块同为 z-index:2 时按 DOM 顺序压过浮层（手机上点开会被解码区文字穿透） */
+  if (dossierSpread && dossierBackdrop) {
+    document.body.appendChild(dossierBackdrop);
+    document.body.appendChild(dossierSpread);
+  }
+
   function openDossier() {
     dossierCover.hidden = true;
     dossierSpread.hidden = false;
