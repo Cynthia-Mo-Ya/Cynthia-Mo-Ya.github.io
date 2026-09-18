@@ -93,15 +93,26 @@
     }
   }
 
-  document.addEventListener('click', function (e) {
-    var t = e.target;
-    if (t.tagName === 'IMG' && t.dataset.group !== undefined) {
-      var list = Array.prototype.slice.call(
-        document.querySelectorAll('img[data-group="' + t.dataset.group + '"]'));
-      openLightbox(list, parseInt(t.dataset.index, 10));
-    } else if (t.tagName === 'IMG' && t.hasAttribute('data-zoom')) {
-      openLightbox([t], 0);
+  // 直接绑定图片交互，让 Safari 触屏与键盘均可打开预览。
+  document.querySelectorAll('img[data-group], img[data-zoom]').forEach(function (img) {
+    function openImage() {
+      if (img.dataset.group !== undefined) {
+        var list = Array.prototype.slice.call(
+          document.querySelectorAll('img[data-group="' + img.dataset.group + '"]'));
+        openLightbox(list, list.indexOf(img));
+      } else {
+        openLightbox([img], 0);
+      }
     }
+    img.setAttribute('role', 'button');
+    img.tabIndex = 0;
+    img.addEventListener('click', openImage);
+    img.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openImage();
+      }
+    });
   });
   document.getElementById('lbClose').addEventListener('click', closeLightbox);
   document.getElementById('lbPrev').addEventListener('click', function () { step(-1); });
@@ -138,10 +149,10 @@
   links.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', closeNav);
   });
-  // 母目录：移动端点按展开/收起子目录（桌面端靠 hover）
+  // 窄屏与触屏通过点按展开子目录。
   links.querySelectorAll('.nav-parent').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
-      if (window.innerWidth <= 900) {
+      if (window.innerWidth <= 900 || window.matchMedia('(hover: none)').matches) {
         e.preventDefault();
         var g = btn.closest('.nav-group');
         var wasOpen = g.classList.contains('open');
@@ -149,6 +160,9 @@
         if (!wasOpen) g.classList.add('open');
       }
     });
+  });
+  document.addEventListener('click', function (e) {
+    if (!nav.contains(e.target)) closeNav();
   });
 
   /* ── custom cursor ──────────────────────────────────── */

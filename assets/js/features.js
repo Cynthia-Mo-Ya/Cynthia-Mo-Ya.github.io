@@ -98,8 +98,8 @@
       zh: '她的游戏库分三层：叙事情感向（底特律变人、艾迪芬奇、锈湖、Journey、光遇）是核心；双人协作/非对称（双人成行、双影奇境、胡闹厨房、猫鼠）是研究方向；再加 MOBA/射击/养成/音游的广撒网。玩得多，拆得更多。',
       en: 'Three layers in her library: narrative/emotional games (Detroit, Edith Finch, Rusty Lake, Journey, Sky) at the core; co-op/asymmetric titles (It Takes Two, Split Fiction, Overcooked, Tom & Jerry Chase) as a research track; plus a wide net of MOBA / shooter / sim / rhythm. She plays a lot — and deconstructs more.' },
     { k: /联系|邮箱|电话|微信|contact|email|phone/i,
-      zh: '邮箱 2062491054@qq.com，电话 135-5413-7459，GitHub @Cynthia-Mo-Ya。页面最底下有彩色纸条，点开就能联系。简历 PDF 也在那里。',
-      en: 'Email 2062491054@qq.com, phone 135-5413-7459, GitHub @Cynthia-Mo-Ya. The colorful tapes at the bottom of the page are all clickable — the resume PDF is there too.' }
+      zh: '邮箱 2062491054@qq.com，电话 135-5413-7459，GitHub @Cynthia-Mo-Ya。页面最底下的三个彩色纸条可以联系本人；完整综合简历在首页 CYNTHIA 档案夹内。',
+      en: 'Email 2062491054@qq.com, phone 135-5413-7459, GitHub @Cynthia-Mo-Ya. The three colorful tapes at the bottom link to her contacts; the complete resume is in the CYNTHIA dossier on the homepage.' }
   ];
   var KB_FALLBACK = {
     zh: '这个问题有点超出我的蛛网范围🕸️ 试试问：她的八项作品、水友赛分工、项目统筹、AI 工作流或综合简历，或者直接发邮件 2062491054@qq.com 问真人。',
