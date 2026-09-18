@@ -48,8 +48,8 @@
 
     'spider.bubble': { zh: 'CLICK ME!<br>点我 · 问我任何事', en: 'CLICK ME!<br>ASK ME ANYTHING' },
     'spider.noteq': { zh: '你有什么想问我的？', en: 'What do you want to ask me?' },
-    "spider.welcome": {"zh": "嗨！我是心雅的小蜘蛛 🕷️ 可以问我八项作品、无畏契约水友赛、她的分工，或 AI 如何参与制作。", "en": "Hi! I am Cynthia’s spider 🕷️ Ask about her eight projects, the VALORANT cup, her roles, or how she works with AI."},
-    "spider.ph": {"zh": "问作品、水友赛、个人分工…", "en": "Ask about projects, the cup, or her role…"},
+    "spider.welcome": {"zh": "嗨！我是心雅的小蜘蛛 🕷️ 可以问我她的作品、解决问题的方法、团队分工，或 AI 如何参与制作。", "en": "Hi! I am Cynthia’s spider 🕷️ Ask about her projects, problem-solving, team roles, or how she works with AI."},
+    "spider.ph": {"zh": "问作品、能力、个人分工…", "en": "Ask about projects, skills, or her role…"},
     'spider.thinking': { zh: '蛛丝感应中…', en: 'Spider-sense tingling…' },
     'spider.error': { zh: '（信号被反派切断了，先看下面这条本地档案）', en: '(Signal jammed by a villain — here is the local file instead)' },
 
@@ -58,7 +58,7 @@
     'file.close': { zh: '⤶ 单击合上文档', en: '⤶ Click to close' },
     "file.name": {"zh": "莫心雅 · 游戏策划 / 叙事 / 关卡", "en": "Mo Xinya · Game / Narrative / Level Design"},
     "file.s1t": {"zh": "从体验出发，让作品落地", "en": "Design experiences. Bring them to life."},
-    "file.s1": {"zh": "游戏策划为主线<br>美术表达 × 团队协作 × AI 辅助", "en": "Game design at the core<br>Art × teamwork × AI-assisted delivery"},
+    "file.s1": {"zh": "把想法转成可体验的作品<br>设计 × 视觉 × 协作 × AI 辅助", "en": "Turn ideas into experiences<br>Design × visuals × teamwork × AI"},
     "file.s2": {"zh": "· 设计交付：概念文档与视觉方案<br>· 团队统筹：8 人团队 ×2<br>· 赛事落地：3 日水友赛与集锦", "en": "· Design documents & visual concepts<br>· Led two eight-person teams<br>· Three-day cup + highlight edit"},
     "file.s3t": {"zh": "教育与实践", "en": "EDUCATION & PRACTICE"},
     "file.s3": {"zh": "湖北大学 · 数字媒体艺术<br>广美附中 · 美术科班<br>光核共创营一期 · 结业总分第一", "en": "Hubei University · Digital Media Art<br>GAFA-affiliated art school<br>LIGHTSPEED camp S1 · No.1 overall"},
@@ -230,6 +230,8 @@
     'pm.b2': { zh: '📄 完整 PM 交付文档', en: '📄 Full PM deliverable' },
     'pm.b3': { zh: '📋 项目管理简历', en: '📋 PM resume' },
     "nav.events": {"zh": "赛事与活动", "en": "Events"},
+    "nav.valorant": {"zh": "无畏契约娱乐水友赛", "en": "VALORANT Community Cup"},
+    "nav.artCollection": {"zh": "美术作品集", "en": "Art Collection"},
     "cards.c8t": {"zh": "无畏契约水友赛", "en": "VALORANT Community Cup"},
     "cards.c8tag": {"zh": "赛事与活动 / 团队共创 / 宣传 · 社群 · 剪辑", "en": "Live event / Team project / Visuals · Community · Editing"},
     "ev.num": {"zh": "ISSUE #07 · 赛事与活动", "en": "ISSUE #07 · EVENTS"},
@@ -340,8 +342,8 @@
     'sk.g3': { zh: '多品类涉猎', en: 'Wide-ranging' },
     'sk.g3d': { zh: '英雄联盟手游 · 和平精英 · 使命召唤手游 · 明日方舟 · 我的世界 · 奇迹暖暖 · 食物语 · Phigros', en: 'Wild Rift · PUBG Mobile · CoD Mobile · Arknights · Minecraft · Miracle Nikki · Food Fantasy · Phigros' },
 
-    'ct.title': { zh: '一起做游戏？', en: 'MAKE GAMES TOGETHER?' },
-    "ct.sub": {"zh": "欢迎交流游戏设计、作品实践与合作机会", "en": "Let’s talk game design, creative projects and collaboration"},
+    'ct.title': { zh: '一起把想法做出来？', en: 'BRING IDEAS TO LIFE?' },
+    "ct.sub": {"zh": "欢迎交流创意、作品实践与合作机会", "en": "Let’s talk ideas, creative projects and collaboration"},
     'ct.open': { zh: 'OPEN TO', en: 'OPEN TO' },
     "ct.opend": {"zh": "叙事 · 系统 · 关卡 · 团队协作 · 赛事与视觉表达", "en": "Narrative · systems · levels · teamwork · events & visuals"},
     'ct.footer': { zh: '© 2026 莫心雅 CYNTHIA · 用 <span class="t-pink">♥</span> 与蛛丝织成 · Inspired by the Spider-Verse / Earth-65', en: '© 2026 MO XINYA / CYNTHIA · woven with <span class="t-pink">♥</span> and webbing · Inspired by the Spider-Verse / Earth-65' }
