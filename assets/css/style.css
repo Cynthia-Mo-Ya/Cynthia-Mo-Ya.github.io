@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family: 'Smiley Sans';
-  src: url('../fonts/smiley-sans-subset.woff2?v=7') format('woff2');
+  src: url('../fonts/smiley-sans-subset.woff2?v=8') format('woff2');
   font-display: swap;
 }
 
@@ -1825,3 +1825,6 @@ body.dossier-open .nav { visibility: hidden; pointer-events: none; }
   .dos-build { grid-column: 1 / -1; grid-row: 2; margin-top: 10px; }
   .dos-build-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 24px; }
 }
+
+.jl-prototype-note { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 16px 0 0; color: var(--lavender); font-size: .78rem; }
+.jl-prototype-note .btn { padding: 7px 12px; font-size: .78rem; }

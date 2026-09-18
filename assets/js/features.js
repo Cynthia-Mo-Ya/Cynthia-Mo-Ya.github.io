@@ -71,8 +71,8 @@
       zh: "「玛卡薇·缚命船医」是光核共创营的英雄设计与对抗平衡课题。她从悠米的一手体验拆解软辅的能动性与团队影响力，设计技能组、数值和加点框架，并借助 AI 模拟辅助评估；机制取舍与结果判断由她负责。",
       en: "Makavi is her camp brief on hero design and counterplay. Drawing on her Yuumi experience, she examines support agency versus team impact, develops an ability kit and numerical framework, and uses AI-assisted simulations to inform evaluation. She owns the design decisions and review." },
     { k: /金陵|黛玉|jinling|daiyu/i,
-      zh: "《金陵残梦》以《红楼梦》为蓝本，把结构与情感两套视角转成双人协作机制。作品包含策划文档、美术、概念 PV、展示材料与导航网站，还有可玩的黛玉章网页 Demo。她负责创意、机制与视觉取舍，并借助 AI 完成部分制作和工程实现。",
-      en: "Remnant Dream of Jinling adapts Dream of the Red Chamber into co-op play through structural and emotional viewpoints. It includes design documents, art, a concept video, presentation materials and a playable Daiyu chapter web demo. Cynthia directs the creative, mechanical and visual decisions, with AI assistance in production and engineering." },
+      zh: "《金陵残梦》以《红楼梦》为蓝本，把结构与情感两套视角转成双人协作机制。作品包含策划文档、美术、概念 PV、展示材料与导航网站。她负责创意、机制与视觉取舍，并借助 AI 完成部分制作和工程实现。",
+      en: "Remnant Dream of Jinling adapts Dream of the Red Chamber into co-op play through structural and emotional viewpoints. It includes design documents, art, a concept video, presentation materials and an interactive project hub. Cynthia directs the creative, mechanical and visual decisions, with AI assistance in production and engineering." },
     { k: /综合简历|简历|resume|cv/i,
       zh: "首页点击「CYNTHIA」档案夹，里面保留了完整综合简历：点击简历纸张或底部的「阅读完整综合简历」即可打开 PDF。旁边的便签概括项目成果，背面纸片列出设计、统筹、赛事执行和 AI 辅助工作流。",
       en: "Open the CYNTHIA dossier on the homepage, then select the resume sheet or its caption to open the complete resume PDF. The notes summarize project evidence, while the sheet behind it outlines design, coordination, event delivery and AI-assisted work." },
@@ -253,8 +253,7 @@
       role: { zh: '我的角色：100% —— 策划 / 叙事 / 关卡 / 美术 / AI 工作流，全部独立完成。', en: 'My role: 100% — design / narrative / levels / art / AI workflow, all solo.' },
       video: 'assets/video/jinling-pv.mp4', poster: 'assets/img/posters/jinling-pv.jpg',
       links: [
-        { t: { zh: '🎮 在线试玩 · 黛玉章可玩切片', en: '🎮 Play the demo · Daiyu chapter slice' }, h: 'https://jinling-canmeng-demo.vercel.app', hot: true, ext: true },
-        { t: { zh: '⚡ 交互导航网站', en: '⚡ Interactive hub' }, h: 'https://jinling-canmeng.vercel.app', ext: true },
+        { t: { zh: '⚡ 交互导航网站', en: '⚡ Interactive hub' }, h: 'https://jinling-canmeng.vercel.app', hot: true, ext: true },
         { t: { zh: '查看完整档案 ↓', en: 'Full file below ↓' }, h: '#jinling' }
       ]
     },
