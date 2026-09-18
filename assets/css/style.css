@@ -1843,3 +1843,21 @@ body.dossier-open .nav { visibility: hidden; pointer-events: none; }
   #lico .ev-doc-pages img { height: min(var(--strip-h), 62vw); }
   #lico .issue-title small { font-size: .95rem; }
 }
+
+/* Full-page base colors. */
+body, .issue-dark { background-color: #0c0914; }
+.issue-light { background-color: #100d1d; }
+.issue-black, .contact { background-color: #06050c; }
+.hero { background-image: radial-gradient(rgba(255, 255, 255, .5) 1px, transparent 1.5px),
+    radial-gradient(rgba(76, 201, 240, .55) 1px, transparent 1.6px),
+    radial-gradient(ellipse at 80% 14%, rgba(255, 62, 157, .3), transparent 58%),
+    radial-gradient(ellipse at 6% 84%, rgba(76, 201, 240, .22), transparent 55%),
+    linear-gradient(115deg, #0c0914 0%, #0c0914 55%, #100d1d 55.2%, #100d1d 100%); }
+
+/* Independent rotation keeps the star turning during scroll parallax.
+   This star remains animated as explicitly requested by the site owner. */
+.hero-splat-pink { animation: heroPinkTurn 26s linear infinite !important; }
+@keyframes heroPinkTurn {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}

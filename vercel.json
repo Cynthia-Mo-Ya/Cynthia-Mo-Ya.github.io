@@ -1,8 +1,19 @@
 {
   "functions": {
-    "api/ask.js": { "maxDuration": 20 }
+    "api/ask.js": {
+      "maxDuration": 20
+    }
   },
   "redirects": [
-    { "source": "/((?!api/).*)", "destination": "https://cynthia-mo-ya.github.io/$1", "permanent": false }
-  ]
+    {
+      "source": "/((?!api/).*)",
+      "destination": "https://cynthia-mo-ya.github.io/$1",
+      "permanent": false
+    }
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "稍暗板": false
+    }
+  }
 }
