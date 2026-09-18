@@ -1826,5 +1826,5 @@ body.dossier-open .nav { visibility: hidden; pointer-events: none; }
   .dos-build-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 24px; }
 }
 
-.jl-prototype-note { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 16px 0 0; color: var(--lavender); font-size: .78rem; }
+.jl-prototype-note { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; max-width: 1200px; margin: 16px auto 0; color: var(--lavender); font-size: .78rem; }
 .jl-prototype-note .btn { padding: 7px 12px; font-size: .78rem; }

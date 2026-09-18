@@ -353,8 +353,8 @@
   function apply() {
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
     document.title = lang === 'zh'
-      ? '莫心雅 CYNTHIA · 游戏策划 × 项目管理 × 游戏美术'
-      : 'CYNTHIA MO · Design × PM × Art Portfolio';
+      ? '莫心雅 CYNTHIA · 游戏策划 × 协作执行 × 视觉表达'
+      : 'CYNTHIA MO · Game Design × Teamwork × Visual Design';
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var entry = D[el.dataset.i18n];
       if (entry) el.innerHTML = entry[lang];
