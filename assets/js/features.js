@@ -58,21 +58,39 @@
   var PROXY_URL = 'https://cynthia-spider.vercel.app/api/ask';
 
   var KB = [
+    { k: /投放|宣传渠道|宣传范围|哪些群|哪几个群|outreach|promotion channels|which communities/i,
+      zh: "水友赛实际投放了三个光核社群：微信「【光核共创营】实战训练生1期」、QQ「【光核】高校共创营1群」和 QQ「【光核】玩家前哨」。团队讨论了宣传范围与报名规模、工作量和赛程的关系，最终在这三个群开展投放，比赛在抖音直播。",
+      en: "Cup outreach used three communities: the cohort-one training group on WeChat, the Guanghe college co-creation application group on QQ, and the Guanghe Player Outpost on QQ. The team weighed recruitment scale against workload and schedule. The final livestream ran on Douyin." },
+    { k: /无畏|水友赛|赛事|赛程|比赛|解说|集锦|valorant|tournament|community cup|caster|highlights/i,
+      zh: "这场无畏契约水友赛是光核共创营一期的小组实践，2026 年 6 月 25–27 日依次进行海选、小组赛、半决赛与总决赛，最终在抖音直播。报名表共 33 人，确认 30 人、替补 2 人、未确认 1 人。心雅参与共同策划，主要负责宣传与赛程图、报名和比赛群组织、公告及集锦剪辑，并协调补充第二位解说。可在「赛事与活动」查看图片、5 份文档和完整集锦。",
+      en: "The VALORANT Community Cup was a team project in camp S1, held June 25–27, 2026: qualifiers, groups, then semifinals and the final, streamed on Douyin. The roster records 33 registrations: 30 confirmed, two substitutes and one unconfirmed. Cynthia co-planned it, made most promo and schedule graphics, organized groups and announcements, edited the highlights and recruited a second caster. The Events section has five PDFs and the full video." },
+    { k: /闹鬼|农场|白盒|haunted|farm|ue5/i,
+      zh: "《闹鬼农场》是她的 UE5 白盒关卡作品：用寻找 6 件遗物串起鬼魂老农的记忆，以观察点、灯光语义和动线帮助玩家探索。她关注叙事如何影响物件摆放、难度与节奏，网站里有完整关卡文档和实机解说录屏。",
+      en: "Haunted Farm is her UE5 level-design blockout. Six relics connect a ghost farmer’s memories; viewpoints, lighting cues and routes guide exploration. It shows how narrative shapes placement, difficulty and pacing. The site includes the level document and a narrated walkthrough." },
+    { k: /玛卡薇|缚命|英雄设计|数值|平衡|makavi|moba|hero design|balance/i,
+      zh: "「玛卡薇·缚命船医」是光核共创营的英雄设计与对抗平衡课题。她从悠米的一手体验拆解软辅的能动性与团队影响力，设计技能组、数值和加点框架，并借助 AI 模拟辅助评估；机制取舍与结果判断由她负责。",
+      en: "Makavi is her camp brief on hero design and counterplay. Drawing on her Yuumi experience, she examines support agency versus team impact, develops an ability kit and numerical framework, and uses AI-assisted simulations to inform evaluation. She owns the design decisions and review." },
+    { k: /金陵|黛玉|jinling|daiyu/i,
+      zh: "《金陵残梦》以《红楼梦》为蓝本，把结构与情感两套视角转成双人协作机制。作品包含策划文档、美术、概念 PV、展示材料与导航网站，还有可玩的黛玉章网页 Demo。她负责创意、机制与视觉取舍，并借助 AI 完成部分制作和工程实现。",
+      en: "Remnant Dream of Jinling adapts Dream of the Red Chamber into co-op play through structural and emotional viewpoints. It includes design documents, art, a concept video, presentation materials and a playable Daiyu chapter web demo. Cynthia directs the creative, mechanical and visual decisions, with AI assistance in production and engineering." },
+    { k: /综合简历|简历|resume|cv/i,
+      zh: "首页点击「CYNTHIA」档案夹，里面保留了完整综合简历：点击简历纸张或底部的「阅读完整综合简历」即可打开 PDF。旁边的便签概括项目成果，背面纸片列出设计、统筹、赛事执行和 AI 辅助工作流。",
+      en: "Open the CYNTHIA dossier on the homepage, then select the resume sheet or its caption to open the complete resume PDF. The notes summarize project evidence, while the sheet behind it outlines design, coordination, event delivery and AI-assisted work." },
     { k: /项目管理|统筹|敏捷|看板|风险|复盘|光核|共创营|\bpm\b|agile|scrum|kanban|dashboard/i,
       zh: 'PM 方向的代表作是「AI 赋能游戏项目管理」（光核共创营课题三）：以 LOLM 7.1 为蓝本推演新人 PM 全链路——认知地图、48h 上手 SOP、冲刺期三冲突决策、复盘框架与三个月 Roadmap，还有一块已上线的「版本风险与进度看板」。她以结业总分第一从光核共创营一期毕业（三份课题 10/10/8），再加上两次带 8 人团队主策划兼统筹的落地经验，她相信 PM 最关键的是让信息透明、让节奏可控。',
       en: 'Her flagship PM work: "AI-Empowered Game PM" (co-creation camp brief #3) — a new-PM full-lifecycle playbook on LOL Mobile 7.1 (cognition map, 48h onboarding SOP, sprint conflict decisions, retro framework, three-month roadmap) plus a live version-risk dashboard. She graduated from LIGHTSPEED STUDIOS\' co-creation camp S1 with the No.1 overall score (briefs 10/10/8). Add twice leading an 8-person team as lead & coordinator, and her core belief: a PM\'s job is keeping information transparent and the rhythm under control.' },
-    { k: /项目|做过|作品|经历|project|work/i,
-      zh: '心雅有五组代表作：①《金陵残梦》——以《红楼梦》为蓝本的双人分屏叙事冒险概念，独立交付 5 件（概念文档/美术集/PV/PPT/导航网站）；②它的衍生宇宙——Arduino 声景装置 + 梦境 APP 概念；③《记忆当铺》五感沉浸体验；④《你就是系统》人体互动画布；⑤「AI 赋能游戏项目管理」——PM 全链路课题 + 已上线的风险看板。往下滑，每一个都有完整档案。',
-      en: 'Five flagship works: 1) Remnant Dream of Jinling — a split-screen co-op narrative concept based on Dream of the Red Chamber, with 5 solo deliverables; 2) its spin-offs — an Arduino soundscape device + a dream-app concept; 3) The Memory Pawnshop, a five-sense immersive show; 4) You Are The System, a human interactive canvas; 5) AI-Empowered Game PM — a full-lifecycle PM playbook with a live risk dashboard. Scroll down for full files.' },
-    { k: /红楼|文学|ip|改编|为什么/i,
+    { k: /项目|做过|作品|经历|\bprojects?\b|\bworks?\b|portfolio/i,
+      zh: "心雅的作品集现在有八项作品：《金陵残梦》、衍生宇宙、《记忆当铺》、《你就是系统》、《闹鬼农场》、《玛卡薇·缚命船医》、AI 赋能游戏项目管理，以及无畏契约娱乐水友赛。它们覆盖游戏设计、团队协作、赛事活动与视觉表达；卡墙和各项目章节都有对应材料。",
+      en: "Her portfolio now has eight projects: Remnant Dream of Jinling, its spin-off universe, The Memory Pawnshop, You Are The System, Haunted Farm, Makavi, AI-Empowered Game PM, and the VALORANT Community Cup. Together they cover game design, teamwork, events and visual expression. Each has a project card and supporting materials." },
+    { k: /红楼|文学|\bip\b|改编|为什么/i,
       zh: '为什么是《红楼梦》？因为它本身就是一场「双视角的梦」——世人看见繁华，黛玉看见将散的宴席。心雅把这种「同一世界、两套真相」转译成双人分屏机制：石青看见结构，温遇看见情感，缺一不可。文学不是皮，是机制的源头。',
       en: 'Why Dream of the Red Chamber? Because the novel itself is a dream with two readings — the world sees splendor, Daiyu sees the feast about to scatter. Cynthia translates that into split-screen mechanics: one player reads structure, the other reads emotion, and neither view alone can finish the game. Literature is not a skin here — it is where the mechanics come from.' },
-    { k: /ai|工作流|工具|claude|deepseek|gpt|流程/i,
-      zh: '她的 AI 工作流四步走：Claude/Gemini/GPT 交叉论证当「会反驳的策划搭档」→ GPT Image 统一水墨概念图 → 即梦/可灵生成动态分镜、剪映成片 → Claude Code 做工程交付（你现在看到的这个网站也是）。所有设计判断由她本人拍板。',
-      en: 'Her AI workflow has four steps: Claude/Gemini/GPT cross-examination as "design partners who talk back" → GPT Image for a consistent ink-wash art set → Jimeng/Kling animatics edited in CapCut → Claude Code for engineering delivery (including this very site). Every design call is hers.' },
+    { k: /\bai\b|工作流|工具|claude|deepseek|gpt|流程/i,
+      zh: "她用 Claude、Gemini、GPT 辅助梳理与交叉检验方案，用图像和视频工具制作概念美术、动态分镜，再借助 Claude Code、Codex 等完成部分工程操作。创意、机制取舍、事实核验和最终验收由她负责；工具使用经历与独立编程能力需要分别理解。",
+      en: "She uses Claude, Gemini and GPT to develop and cross-check ideas, image and video tools for concept art and animatics, and assistants such as Claude Code and Codex for engineering tasks. She owns creative choices, mechanics, fact-checking and final review. Tool-assisted delivery should be distinguished from independent programming proficiency." },
     { k: /团队|合作|实习|岗位|招|join|team|intern/i,
-      zh: '她正同时看两条线：游戏策划 和 项目管理（都是日常实习）。策划线方向是叙事、系统、关卡；PM 线有 LOLM 蓝本的全链路课题和已上线的风险看板背书。想要的团队：认真做体验、愿意让新人真的上手干活。联系方式在页面最底下 👇',
-      en: 'She is open to two tracks: game design and project management (both part-time internships). Design side: narrative, systems, levels; PM side: a full-lifecycle playbook on LOL Mobile plus a live risk dashboard to show for it. She wants a team that takes player experience seriously and lets juniors actually build things. Contact info at the bottom 👇' },
+      zh: "她以游戏策划与设计为主线，美术表达、团队协作和 AI 辅助制作支持落地。已有两次 8 人团队主策划兼统筹经历，也参与了水友赛共同策划、社群组织与物料制作。具体合作方式和当前档期，可以通过页面底部的联系方式直接沟通。",
+      en: "Game design is her main focus, supported by visual expression, teamwork and AI-assisted production. She has led and coordinated two eight-person projects, and contributed shared planning, community organization and visual materials to the cup. Contact her directly about collaboration and current availability." },
     { k: /教育|学校|大学|学历|背景|结业|school|edu/i,
       zh: '湖北大学数字媒体艺术本科（2025–2029），学业排名 1/120 专业第一；之前是广州美术学院附属中等美术学校美术方向，还有约一年动画专项训练。2026 年以结业总分第一从光子「光核共创营」一期毕业（优秀结业生，三份课题 10/10/8）。美术是童子功，策划与统筹是主修。',
       en: 'BA in Digital Media Art at Hubei University (2025–2029), ranked 1/120 — top of the major. Before that: the GAFA-affiliated art school plus ~a year of animation training. In 2026 she graduated from LIGHTSPEED STUDIOS\' co-creation camp S1 as a distinguished graduate with the No.1 overall score (briefs 10/10/8). Art is her foundation; design and coordination are her major.' },
@@ -84,8 +102,8 @@
       en: 'Email 2062491054@qq.com, phone 135-5413-7459, GitHub @Cynthia-Mo-Ya. The colorful tapes at the bottom of the page are all clickable — the resume PDF is there too.' }
   ];
   var KB_FALLBACK = {
-    zh: '这个问题有点超出我的蛛网范围🕸️ 试试问：她的作品、项目统筹、AI 工作流、为什么选《红楼梦》、想加入什么团队，或者直接发邮件 2062491054@qq.com 问真人。',
-    en: 'That one is a bit outside my web 🕸️ Try asking about her works, project coordination, AI workflow, why Dream of the Red Chamber, or what team she wants — or email the human directly: 2062491054@qq.com.'
+    zh: '这个问题有点超出我的蛛网范围🕸️ 试试问：她的八项作品、水友赛分工、项目统筹、AI 工作流或综合简历，或者直接发邮件 2062491054@qq.com 问真人。',
+    en: 'That one is a bit outside my web 🕸️ Try asking about her eight projects, the cup, project coordination, AI-assisted work, or her resume — or email the human directly: 2062491054@qq.com.'
   };
 
   var spiderStage = document.getElementById('spiderStage');

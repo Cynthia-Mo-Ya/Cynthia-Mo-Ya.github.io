@@ -7,7 +7,9 @@ const SYSTEM_PROMPT = require('./knowledge.js');
 const ALLOWED_ORIGINS = [
   'https://cynthia-mo-ya.github.io',
   'http://localhost:8765',
-  'http://127.0.0.1:8765'
+  'http://127.0.0.1:8765',
+  'http://localhost:8766',
+  'http://127.0.0.1:8766'
 ];
 
 // 简易限流（同一实例内每 IP 每分钟 8 次）
