@@ -9,7 +9,7 @@
 <meta property="og:description" content="会造梦，也会让梦如期上线 — 美术 / 策划 / 统筹">
 <meta property="og:image" content="assets/img/jinling-art/jinling-art-01.webp">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="stylesheet" href="assets/css/style.css?v=32">
+<link rel="stylesheet" href="assets/css/style.css?v=34">
 </head>
 <body>
 
@@ -382,7 +382,7 @@
     </button>
     <button class="pcard pc-event" data-card="valorant">
       <span class="pc-frame">
-        <img class="pc-cover" src="assets/img/valorant/recruitment.webp" alt="" loading="lazy">
+        <img class="pc-cover" src="assets/img/covers/cover-valorant.webp" alt="" loading="lazy">
         <span class="pc-num">PANEL 07</span>
       </span>
       <span class="pc-face"><b data-i18n="cards.c8t" class="pc-title">无畏契约水友赛</b><small data-i18n="cards.c8tag" class="pc-tags">赛事与活动 / 团队共创 / 宣传 · 社群 · 剪辑</small></span>
@@ -663,16 +663,24 @@
 <!-- ════════ ISSUE #07 赛事与活动 ════════ -->
 <section class="issue issue-dark" id="events">
   <span class="bigword" aria-hidden="true">PLAY!</span>
-  <div class="issue-head">
-    <span class="issue-num num-cyan"><span data-i18n="ev.num">ISSUE #07 · 赛事与活动</span></span>
-    <h2 class="issue-title"><span data-i18n="ev.title" class="glitch" data-text="无畏契约娱乐水友赛">无畏契约娱乐水友赛</span><small>VALORANT COMMUNITY CUP</small></h2>
-    <p data-i18n="ev.meta" class="issue-meta">光核共创营第一期小组实践 · 2026.06.25—06.27 · 抖音直播</p>
-  </div>
-  <div class="ev-intro">
-    <div class="speech speech-light reveal">
-      <p data-i18n="ev.quote" class="speech-big">无畏集结，欢乐对决。</p>
-      <p data-i18n="ev.desc">从群语音中的共同策划，到招募、赛程同步、直播与赛后集锦，和队友一起把一场面向玩家的娱乐水友赛落地。</p>
-      <div class="ev-role"><b data-i18n="ev.role">我的职责</b><p data-i18n="ev.roled">参与团队共同策划；承担主要外宣图与赛程图制作、报名及比赛社群组织、公告发布和赛事集锦剪辑；协调同学补充第二位解说。</p></div>
+  <div class="ev-content">
+    <div class="issue-head">
+      <span class="issue-num num-cyan"><span data-i18n="ev.num">ISSUE #07 · 赛事与活动</span></span>
+      <h2 class="issue-title"><span data-i18n="ev.title" class="glitch" data-text="无畏契约娱乐水友赛">无畏契约娱乐水友赛</span><small>VALORANT COMMUNITY CUP</small></h2>
+      <p data-i18n="ev.meta" class="issue-meta">光核共创营第一期小组实践 · 2026.06.25—06.27 · 抖音直播</p>
+    </div>
+    <div class="ev-intro">
+      <div class="speech speech-light reveal">
+        <p data-i18n="ev.quote" class="speech-big">无畏集结，欢乐对决。</p><p data-i18n="ev.desc">从群语音中的共同策划，到招募、赛程同步、直播与赛后集锦，和队友一起把一场面向玩家的娱乐水友赛落地。</p>
+        <div class="ev-role"><b data-i18n="ev.role">我的职责</b><p data-i18n="ev.roled">参与团队共同策划；承担主要外宣图与赛程图制作、报名及比赛社群组织、公告发布和赛事集锦剪辑；协调同学补充第二位解说。</p></div>
+      </div>
+      <div class="ev-watch reveal">
+        <h3 class="strip-title"><span data-i18n="ev.watch">赛事集锦</span></h3>
+        <div class="ev-video video-frame video-frame-cyan">
+          <video id="eventVideo" controls playsinline preload="none" poster="assets/img/valorant/video-poster.jpg" aria-labelledby="eventVideoCaption"><source src="assets/video/valorant-highlights.mp4" type="video/mp4"></video>
+        </div>
+        <p data-i18n="ev.watchmeta" id="eventVideoCaption" class="ev-note">9 分 16 秒 · 高光、趣味片段与赛事回顾</p>
+      </div>
     </div>
     <div class="ev-facts reveal">
       <dl class="ev-stats">
@@ -680,45 +688,80 @@
         <div><dt><span data-i18n="ev.confirmed">确认选手</span></dt><dd>30</dd></div>
         <div><dt><span data-i18n="ev.days">比赛日</span></dt><dd>3</dd></div>
       </dl>
-      <p data-i18n="ev.statnote" class="ev-note">报名表记录：共 33 人，其中确认 30 人、替补 2 人、未确认 1 人。</p>
       <ol class="ev-timeline">
         <li><time datetime="2026-06-25">06.25</time><span data-i18n="ev.day1">海选赛</span></li>
         <li><time datetime="2026-06-26">06.26</time><span data-i18n="ev.day2">小组赛</span></li>
         <li><time datetime="2026-06-27">06.27</time><span data-i18n="ev.day3">半决赛与总决赛</span></li>
       </ol>
     </div>
-  </div>
-  <h3 class="strip-title reveal"><span data-i18n="ev.watch">赛事集锦</span> <small><span data-i18n="ev.watchmeta">9 分 16 秒 · 击杀高光、趣味片段与赛前赛后回顾</span></small></h3>
-  <div class="video-panel reveal ev-video">
-    <video id="eventVideo" controls playsinline preload="none" poster="assets/img/valorant/video-poster.jpg" aria-labelledby="eventVideoCaption">
-      <source src="assets/video/valorant-highlights.mp4" type="video/mp4">
-    </video>
-    <p data-i18n="ev.videoLabel" id="eventVideoCaption" class="ev-note">无畏契约娱乐水友赛赛事集锦</p>
-  </div>
-  <h3 class="strip-title reveal"><span data-i18n="ev.materials">让赛事信息一目了然</span></h3>
-  <p data-i18n="ev.materialsd" class="ev-copy">报名招募、赛程与晋级结果、决赛观赛入口，随赛事阶段同步信息。点击图片可查看完整物料。</p>
-  <div class="ev-posters reveal">
-<figure><img src="assets/img/valorant/recruitment.webp" alt="报名宣传长图" loading="lazy" data-zoom><figcaption data-i18n="ev.recruitment">报名宣传长图</figcaption></figure>
-<figure><img src="assets/img/valorant/schedule.webp" alt="赛程与小组赛结果" loading="lazy" data-zoom><figcaption data-i18n="ev.schedule">赛程与小组赛结果</figcaption></figure>
-<figure><img src="assets/img/valorant/finals.webp" alt="最终赛段预告" loading="lazy" data-zoom><figcaption data-i18n="ev.finals">最终赛段预告</figcaption></figure>
-</div>
-  <h3 class="strip-title reveal"><span data-i18n="ev.countdown">赛前预热与直播物料</span></h3>
-  <div class="ev-countdown reveal">
-<figure><img src="assets/img/valorant/countdown-3.webp" alt="倒计时 3 天" loading="lazy" data-zoom><figcaption data-i18n="ev.cd3">倒计时 3 天</figcaption></figure>
-<figure><img src="assets/img/valorant/countdown-2.webp" alt="倒计时 2 天" loading="lazy" data-zoom><figcaption data-i18n="ev.cd2">倒计时 2 天</figcaption></figure>
-<figure><img src="assets/img/valorant/countdown-1.webp" alt="倒计时 1 天" loading="lazy" data-zoom><figcaption data-i18n="ev.cd1">倒计时 1 天</figcaption></figure>
-<figure><img src="assets/img/valorant/live-cover.webp" alt="直播间封面" loading="lazy" data-zoom><figcaption data-i18n="ev.live">直播间封面</figcaption></figure>
-</div>
-  <p data-i18n="ev.team" class="ev-note ev-credit">策划由团队通过多次群语音共同讨论；展示物料为团队赛事成果，我承担其中主要图像制作工作。</p>
-  <h3 class="strip-title reveal"><span data-i18n="ev.execution">从共同策划到现场执行</span></h3>
-  <div class="ev-cases reveal">
-<article><h4 data-i18n="ev.scope">让宣传范围匹配承接能力</h4><p data-i18n="ev.scoped">团队讨论营内、高校与公开平台等宣传范围，将报名规模、执行工作量和赛程长度一起考虑，最终围绕三个光核社群开展投放。</p></article>
-<article><h4 data-i18n="ev.staff">成员变动后的协作补位</h4><p data-i18n="ev.staffd">筹备团队最初为 8 人，一名成员中途退出后，其余成员共同承接原有任务，继续推进赛事筹备与收尾。</p></article>
-<article><h4 data-i18n="ev.caster">补齐解说与直播环节</h4><p data-i18n="ev.casterd">团队经过多轮直播方式测试，最终采用抖音直播。第二位解说出现缺口时，我联系并邀请一位同学加入解说。</p></article>
-</div>
-  <div class="ev-community reveal">
-    <h3 data-i18n="ev.community">面向三个光核社群的宣传与沟通</h3><p data-i18n="ev.communityd">通过光核共创营学员群、报名社群及玩家前哨社群开展宣传，覆盖报名招募、赛程通知与观赛引导。我负责报名与比赛社群组织、公告发布及赛事信息同步。</p>
-    <ul><li data-i18n="ev.channel1">微信 · 光核共创营实战训练生1期群</li><li data-i18n="ev.channel2">QQ · 光核高校共创营1群（报名群）</li><li data-i18n="ev.channel3">QQ · 光核玩家前哨群</li></ul>
+    <p data-i18n="ev.statnote" class="ev-note ev-statnote">报名表记录：共 33 人，其中确认 30 人、替补 2 人、未确认 1 人。</p>
+    <div class="ev-media-row">
+      <div class="ev-media-group">
+        <h3 class="strip-title"><span data-i18n="ev.materials">宣传与赛程</span></h3>
+        <div class="ev-posters strip reveal" style="--strip-h:270px">
+          <figure><img src="assets/img/valorant/recruitment.webp" alt="报名宣传长图" data-i18n-alt="ev.recruitment" loading="lazy" data-group="event-posters" data-index="0"><figcaption data-i18n="ev.recruitment">报名宣传长图</figcaption></figure>
+          <figure><img src="assets/img/valorant/schedule.webp" alt="赛程与小组赛结果" data-i18n-alt="ev.schedule" loading="lazy" data-group="event-posters" data-index="1"><figcaption data-i18n="ev.schedule">赛程与小组赛结果</figcaption></figure>
+          <figure><img src="assets/img/valorant/finals.webp" alt="最终赛段预告" data-i18n-alt="ev.finals" loading="lazy" data-group="event-posters" data-index="2"><figcaption data-i18n="ev.finals">最终赛段预告</figcaption></figure>
+        </div>
+      </div>
+      <div class="ev-media-group">
+        <h3 class="strip-title"><span data-i18n="ev.countdown">预热与直播物料</span></h3>
+        <div class="ev-countdown reveal">
+          <figure><img src="assets/img/valorant/countdown-3.webp" alt="倒计时 3 天" data-i18n-alt="ev.cd3" loading="lazy" data-group="event-countdown" data-index="0"><figcaption data-i18n="ev.cd3">倒计时 3 天</figcaption></figure>
+          <figure><img src="assets/img/valorant/countdown-2.webp" alt="倒计时 2 天" data-i18n-alt="ev.cd2" loading="lazy" data-group="event-countdown" data-index="1"><figcaption data-i18n="ev.cd2">倒计时 2 天</figcaption></figure>
+          <figure><img src="assets/img/valorant/countdown-1.webp" alt="倒计时 1 天" data-i18n-alt="ev.cd1" loading="lazy" data-group="event-countdown" data-index="2"><figcaption data-i18n="ev.cd1">倒计时 1 天</figcaption></figure>
+          <figure><img src="assets/img/valorant/live-cover.webp" alt="直播间封面" data-i18n-alt="ev.live" loading="lazy" data-group="event-countdown" data-index="3"><figcaption data-i18n="ev.live">直播间封面</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <p data-i18n="ev.team" class="ev-note ev-credit">策划由团队通过多次群语音共同讨论；展示物料为团队赛事成果，我承担其中主要图像制作工作。</p>
+    <h3 class="strip-title"><span data-i18n="ev.docs">赛事文档</span> <small><span data-i18n="ev.docsmeta">团队策划与执行资料 · 点击打开 PDF</span></small></h3>
+    <div class="ev-doc-pages strip reveal" style="--strip-h:220px">
+      <figure><img src="assets/img/valorant/docs/promotion-01.webp" alt="宣发专项策划案 · 1/4" data-i18n-alt="ev.page.promotion.1" loading="lazy" data-group="event-documents" data-index="0"><figcaption data-i18n="ev.page.promotion.1">宣发专项策划案 · 1/4</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/promotion-02.webp" alt="宣发专项策划案 · 2/4" data-i18n-alt="ev.page.promotion.2" loading="lazy" data-group="event-documents" data-index="1"><figcaption data-i18n="ev.page.promotion.2">宣发专项策划案 · 2/4</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/promotion-03.webp" alt="宣发专项策划案 · 3/4" data-i18n-alt="ev.page.promotion.3" loading="lazy" data-group="event-documents" data-index="2"><figcaption data-i18n="ev.page.promotion.3">宣发专项策划案 · 3/4</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/promotion-04.webp" alt="宣发专项策划案 · 4/4" data-i18n-alt="ev.page.promotion.4" loading="lazy" data-group="event-documents" data-index="3"><figcaption data-i18n="ev.page.promotion.4">宣发专项策划案 · 4/4</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/announcements-01.webp" alt="群宣文案 · 1/8" data-i18n-alt="ev.page.announcements.1" loading="lazy" data-group="event-documents" data-index="4"><figcaption data-i18n="ev.page.announcements.1">群宣文案 · 1/8</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/announcements-02.webp" alt="群宣文案 · 2/8" data-i18n-alt="ev.page.announcements.2" loading="lazy" data-group="event-documents" data-index="5"><figcaption data-i18n="ev.page.announcements.2">群宣文案 · 2/8</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/announcements-03.webp" alt="群宣文案 · 3/8" data-i18n-alt="ev.page.announcements.3" loading="lazy" data-group="event-documents" data-index="6"><figcaption data-i18n="ev.page.announcements.3">群宣文案 · 3/8</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/announcements-04.webp" alt="群宣文案 · 4/8" data-i18n-alt="ev.page.announcements.4" loading="lazy" data-group="event-documents" data-index="7"><figcaption data-i18n="ev.page.announcements.4">群宣文案 · 4/8</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/announcements-05.webp" alt="群宣文案 · 5/8" data-i18n-alt="ev.page.announcements.5" loading="lazy" data-group="event-documents" data-index="8"><figcaption data-i18n="ev.page.announcements.5">群宣文案 · 5/8</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/announcements-06.webp" alt="群宣文案 · 6/8" data-i18n-alt="ev.page.announcements.6" loading="lazy" data-group="event-documents" data-index="9"><figcaption data-i18n="ev.page.announcements.6">群宣文案 · 6/8</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/announcements-07.webp" alt="群宣文案 · 7/8" data-i18n-alt="ev.page.announcements.7" loading="lazy" data-group="event-documents" data-index="10"><figcaption data-i18n="ev.page.announcements.7">群宣文案 · 7/8</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/announcements-08.webp" alt="群宣文案 · 8/8" data-i18n-alt="ev.page.announcements.8" loading="lazy" data-group="event-documents" data-index="11"><figcaption data-i18n="ev.page.announcements.8">群宣文案 · 8/8</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/rules-roles-01.webp" alt="赛制专项 · 1/2" data-i18n-alt="ev.page.rules-roles.1" loading="lazy" data-group="event-documents" data-index="12"><figcaption data-i18n="ev.page.rules-roles.1">赛制专项 · 1/2</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/rules-roles-02.webp" alt="赛制专项 · 2/2" data-i18n-alt="ev.page.rules-roles.2" loading="lazy" data-group="event-documents" data-index="13"><figcaption data-i18n="ev.page.rules-roles.2">赛制专项 · 2/2</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/format-01.webp" alt="小型赛事赛制方案 · 1/6" data-i18n-alt="ev.page.format.1" loading="lazy" data-group="event-documents" data-index="14"><figcaption data-i18n="ev.page.format.1">小型赛事赛制方案 · 1/6</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/format-02.webp" alt="小型赛事赛制方案 · 2/6" data-i18n-alt="ev.page.format.2" loading="lazy" data-group="event-documents" data-index="15"><figcaption data-i18n="ev.page.format.2">小型赛事赛制方案 · 2/6</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/format-03.webp" alt="小型赛事赛制方案 · 3/6" data-i18n-alt="ev.page.format.3" loading="lazy" data-group="event-documents" data-index="16"><figcaption data-i18n="ev.page.format.3">小型赛事赛制方案 · 3/6</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/format-04.webp" alt="小型赛事赛制方案 · 4/6" data-i18n-alt="ev.page.format.4" loading="lazy" data-group="event-documents" data-index="17"><figcaption data-i18n="ev.page.format.4">小型赛事赛制方案 · 4/6</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/format-05.webp" alt="小型赛事赛制方案 · 5/6" data-i18n-alt="ev.page.format.5" loading="lazy" data-group="event-documents" data-index="18"><figcaption data-i18n="ev.page.format.5">小型赛事赛制方案 · 5/6</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/format-06.webp" alt="小型赛事赛制方案 · 6/6" data-i18n-alt="ev.page.format.6" loading="lazy" data-group="event-documents" data-index="19"><figcaption data-i18n="ev.page.format.6">小型赛事赛制方案 · 6/6</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/registration-01.webp" alt="报名人员名单（公开版） · 1/4" data-i18n-alt="ev.page.registration.1" loading="lazy" data-group="event-documents" data-index="20"><figcaption data-i18n="ev.page.registration.1">报名人员名单（公开版） · 1/4</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/registration-02.webp" alt="报名人员名单（公开版） · 2/4" data-i18n-alt="ev.page.registration.2" loading="lazy" data-group="event-documents" data-index="21"><figcaption data-i18n="ev.page.registration.2">报名人员名单（公开版） · 2/4</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/registration-03.webp" alt="报名人员名单（公开版） · 3/4" data-i18n-alt="ev.page.registration.3" loading="lazy" data-group="event-documents" data-index="22"><figcaption data-i18n="ev.page.registration.3">报名人员名单（公开版） · 3/4</figcaption></figure>
+      <figure><img src="assets/img/valorant/docs/registration-04.webp" alt="报名人员名单（公开版） · 4/4" data-i18n-alt="ev.page.registration.4" loading="lazy" data-group="event-documents" data-index="23"><figcaption data-i18n="ev.page.registration.4">报名人员名单（公开版） · 4/4</figcaption></figure>
+    </div>
+    <div class="ev-doc-buttons btn-row">
+      <a class="btn btn-sm" href="assets/pdf/valorant/光核共创杯水友赛_宣发专项策划案.pdf" target="_blank" rel="noopener" data-i18n="ev.open.promotion">打开宣发专项策划案 PDF</a>
+      <a class="btn btn-sm" href="assets/pdf/valorant/光核共创杯水友赛_群宣文案.pdf" target="_blank" rel="noopener" data-i18n="ev.open.announcements">打开群宣文案 PDF</a>
+      <a class="btn btn-sm" href="assets/pdf/valorant/光核共创杯水友赛_赛制专项.pdf" target="_blank" rel="noopener" data-i18n="ev.open.rules-roles">打开赛制专项 PDF</a>
+      <a class="btn btn-sm" href="assets/pdf/valorant/无畏契约_小型赛事赛制方案.pdf" target="_blank" rel="noopener" data-i18n="ev.open.format">打开小型赛事赛制方案 PDF</a>
+      <a class="btn btn-sm" href="assets/pdf/valorant/光核共创杯水友赛_报名人员名单_公开版.pdf" target="_blank" rel="noopener" data-i18n="ev.open.registration">打开报名人员名单（公开版） PDF</a>
+    </div>
+    <div class="ev-operations">
+      <h3 class="strip-title"><span data-i18n="ev.operations">策划与执行</span></h3>
+      <div class="ev-cases reveal">
+        <article><h4 data-i18n="ev.scope">让宣传范围匹配承接能力</h4><p data-i18n="ev.scoped">团队讨论营内、高校与公开平台等宣传范围，将报名规模、执行工作量和赛程长度一起考虑，最终围绕三个光核社群开展投放。</p></article>
+        <article><h4 data-i18n="ev.staff">成员变动后的协作补位</h4><p data-i18n="ev.staffd">筹备团队最初为 8 人，一名成员中途退出后，其余成员共同承接原有任务，继续推进赛事筹备与收尾。</p></article>
+        <article><h4 data-i18n="ev.caster">补齐解说与直播环节</h4><p data-i18n="ev.casterd">团队经过多轮直播方式测试，最终采用抖音直播。第二位解说出现缺口时，我联系并邀请一位同学加入解说。</p></article>
+      </div>
+      <details class="ev-community">
+        <summary><span data-i18n="ev.communityshort">三个光核社群投放</span></summary>
+        <p data-i18n="ev.communityd">通过光核共创营学员群、报名社群及玩家前哨社群开展宣传，覆盖报名招募、赛程通知与观赛引导。我负责报名与比赛社群组织、公告发布及赛事信息同步。</p>
+        <ul><li data-i18n="ev.channel1">微信 · 光核共创营实战训练生1期群</li><li data-i18n="ev.channel2">QQ · 光核高校共创营1群（报名群）</li><li data-i18n="ev.channel3">QQ · 光核玩家前哨群</li></ul>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -840,7 +883,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="assets/js/i18n.js?v=31"></script>
+<script src="assets/js/i18n.js?v=33"></script>
 <script src="assets/js/main.js?v=11"></script>
 <script src="assets/js/features.js?v=21"></script>
 </body>

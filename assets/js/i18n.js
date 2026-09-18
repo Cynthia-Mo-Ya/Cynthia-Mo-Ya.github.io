@@ -230,7 +230,6 @@
     'pm.b1': { zh: '⚡ 打开在线风险看板', en: '⚡ Open the live dashboard' },
     'pm.b2': { zh: '📄 完整 PM 交付文档', en: '📄 Full PM deliverable' },
     'pm.b3': { zh: '📋 项目管理简历', en: '📋 PM resume' },
-
     "nav.events": {"zh": "赛事与活动", "en": "Events"},
     "cards.c8t": {"zh": "无畏契约水友赛", "en": "VALORANT Community Cup"},
     "cards.c8tag": {"zh": "赛事与活动 / 团队共创 / 宣传 · 社群 · 剪辑", "en": "Live event / Team project / Visuals · Community · Editing"},
@@ -250,14 +249,14 @@
     "ev.day2": {"zh": "小组赛", "en": "Group stage"},
     "ev.day3": {"zh": "半决赛与总决赛", "en": "Semifinals & final"},
     "ev.watch": {"zh": "赛事集锦", "en": "Tournament highlights"},
-    "ev.watchmeta": {"zh": "9 分 16 秒 · 击杀高光、趣味片段与赛前赛后回顾", "en": "9 min 16 sec · Key plays, funny moments and behind-the-scenes footage"},
+    "ev.watchmeta": {"zh": "9 分 16 秒 · 高光、趣味片段与赛事回顾", "en": "9 min 16 sec · Key plays, funny moments & recap"},
     "ev.videoLabel": {"zh": "无畏契约娱乐水友赛赛事集锦", "en": "VALORANT Community Cup highlight reel"},
-    "ev.materials": {"zh": "让赛事信息一目了然", "en": "Making the event easy to follow"},
+    "ev.materials": {"zh": "宣传与赛程", "en": "Promotion & schedules"},
     "ev.materialsd": {"zh": "报名招募、赛程与晋级结果、决赛观赛入口，随赛事阶段同步信息。点击图片可查看完整物料。", "en": "Recruitment, schedules, advancement results and finals viewing information, updated as the event progressed. Select an image to view it in full."},
     "ev.recruitment": {"zh": "报名宣传长图", "en": "Recruitment poster"},
     "ev.schedule": {"zh": "赛程与小组赛结果", "en": "Schedule & group-stage results"},
     "ev.finals": {"zh": "最终赛段预告", "en": "Finals preview"},
-    "ev.countdown": {"zh": "赛前预热与直播物料", "en": "Countdown & livestream visuals"},
+    "ev.countdown": {"zh": "预热与直播物料", "en": "Countdown & livestream visuals"},
     "ev.cd3": {"zh": "倒计时 3 天", "en": "3 days to go"},
     "ev.cd2": {"zh": "倒计时 2 天", "en": "2 days to go"},
     "ev.cd1": {"zh": "倒计时 1 天", "en": "1 day to go"},
@@ -274,6 +273,46 @@
     "ev.channel1": {"zh": "微信 · 光核共创营实战训练生1期群", "en": "WeChat · Guanghe Camp Cohort 1"},
     "ev.channel2": {"zh": "QQ · 光核高校共创营1群（报名群）", "en": "QQ · Guanghe Camp applicant group"},
     "ev.channel3": {"zh": "QQ · 光核玩家前哨群", "en": "QQ · Guanghe Player Outpost"},
+
+    "ev.docs": {"zh": "赛事文档", "en": "Event documents"},
+    "ev.docsmeta": {"zh": "24 页 · 横向滑动 · 点击放大", "en": "24 pages · Scroll horizontally · Select to enlarge"},
+    "ev.operations": {"zh": "策划与执行", "en": "Planning & delivery"},
+    "ev.communityshort": {"zh": "三个光核社群投放", "en": "Outreach across three communities"},
+    "ev.doc.promotion": {"zh": "宣发专项策划案", "en": "Promotion plan"},
+    "ev.doc.announcements": {"zh": "群宣文案", "en": "Community announcements"},
+    "ev.doc.rules-roles": {"zh": "赛制专项", "en": "Rules workstream"},
+    "ev.doc.format": {"zh": "小型赛事赛制方案", "en": "Tournament format plan"},
+    "ev.doc.registration": {"zh": "报名人员名单（公开版）", "en": "Registration roster (public version)"},
+
+    "ev.page.promotion.1": {"zh": "宣发专项策划案 · 1/4", "en": "Promotion plan · 1/4"},
+    "ev.page.promotion.2": {"zh": "宣发专项策划案 · 2/4", "en": "Promotion plan · 2/4"},
+    "ev.page.promotion.3": {"zh": "宣发专项策划案 · 3/4", "en": "Promotion plan · 3/4"},
+    "ev.page.promotion.4": {"zh": "宣发专项策划案 · 4/4", "en": "Promotion plan · 4/4"},
+    "ev.open.promotion": {"zh": "打开宣发专项策划案 PDF", "en": "Open Promotion plan PDF"},
+    "ev.page.announcements.1": {"zh": "群宣文案 · 1/8", "en": "Community announcements · 1/8"},
+    "ev.page.announcements.2": {"zh": "群宣文案 · 2/8", "en": "Community announcements · 2/8"},
+    "ev.page.announcements.3": {"zh": "群宣文案 · 3/8", "en": "Community announcements · 3/8"},
+    "ev.page.announcements.4": {"zh": "群宣文案 · 4/8", "en": "Community announcements · 4/8"},
+    "ev.page.announcements.5": {"zh": "群宣文案 · 5/8", "en": "Community announcements · 5/8"},
+    "ev.page.announcements.6": {"zh": "群宣文案 · 6/8", "en": "Community announcements · 6/8"},
+    "ev.page.announcements.7": {"zh": "群宣文案 · 7/8", "en": "Community announcements · 7/8"},
+    "ev.page.announcements.8": {"zh": "群宣文案 · 8/8", "en": "Community announcements · 8/8"},
+    "ev.open.announcements": {"zh": "打开群宣文案 PDF", "en": "Open Community announcements PDF"},
+    "ev.page.rules-roles.1": {"zh": "赛制专项 · 1/2", "en": "Rules workstream · 1/2"},
+    "ev.page.rules-roles.2": {"zh": "赛制专项 · 2/2", "en": "Rules workstream · 2/2"},
+    "ev.open.rules-roles": {"zh": "打开赛制专项 PDF", "en": "Open Rules workstream PDF"},
+    "ev.page.format.1": {"zh": "小型赛事赛制方案 · 1/6", "en": "Tournament format plan · 1/6"},
+    "ev.page.format.2": {"zh": "小型赛事赛制方案 · 2/6", "en": "Tournament format plan · 2/6"},
+    "ev.page.format.3": {"zh": "小型赛事赛制方案 · 3/6", "en": "Tournament format plan · 3/6"},
+    "ev.page.format.4": {"zh": "小型赛事赛制方案 · 4/6", "en": "Tournament format plan · 4/6"},
+    "ev.page.format.5": {"zh": "小型赛事赛制方案 · 5/6", "en": "Tournament format plan · 5/6"},
+    "ev.page.format.6": {"zh": "小型赛事赛制方案 · 6/6", "en": "Tournament format plan · 6/6"},
+    "ev.open.format": {"zh": "打开小型赛事赛制方案 PDF", "en": "Open Tournament format plan PDF"},
+    "ev.page.registration.1": {"zh": "报名人员名单（公开版） · 1/4", "en": "Registration roster (public version) · 1/4"},
+    "ev.page.registration.2": {"zh": "报名人员名单（公开版） · 2/4", "en": "Registration roster (public version) · 2/4"},
+    "ev.page.registration.3": {"zh": "报名人员名单（公开版） · 3/4", "en": "Registration roster (public version) · 3/4"},
+    "ev.page.registration.4": {"zh": "报名人员名单（公开版） · 4/4", "en": "Registration roster (public version) · 4/4"},
+    "ev.open.registration": {"zh": "打开报名人员名单（公开版） PDF", "en": "Open Registration roster (public version) PDF"},
 
     'ga.num': { zh: 'BONUS ISSUE · 番外', en: 'BONUS ISSUE' },
     'ga.title': { zh: '游戏美术', en: 'GAME ART' },
@@ -322,6 +361,10 @@
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var entry = D[el.dataset.i18n];
       if (entry) el.innerHTML = entry[lang];
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      var entry = D[el.dataset.i18nAlt];
+      if (entry) el.alt = entry[lang];
     });
     document.querySelectorAll('[data-i18n-ph]').forEach(function (el) {
       var entry = D[el.dataset.i18nPh];
