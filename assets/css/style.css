@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family: 'Smiley Sans';
-  src: url('../fonts/smiley-sans-subset.woff2?v=9') format('woff2');
+  src: url('../fonts/smiley-sans-subset.woff2?v=10') format('woff2');
   font-display: swap;
 }
 
@@ -1782,8 +1782,7 @@ body.dossier-open .nav { visibility: hidden; pointer-events: none; }
 .ev-cases h4 { font: 1.2rem var(--disp-zh); color: var(--cyan); margin: 0 0 8px; }
 .ev-cases p { font-size: .85rem; line-height: 1.8; }
 .ev-community { margin-top: 20px; border-top: 1px solid rgba(179,136,255,.35); padding-top: 14px; }
-.ev-community summary { cursor: pointer; color: var(--cyan); font: 1.15rem var(--disp-zh); }
-.ev-community summary:hover { color: var(--pink); }
+.ev-community h4 { color: var(--cyan); font: 1.15rem var(--disp-zh); }
 .ev-community p { font-size: .85rem; line-height: 1.8; margin-top: 12px; }
 .ev-community ul { display: flex; flex-wrap: wrap; gap: 12px 22px; list-style: none; padding: 12px 0 0; color: var(--lavender); font-size: .8rem; }
 @media (max-width: 1000px) {
@@ -1828,3 +1827,19 @@ body.dossier-open .nav { visibility: hidden; pointer-events: none; }
 
 .jl-prototype-note { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; max-width: 1200px; margin: 16px auto 0; color: var(--lavender); font-size: .78rem; }
 .jl-prototype-note .btn { padding: 7px 12px; font-size: .78rem; }
+
+/* Lico: team game case within the existing project layout. */
+.pc-lico { --pc-accent: var(--cyan); }
+.lico-content { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
+#lico .issue-head { margin: 0 0 28px; }
+#lico .strip-title { margin: 30px 0 14px; text-align: left; max-width: none; }
+#lico .ev-watch .strip-title { margin-top: 0; }
+#lico .lico-actions { justify-content: flex-start; margin: 16px 0 0; gap: 12px; }
+#lico .ev-video video { aspect-ratio: 3432 / 1918; }
+.lico-cases { margin: 30px 0; }
+#lico .ev-intro > * { min-width: 0; }
+@media (max-width: 700px) {
+  #lico .ev-cases { grid-template-columns: 1fr; gap: 22px; }
+  #lico .ev-doc-pages img { height: min(var(--strip-h), 62vw); }
+  #lico .issue-title small { font-size: .95rem; }
+}

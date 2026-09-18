@@ -58,6 +58,9 @@
   var PROXY_URL = 'https://cynthia-spider.vercel.app/api/ask';
 
   var KB = [
+    { k: /狸|旅行日记|lico|travel diary|游戏创作大赛/i,
+      zh: "《狸的旅行日记》是 2026 年 8 月 15 日至 9 月 15 日制作的团队 Windows Demo，已投递腾讯游戏创作大赛初赛。何旭提出最初设想；心雅参与共同策划，主要负责 AI 美术方向的构图与提示词、宣传 PPT 和视频剪辑。场景与动画由其他队友制作。Demo 因涉及 API key 配置需联系获取，项目章节提供视频与完整文档。",
+      en: "Lico\u2019s Travel Diary is a team Windows demo developed from Aug 15 to Sep 15, 2026 and submitted to the preliminary round of the Tencent Game Creation Competition. He Xu proposed the initial idea. Cynthia contributed to planning, focused on composition and prompts for AI-assisted art, created the presentation and edited the video. Other teammates produced the scenes and animation. Demo access is by request because it includes API key configuration. The project section contains the walkthrough, documents and contact link." },
     { k: /投放|宣传渠道|宣传范围|哪些群|哪几个群|outreach|promotion channels|which communities/i,
       zh: "水友赛实际投放了三个光核社群：微信「【光核共创营】实战训练生1期」、QQ「【光核】高校共创营1群」和 QQ「【光核】玩家前哨」。团队讨论了宣传范围与报名规模、工作量和赛程的关系，最终在这三个群开展投放，比赛在抖音直播。",
       en: "Cup outreach used three communities: the cohort-one training group on WeChat, the Guanghe college co-creation application group on QQ, and the Guanghe Player Outpost on QQ. The team weighed recruitment scale against workload and schedule. The final livestream ran on Douyin." },
@@ -80,8 +83,8 @@
       zh: 'PM 方向的代表作是「AI 赋能游戏项目管理」（光核共创营课题三）：以 LOLM 7.1 为蓝本推演新人 PM 全链路——认知地图、48h 上手 SOP、冲刺期三冲突决策、复盘框架与三个月 Roadmap，还有一块已上线的「版本风险与进度看板」。她以结业总分第一从光核共创营一期毕业（三份课题 10/10/8），再加上两次带 8 人团队主策划兼统筹的落地经验，她相信 PM 最关键的是让信息透明、让节奏可控。',
       en: 'Her flagship PM work: "AI-Empowered Game PM" (co-creation camp brief #3) — a new-PM full-lifecycle playbook on LOL Mobile 7.1 (cognition map, 48h onboarding SOP, sprint conflict decisions, retro framework, three-month roadmap) plus a live version-risk dashboard. She graduated from LIGHTSPEED STUDIOS\' co-creation camp S1 with the No.1 overall score (briefs 10/10/8). Add twice leading an 8-person team as lead & coordinator, and her core belief: a PM\'s job is keeping information transparent and the rhythm under control.' },
     { k: /项目|做过|作品|经历|\bprojects?\b|\bworks?\b|portfolio/i,
-      zh: "心雅的作品集现在有八项作品：《金陵残梦》、衍生宇宙、《记忆当铺》、《你就是系统》、《闹鬼农场》、《玛卡薇·缚命船医》、AI 赋能游戏项目管理，以及无畏契约娱乐水友赛。它们覆盖游戏设计、团队协作、赛事活动与视觉表达；卡墙和各项目章节都有对应材料。",
-      en: "Her portfolio now has eight projects: Remnant Dream of Jinling, its spin-off universe, The Memory Pawnshop, You Are The System, Haunted Farm, Makavi, AI-Empowered Game PM, and the VALORANT Community Cup. Together they cover game design, teamwork, events and visual expression. Each has a project card and supporting materials." },
+      zh: "心雅的作品集现在有九项作品：《金陵残梦》、衍生宇宙、《狸的旅行日记》、《记忆当铺》、《你就是系统》、《闹鬼农场》、《玛卡薇·缚命船医》、AI 赋能游戏项目管理，无畏契约娱乐水友赛。它们覆盖游戏设计、团队协作、赛事活动与视觉表达；卡墙和各项目章节都有对应材料。",
+      en: "Her portfolio now has nine projects: Remnant Dream of Jinling, the Jinling spin-off universe, Lico’s Travel Diary, The Memory Pawnshop, You Are The System, Haunted Farm, Makavi, AI-Empowered Game PM, and the VALORANT Community Cup. Together they cover game design, teamwork, events and visual expression. Each has a project card and supporting materials." },
     { k: /红楼|文学|\bip\b|改编|为什么/i,
       zh: '为什么是《红楼梦》？因为它本身就是一场「双视角的梦」——世人看见繁华，黛玉看见将散的宴席。心雅把这种「同一世界、两套真相」转译成双人分屏机制：石青看见结构，温遇看见情感，缺一不可。文学不是皮，是机制的源头。',
       en: 'Why Dream of the Red Chamber? Because the novel itself is a dream with two readings — the world sees splendor, Daiyu sees the feast about to scatter. Cynthia translates that into split-screen mechanics: one player reads structure, the other reads emotion, and neither view alone can finish the game. Literature is not a skin here — it is where the mechanics come from.' },
@@ -102,8 +105,8 @@
       en: 'Email 2062491054@qq.com, phone 135-5413-7459, GitHub @Cynthia-Mo-Ya. The three colorful tapes at the bottom link to her contacts; the complete resume is in the CYNTHIA dossier on the homepage.' }
   ];
   var KB_FALLBACK = {
-    zh: '这个问题有点超出我的蛛网范围🕸️ 试试问：她的八项作品、水友赛分工、项目统筹、AI 工作流或综合简历，或者直接发邮件 2062491054@qq.com 问真人。',
-    en: 'That one is a bit outside my web 🕸️ Try asking about her eight projects, the cup, project coordination, AI-assisted work, or her resume — or email the human directly: 2062491054@qq.com.'
+    zh: '这个问题有点超出我的蛛网范围🕸️ 试试问：她的九项作品、水友赛分工、项目统筹、AI 工作流或综合简历，或者直接发邮件 2062491054@qq.com 问真人。',
+    en: 'That one is a bit outside my web 🕸️ Try asking about her nine projects, the cup, project coordination, AI-assisted work, or her resume — or email the human directly: 2062491054@qq.com.'
   };
 
   var spiderStage = document.getElementById('spiderStage');
@@ -236,6 +239,7 @@
 
   /* ════════ 4. PROJECT CARDS ════════ */
   var CARD_DATA = {
+    lico: {"chips": {"zh": ["团队 Windows Demo", "AI 美术 / 共同策划", "腾讯游戏创作大赛初赛"], "en": ["Team Windows demo", "AI art / Collaborative planning", "Competition preliminary submission"]}, "title": {"zh": "狸的旅行日记", "en": "Lico’s Travel Diary"}, "sub": "LICO’S TRAVEL DIARY", "desc": {"zh": "输入一句关于「远方」的想象，和狸一起出发，在旅途中欣赏幻想风景、拍照留念，并通过信件与画作建立陪伴。团队将这一设想做成 Windows Demo，提交腾讯游戏创作大赛初赛。", "en": "Describe an imagined destination and set off with Lico: discover fantasy scenery, take photos, and build companionship through letters and drawings. Our team developed a Windows demo and submitted it to the preliminary round of the Tencent Game Creation Competition."}, "role": {"zh": "我的贡献：主要负责 AI 美术方向的构图与提示词、宣传 PPT 制作和讲解视频剪辑，并参与团队共同策划与后续构想。最初设想由何旭提出，团队共同推进 Demo 实现。", "en": "My contribution: I focused on composition and prompts for AI-assisted art, created the presentation and edited the walkthrough video. I also contributed to collaborative planning and further concepts. He Xu proposed the initial idea, and the team developed the demo together."}, "video": "assets/video/lico-walkthrough.mp4", "poster": "assets/img/lico/video-poster.jpg", "links": [{"t": {"zh": "查看完整项目 ↓", "en": "Explore the project ↓"}, "h": "#lico"}]},
     valorant: {
       chips: { zh: ['赛事与活动', '团队共同策划', '2026.06.25—06.27'], en: ['Live event', 'Team planning', 'June 25–27, 2026'] },
       title: { zh: '无畏契约娱乐水友赛', en: 'VALORANT Community Cup' },

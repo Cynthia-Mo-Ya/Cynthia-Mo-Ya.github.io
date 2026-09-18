@@ -5,15 +5,21 @@
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasGsap = typeof gsap !== 'undefined';
 
-  /* ── 锚点残留修复：Safari 恢复标签页 / 刷新时带着 #hash 会直接跳到中间章节 ── */
-  if (location.hash) {
+  /* Honor direct section links; reloads and restored tabs still start at the top. */
+  var navigation = performance.getEntriesByType('navigation')[0];
+  var initialSection = (!navigation || navigation.type === 'navigate') &&
+    /^#[a-zA-Z0-9_-]+$/.test(location.hash)
+    ? document.getElementById(location.hash.slice(1)) : null;
+  if (location.hash && !initialSection) {
     history.replaceState(null, '', location.pathname + location.search);
   }
   /* 刷新永远回到顶部。注意：ScrollTrigger 的 refresh 会把 scrollRestoration 改回 auto，
      浏览器随后仍会恢复上次滚动位置 —— 所以 load 后要多次重申 + 强制回顶 */
   function forceTop() {
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    var top = initialSection
+      ? Math.max(0, initialSection.getBoundingClientRect().top + window.scrollY - 90) : 0;
+    window.scrollTo({ top: top, left: 0, behavior: 'instant' });
   }
   forceTop();
   window.addEventListener('load', function () {
@@ -23,7 +29,13 @@
     setTimeout(forceTop, 1000);
   });
   /* Safari 往返缓存(bfcache)恢复页面时也带回位置：pageshow 强制回顶 */
-  window.addEventListener('pageshow', forceTop);
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted) {
+      initialSection = null;
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    }
+    forceTop();
+  });
   window.addEventListener('pagehide', function () { window.scrollTo(0, 0); });
 
   /* ── build gallery strips ───────────────────────────── */
