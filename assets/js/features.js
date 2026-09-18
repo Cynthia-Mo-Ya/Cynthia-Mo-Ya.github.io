@@ -218,6 +218,15 @@
 
   /* ════════ 4. PROJECT CARDS ════════ */
   var CARD_DATA = {
+    valorant: {
+      chips: { zh: ['赛事与活动', '团队共同策划', '2026.06.25—06.27'], en: ['Live event', 'Team planning', 'June 25–27, 2026'] },
+      title: { zh: '无畏契约娱乐水友赛', en: 'VALORANT Community Cup' },
+      sub: 'VALORANT COMMUNITY CUP',
+      desc: { zh: '从群语音中的共同策划，到招募、赛程同步、直播与赛后集锦，和队友一起把一场面向玩家的娱乐水友赛落地。报名登记 33 人，确认选手 30 人；通过三个光核社群宣传，在抖音进行赛事直播。', en: 'From planning in team voice calls to recruitment, schedule updates, livestreaming and a highlight reel, we brought a community tournament to life. 33 registrations, 30 confirmed players, outreach across three Guanghe communities, and a Douyin livestream.' },
+      role: { zh: '我的角色：参与团队共同策划；承担主要外宣图与赛程图制作、报名及比赛社群组织、公告发布和赛事集锦剪辑；协调同学补充第二位解说。', en: 'My role: I contributed to team planning, produced most promotional graphics and schedule visuals, organized registration and match groups, posted announcements, edited the highlight reel, and recruited a classmate as the second commentator.' },
+      video: 'assets/video/valorant-highlights.mp4', poster: 'assets/img/valorant/video-poster.jpg',
+      links: [{ t: { zh: '查看完整赛事档案 ↓', en: 'Explore the event ↓' }, h: '#events' }]
+    },
     jinling: {
       chips: { zh: ['个人独立完成', '概念已交付 5 件', '2026.03 – 至今'], en: ['Solo project', '5 deliverables shipped', '2026.03 – present'] },
       title: { zh: '金陵残梦', en: 'Remnant Dream of Jinling' },

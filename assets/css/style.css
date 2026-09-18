@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family: 'Smiley Sans';
-  src: url('../fonts/smiley-sans-subset.woff2?v=2') format('woff2');
+  src: url('../fonts/smiley-sans-subset.woff2?v=3') format('woff2');
   font-display: swap;
 }
 
@@ -1740,4 +1740,52 @@ body.dossier-open .nav { visibility: hidden; pointer-events: none; }
   .dos-resume-alt { width: 100%; }
   .dos-build { position: relative; top: auto; bottom: auto; right: auto; width: 100%; margin-top: 18px; transform: rotate(-1deg); }
   .dos-build:hover, .dos-build:focus-within { transform: rotate(0) scale(1.02); }
+}
+
+/* 赛事与活动：沿用漫画档案的字体、色板和硬投影。 */
+.pc-event::before { content: "PLAY!"; background: var(--cyan); color: var(--ink); }
+.pc-event .pc-cover { object-position: center top; }
+.rail-tbc.rail-tbc-footer { flex-direction: row; flex-wrap: wrap; justify-content: flex-end; margin-top: 30px; border: 0; padding: 8px; position: relative; z-index: 2; }
+.ev-intro { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: start; margin-bottom: 50px; }
+.ev-role { margin-top: 24px; padding-top: 18px; border-top: 2px solid var(--ink); }
+.ev-role b { font-family: var(--disp-zh); font-size: 1.3rem; color: var(--ink); }
+.ev-role p { margin-top: 8px; }
+.ev-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0; }
+.ev-stats div { display: flex; flex-direction: column-reverse; border-bottom: 3px solid var(--cyan); padding: 8px 0 14px; }
+.ev-stats dt { color: var(--lavender); font-size: .9rem; }
+.ev-stats dd { margin: 0; font-family: var(--disp-en); font-size: clamp(3.2rem, 6vw, 5rem); color: var(--paper); line-height: 1; }
+.ev-note { color: var(--lavender); font-size: .82rem; line-height: 1.7; margin-top: 14px; }
+.ev-timeline { padding: 0; list-style: none; margin-top: 25px; }
+.ev-timeline li { display: flex; align-items: center; gap: 22px; padding: 14px 0; border-bottom: 1px solid rgba(179,136,255,.3); }
+.ev-timeline time { font-family: var(--disp-en); font-size: 1.8rem; color: var(--cyan); }
+.ev-video { max-width: 980px; }
+.ev-video video { display: block; width: 100%; aspect-ratio: 960 / 544; background: var(--ink); border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--pink); }
+.ev-copy { max-width: 780px; line-height: 1.8; margin: -12px 0 25px; }
+.ev-posters { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; margin-bottom: 45px; }
+.ev-posters figure,.ev-countdown figure { margin: 0; min-width: 0; border: 3px solid var(--ink); background: var(--ink-2); box-shadow: 6px 6px 0 var(--ink); }
+.ev-posters img { width: 100%; height: 380px; object-fit: contain; background: var(--ink); cursor: zoom-in; }
+.ev-posters figcaption,.ev-countdown figcaption { padding: 12px; color: var(--paper); font-size: .9rem; }
+.ev-countdown { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.ev-countdown img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+.ev-credit { margin: 20px 0 48px; }
+.ev-cases { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.ev-cases article { border-top: 4px solid var(--pink); padding: 22px 0; }
+.ev-cases h4 { font: 1.4rem var(--disp-zh); margin-bottom: 14px; color: var(--cyan); }
+.ev-cases p,.ev-community p { line-height: 1.9; }
+.ev-community { margin-top: 22px; border: 2px solid var(--lavender); background: var(--ink-2); box-shadow: 7px 7px 0 var(--ink); padding: clamp(22px,3vw,36px); }
+.ev-community h3 { font: 1.6rem var(--disp-zh); margin: 0 0 16px; }
+.ev-community ul { display: flex; flex-wrap: wrap; gap: 12px 24px; list-style: none; padding: 20px 0 0; color: var(--cyan); font-size: .86rem; }
+@media (max-width: 900px) {
+  .ev-intro { grid-template-columns: 1fr; }
+  .ev-cases { grid-template-columns: 1fr; gap: 0; }
+}
+@media (max-width: 600px) {
+  .ev-posters { display: flex; overflow-x: auto; padding: 0 8px 14px 0; scroll-snap-type: x mandatory; gap: 16px; }
+  .ev-posters figure { flex: 0 0 82%; scroll-snap-align: start; }
+  .ev-posters img { height: 360px; }
+  .ev-countdown { grid-template-columns: 1fr; gap: 20px; }
+  .ev-stats { gap: 12px; }
+  .ev-stats dt { font-size: .8rem; }
+  .ev-timeline { margin-top: 18px; }
+  .rail-tbc.rail-tbc-footer { justify-content: center; }
 }
