@@ -199,8 +199,8 @@
     'cards.tbcs': { zh: '下一话 · 更多作品正在赶来', en: 'Next issue · more works on the way' },
 
     'jl.num': { zh: 'ISSUE #01 · 游戏概念设计', en: 'ISSUE #01 · GAME CONCEPT' },
-    'ps.num': { zh: 'ISSUE #03 · 活动策划 · 统筹落地', en: 'ISSUE #03 · EXPERIENCE DESIGN & COORDINATION' },
-    'sy.num': { zh: 'ISSUE #04 · 活动策划 · 统筹落地', en: 'ISSUE #04 · EXPERIENCE DESIGN & COORDINATION' },
+    'ps.num': { zh: 'ISSUE #07 · 活动策划 · 统筹落地', en: 'ISSUE #07 · EXPERIENCE DESIGN & COORDINATION' },
+    'sy.num': { zh: 'ISSUE #08 · 活动策划 · 统筹落地', en: 'ISSUE #08 · EXPERIENCE DESIGN & COORDINATION' },
     'jl.title': { zh: '金陵残梦', en: 'JINLING DREAM' },
     'jl.meta': { zh: '个人独立完成 · 策划 / 叙事 / 关卡 / 美术 / AI 工作流 · 2026.03 – 至今', en: 'Solo project · design / narrative / levels / art / AI workflow · 2026.03 – present' },
     'jl.quote': { zh: '“共入金陵旧梦，<br>各得一双眼睛。”', en: '"Enter the old dream of Jinling together —<br>each receives a different pair of eyes."' },
@@ -255,7 +255,7 @@
     'sy.s1': { zh: '宣讲 PPT', en: 'Pitch Deck' },
     'sy.b1': { zh: '📑 下载宣讲 PPT', en: '📑 Download the deck' },
 
-    'fm.num': { zh: 'ISSUE #05 · 关卡设计', en: 'ISSUE #05 · LEVEL DESIGN' },
+    'fm.num': { zh: 'ISSUE #03 · 关卡设计', en: 'ISSUE #03 · LEVEL DESIGN' },
     'fm.title': { zh: '闹鬼农场', en: 'HAUNTED FARM' },
     'fm.meta': { zh: '个人独立完成 · 关卡设计 / UE5.8 白盒 · 寻物解谜 + 轻战斗', en: 'Solo · Level design / UE5.8 white-box · puzzle-explore + light combat' },
     'fm.quote': { zh: '“让老莫安息，<br>让农场重新活过来。”', en: '"Let Old Mo rest —<br>let the farm come alive again."' },
@@ -273,7 +273,7 @@
     'fm.s1s': { zh: 'LEVEL DESIGN DOC · 9P · 点击放大', en: 'LEVEL DESIGN DOC · 9 PAGES · CLICK TO ZOOM' },
     'fm.b1': { zh: '📄 完整关卡设计文档', en: '📄 Full level design doc' },
 
-    'mb.num': { zh: 'ISSUE #06 · 英雄设计', en: 'ISSUE #06 · CHAMPION DESIGN' },
+    'mb.num': { zh: 'ISSUE #04 · 英雄设计', en: 'ISSUE #04 · CHAMPION DESIGN' },
     'mb.title': { zh: '玛卡薇 · 缚命船医', en: 'MAKAVI' },
     'mb.meta': { zh: '光核共创营课题十一 · 个人独立完成 · 英雄设计 / 数值与对抗平衡 · LOLM 7.1g · 2026', en: 'Co-creation camp brief #11 · solo · champion design / systems & counterplay balance · LOLM 7.1g · 2026' },
     'mb.quote': { zh: '“你死不了——<br>今天，我替你扛。”', en: '"You won\'t die —<br>today, I take the hit for you."' },
@@ -290,7 +290,7 @@
     'mb.s1s': { zh: 'CHAMPION DESIGN · 25P · 拆解 → 原创 → 平衡评估', en: 'CHAMPION DESIGN · 25 PAGES · teardown → design → balance' },
     'mb.b1': { zh: '📄 完整英雄设计文档', en: '📄 Full champion design doc' },
 
-    'pm.num': { zh: 'ISSUE #07 · 项目管理', en: 'ISSUE #07 · PROJECT MGMT' },
+    'pm.num': { zh: 'ISSUE #05 · 项目管理', en: 'ISSUE #05 · PROJECT MGMT' },
     'pm.title': { zh: 'AI 赋能游戏项目管理', en: 'AI-EMPOWERED GAME PM' },
     'pm.meta': { zh: '光核共创营课题三 · 游戏项目管理 / 新人 PM 全链路推演 · 蓝本：英雄联盟手游 7.1「全速竞逐」', en: 'Co-creation camp brief #3 · Game project management / new-PM full-lifecycle playbook · Blueprint: LOL Mobile 7.1' },
     'pm.quote': { zh: '“AI 做杠杆，<br>不做拐杖。”', en: '"AI as leverage,<br>not a crutch."' },
@@ -314,7 +314,7 @@
     "nav.artCollection": {"zh": "美术作品集", "en": "Art Collection"},
     "cards.c8t": {"zh": "无畏契约水友赛", "en": "VALORANT Community Cup"},
     "cards.c8tag": {"zh": "赛事与活动 / 团队共创 / 宣传 · 社群 · 剪辑", "en": "Live event / Team project / Visuals · Community · Editing"},
-    "ev.num": {"zh": "ISSUE #08 · 赛事与活动", "en": "ISSUE #08 · EVENTS"},
+    "ev.num": {"zh": "ISSUE #06 · 赛事与活动", "en": "ISSUE #06 · EVENTS"},
     "ev.title": {"zh": "无畏契约娱乐水友赛", "en": "VALORANT Community Cup"},
     "ev.meta": {"zh": "光核共创营第一期小组实践 · 2026.06.25—06.27 · 抖音直播", "en": "A team project at Guanghe Co-creation Camp, Cohort 1 · June 25–27, 2026 · Livestreamed on Douyin"},
     "ev.quote": {"zh": "无畏集结，欢乐对决。", "en": "Play together. Make it an event."},
